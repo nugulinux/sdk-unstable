@@ -5,6 +5,14 @@ echo "Repository slug = ${REPOSLUG}"
 echo "SHA = ${SHA}"
 echo "Short SHA = ${SHORTSHA}"
 
+# Get date for commit to genereate version
+DATETIME=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/${SHORTSHA} | jq '.commit.committer.date' -r)
+echo "commit.committer.date = ${DATETIME}"
+
+STAMP=$(date -d ${DATETIME} +%Y%m%d)
+VERSION="${STAMP}${SHORTSHA}"
+echo "package version = ${VERSION}"
+
 echo "Clone the repository"
 git clone https://github.com/${REPOSLUG} --recursive
 cd ${REPO}
@@ -13,8 +21,8 @@ git reset --hard
 rm -rf .git
 
 echo "Add commit-id(${SHORTSHA}) to package version"
-sed -i "1 s/ubuntu[0-9]*~xenial/ubuntu${SHORTSHA}~xenial/" packaging/xenial/changelog
-sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${SHORTSHA}~bionic/" packaging/bionic/changelog
+sed -i "1 s/ubuntu[0-9]*~xenial/ubuntu${VERSION}~xenial/" packaging/xenial/changelog
+sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${VERSION}~bionic/" packaging/bionic/changelog
 head -1 packaging/xenial/changelog
 head -1 packaging/bionic/changelog
 cd -
