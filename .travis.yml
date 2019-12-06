@@ -19,6 +19,7 @@ jobs:
   - stage: setup
     script: |
       export SHA=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/master | jq '.sha' -r)
+      export MSG=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/master | jq '.commit.message' -r)
       export SHORTSHA=$(echo ${SHA} | cut -c -7)
       ID=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases/tags/${SHORTSHA} | jq '.id' -r)
       echo "ID = ${ID}"
@@ -26,6 +27,7 @@ jobs:
         echo "Remove exist release ${ID}"
         curl -D - -H "Authorization: token ${GITHUB_TOKEN}" -X DELETE https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases/${ID}
       fi
+      jq -n --arg body "${MSG}" --arg tag_name "${SHORTSHA}" '{ "tag_name": $tag_name, "body": $body }' | curl -D - -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases -d@-
   - stage: build
     env:
     - TARGET=xenial_x64
