@@ -29,7 +29,7 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/mnt/UDISK -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain
 make -j6
 make install
 mv /mnt/UDISK ./SDK
-tar cvfz files_allwinner.tgz SDK
+tar cvfz files_allwinner_${SHORTSHA}.tgz SDK
 EOF
 chmod 755 sdkbuild.sh
 
@@ -38,6 +38,6 @@ docker run -t --rm -v $PWD:$PWD -w $PWD \
     nugulinux/devenv:allwinner ./sdkbuild.sh
 
 mkdir /tmp/result
-cp build/files_allwinner.tgz /tmp/result/
+cp build/files_*.tgz /tmp/result/
 
 echo "Completed"
