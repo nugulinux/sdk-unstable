@@ -25,7 +25,7 @@ rm -rf build
 mkdir build
 cd build
 
-cmake .. -DCMAKE_INSTALL_PREFIX=/mnt/UDISK -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/Toolchain.cmake
+cmake .. -DCMAKE_INSTALL_PREFIX=/mnt/UDISK -DCMAKE_INSTALL_LIBDIR=/mnt/UDISK/lib -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/Toolchain.cmake
 make -j6
 make install
 mv /mnt/UDISK ./SDK
