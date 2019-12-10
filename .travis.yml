@@ -27,7 +27,7 @@ jobs:
         echo "Remove exist release ${ID}"
         curl -D - -H "Authorization: token ${GITHUB_TOKEN}" -X DELETE https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases/${ID}
       fi
-      jq -n --arg body "${MSG}" --arg tag_name "${SHORTSHA}" '{ "tag_name": $tag_name, "body": $body }' | curl -D - -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases -d@-
+      jq -n --arg body "${MSG}" --arg tag_name "${SHORTSHA}" --arg name "${SHORTSHA}" '{ "tag_name": $tag_name, "name": $name, "body": $body }' | curl -D - -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases -d@-
   - stage: build
     script: |
       echo "Build allwinner"
