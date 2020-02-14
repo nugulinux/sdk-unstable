@@ -10,6 +10,8 @@ addons:
   apt:
     packages:
     - jq
+    - doxygen
+    - graphviz
 branches:
   only:
   - master

@@ -2,7 +2,9 @@
 
 # NUGU SDK for Linux unstable repository
 
-<https://nugulinux.github.io/sdk-unstable/>
+Unstable release page: <https://nugulinux.github.io/sdk-unstable/>
+
+Unstable API document: <https://nugulinux.github.io/sdk-unstable/doxygen/>
 
 ## Usage
 
@@ -20,6 +22,6 @@ Ubuntu 18.04:
 
     deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main
 
-Update the package informations
+Update the package information
 
     sudo apt-get update

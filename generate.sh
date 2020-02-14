@@ -1,6 +1,5 @@
 #!/bin/bash
 
-REPOSLUG=${TRAVIS_REPO_SLUG}
 TAG=${SHORTSHA}
 
 BASEROOT=/tmp/www
@@ -26,13 +25,13 @@ do
     fi
 done
 
-echo "Get release(${TAG}) information from ${REPOSLUG}"
+echo "Get release(${TAG}) information from ${TRAVIS_REPO_SLUG}"
 
-ID=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${REPOSLUG}/releases/tags/${TAG} | jq '.id' -r)
+ID=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases/tags/${TAG} | jq '.id' -r)
 echo "ID = ${ID}"
 
 echo "Get file list"
-RESULT=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${REPOSLUG}/releases/${ID}/assets?per_page=50)
+RESULT=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" -X GET https://api.github.com/repos/${TRAVIS_REPO_SLUG}/releases/${ID}/assets?per_page=50)
 FILES=$(echo $RESULT  | jq '.[].browser_download_url' -r)
 for item in $FILES
 do
@@ -58,7 +57,14 @@ cat <<EOF > ${BASEROOT}/index.html
 <html>
 <body>
 <h1>DEB Package repository for unstable release</h1>
+
+<p>
 last unstable commit: <a href="https://github.com/nugu-developers/nugu-linux/commit/${SHORTSHA}">${SHORTSHA}</a>
+</p>
+
+<p>
+API Document(doxygen): <a href="https://nugulinux.github.io/sdk-unstable/doxygen/">https://nugulinux.github.io/sdk-unstable/doxygen/</a>
+</p>
 
 <hr/>
 
@@ -95,15 +101,26 @@ EOF
 function generate {
     DIST=$1
     HOST=$2
-    REPO="dists/$DIST/pool"
-    PKGS="dists/$DIST/main/binary-$HOST/"
+    PKGSREPO="dists/${DIST}/pool"
+    PKGS="dists/${DIST}/main/binary-${HOST}/"
 
-    echo "DEB Repo: $REPO"
-    echo "Packages path: $PKGS"
+    echo "DEB Repo: ${PKGSREPO}"
+    echo "Packages path: ${PKGS}"
 
     cd ${BASEROOT}/ubuntu
-    dpkg-scanpackages -m -a $HOST $REPO > $PKGS/Packages
+    dpkg-scanpackages -m -a $HOST $PKGSREPO > ${PKGS}/Packages
     cd -
+}
+
+function generate_doxygen {
+    git clone https://github.com/${REPOSLUG}
+    cd ${REPO}
+    git checkout ${SHA}
+    git reset --hard
+    rm -rf .git
+
+    doxygen
+    mv doc/html ${BASEROOT}/doxygen
 }
 
 generate "xenial" "amd64"
@@ -112,3 +129,5 @@ generate "xenial" "armhf"
 generate "bionic" "amd64"
 generate "bionic" "arm64"
 generate "bionic" "armhf"
+
+generate_doxygen
