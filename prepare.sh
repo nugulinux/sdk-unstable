@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -e
+set -e
 
 echo "Repository slug = ${REPOSLUG}"
 echo "SHA = ${SHA}"
@@ -13,7 +13,7 @@ STAMP=$(date -d ${DATETIME} +%Y%m%d)
 VERSION="${STAMP}${SHORTSHA}"
 echo "package version = ${VERSION}"
 
-echo "Clone the repository"
+echo "Clone the sdk repository"
 git clone https://github.com/${REPOSLUG} --recursive
 cd ${REPO}
 git checkout ${SHA}
@@ -37,7 +37,16 @@ docker run -t --rm --privileged -v $PWD:$PWD -w $PWD/${REPO} \
     nugulinux/buildenv:$TARGET sdkbuild.sh
 
 ls -l
-mkdir /tmp/result
+
+if [[ -d /tmp/result ]]; then
+	echo "/tmp/result exist"
+	ls -l /tmp/result
+	rm -rf /tmp/result/*
+else
+	echo "Create /tmp/result"
+	mkdir /tmp/result
+fi
+
 cp *.deb /tmp/result/
 
 echo "Completed"

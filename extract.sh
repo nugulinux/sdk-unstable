@@ -31,3 +31,8 @@ cp ${FILENAME}.tgz /tmp/result/
 
 # Remove temporary directory
 rm -rf dest
+
+echo "Cleanup workspace"
+git reset --hard
+git clean -dfx
+
