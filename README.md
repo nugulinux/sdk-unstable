@@ -1,2 +1,1 @@
-# sdk-unstable
-SDK Unstable release
+# Tizen
