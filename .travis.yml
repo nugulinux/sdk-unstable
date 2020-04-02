@@ -23,8 +23,8 @@ script: |
   ./check.sh /tmp/check
   echo "Script result = $?"
   if [ -f /tmp/check ]; then
+    ./tizen.sh || exit 1
     UPLOAD=1
-    ./tizen.sh
   fi
   echo "Upload flag = $UPLOAD"
 deploy:
