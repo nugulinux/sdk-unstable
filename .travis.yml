@@ -11,6 +11,7 @@ addons:
   apt:
     packages:
       - jq
+sudo: required
 
 script: |
   export CURL_AUTH="Authorization: token ${GITHUB_TOKEN}"

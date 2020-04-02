@@ -44,6 +44,9 @@ mkdir /tmp/result
 cp build/files_*.tgz /tmp/result/
 
 cd ..
-rm -rf ${REPO}
+whoami
+ls -l
+
+sudo rm -rf ${REPO}
 
 echo "> Completed"
