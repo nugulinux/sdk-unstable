@@ -62,6 +62,9 @@ mkdir /tmp/result
 cp files_*.tgz /tmp/result/
 
 cd ..
-rm -rf ${REPO}
+whoami
+ls -l
+
+sudo rm -rf ${REPO}
 
 echo "> Completed"
