@@ -27,9 +27,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
@@ -54,9 +54,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
@@ -81,9 +81,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
@@ -108,9 +108,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
@@ -135,9 +135,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
@@ -162,9 +162,9 @@ jobs:
       ./check.sh /tmp/check
       echo "Script result = $?"
       if [ -f /tmp/check ]; then
-        UPLOAD=1
-        ./prepare.sh
+        ./prepare.sh || exit 1
         ./extract.sh files_${TARGET}_${SHORTSHA}
+        UPLOAD=1
       fi
       echo "Upload flag = $UPLOAD"
     deploy:
