@@ -178,7 +178,7 @@ jobs:
         condition: $UPLOAD = 1
         all_branches: true
       overwrite: true
-  - stage: "Generate"
+  - stage: "Generate DEB package repository"
     name: Generate deb package repository using GitHub Pages
     script: |
       echo "Generate meta info"
@@ -195,4 +195,20 @@ jobs:
       keep_history: false
       on:
         repo: nugulinux/sdk-unstable
+        all_branches: true
+  - stage: "Generate docker image"
+    name: Generate unstable docker image for bionic_x64
+    script: |
+      echo "Generate docker image"
+      export CURL_AUTH="Authorization: token ${GITHUB_TOKEN}"
+      export SHA=$(curl -s -H "$CURL_AUTH" -X GET https://api.github.com/repos/${REPOSLUG}/commits/master | jq '.sha' -r)
+      export SHORTSHA=$(echo ${SHA} | cut -c -7)
+      ./dockerimage.sh
+    before_deploy:
+      - docker images
+      - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    deploy:
+      provider: script
+      script: docker push nugulinux/sdk:unstable
+      on:
         all_branches: true
