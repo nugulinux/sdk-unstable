@@ -1,0 +1,6 @@
+<map id="Driver API" name="Driver API">
+<area shape="rect" id="node1" href="$group__NuguPcmDriver.html" title="PCM driver. " alt="" coords="170,5,261,32"/>
+<area shape="rect" id="node2" href="$group__NuguRecorderDriver.html" title="Audio recorder driver. " alt="" coords="137,56,293,83"/>
+<area shape="rect" id="node3" href="$group__NuguDecoderDriver.html" title="Decoder driver. " alt="" coords="157,107,273,133"/>
+<area shape="rect" id="node5" href="$group__NuguPlayerDriver.html" title="Media player driver. " alt="" coords="144,157,287,184"/>
+</map>

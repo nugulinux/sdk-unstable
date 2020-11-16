@@ -1,0 +1,107 @@
+Package: libnugu
+Source: nugu
+Version: 0.22.0ubuntu2020111691b2fa8~xenial
+Architecture: arm64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 1673
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.28.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl1.0.0 (>= 1.0.2~beta3), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Recommends: libnugu-plugins-default
+Filename: dists/xenial/pool/libnugu_0.22.0ubuntu2020111691b2fa8.xenial_arm64.deb
+Size: 399146
+MD5sum: 71fe590dae55a353b8e5544e2cf6bef0
+SHA1: ff189e2fdede96117ba7c9a43fefff248a1de089
+SHA256: 412488a70dc80a88fee04c16d52dc2456f3a192e54e9b07a7f64bcfb520ccb91
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu package provide shared libraries.
+
+Package: libnugu-dbg
+Source: nugu
+Version: 0.22.0ubuntu2020111691b2fa8~xenial
+Architecture: arm64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 4987
+Depends: libnugu (= 0.22.0ubuntu2020111691b2fa8~xenial)
+Filename: dists/xenial/pool/libnugu-dbg_0.22.0ubuntu2020111691b2fa8.xenial_arm64.deb
+Size: 4162918
+MD5sum: 1281f5b03f4953e893ae70068e884d02
+SHA1: d3c14c0e9201fc89de90bf7a8962fc9e4c80662c
+SHA256: e1e2cd62ad1efd332db02cfac5bf9ef583b47726e903697b15824475e9a5226a
+Section: debug
+Priority: extra
+Description: NUGU is an AI service platform (debugging symbols)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dbg package provide debugging symbols.
+Build-Ids: 810da80ed04ae0f73953805133f48ae2dc391ca4
+
+Package: libnugu-dev
+Source: nugu
+Version: 0.22.0ubuntu2020111691b2fa8~xenial
+Architecture: arm64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 334
+Depends: libnugu
+Filename: dists/xenial/pool/libnugu-dev_0.22.0ubuntu2020111691b2fa8.xenial_arm64.deb
+Size: 48006
+MD5sum: 0fc087dcfc4a5a4a3a301694d42cc3f8
+SHA1: 1ce9a380d0b5695698679d869bcc3eda2c48cb8b
+SHA256: 36acba3f88becd7562efb68763a85e4a0c7e098bfbb3759a2775082bc91320e2
+Section: libdevel
+Priority: optional
+Description: NUGU is an AI service platform (development files)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dev package provide development files.
+
+Package: libnugu-examples
+Source: nugu
+Version: 0.22.0ubuntu2020111691b2fa8~xenial
+Architecture: arm64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 690
+Depends: libnugu, libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.16.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libstdc++6 (>= 5.2), python, python-flask-restful, python-requests-oauthlib, curl, jq
+Filename: dists/xenial/pool/libnugu-examples_0.22.0ubuntu2020111691b2fa8.xenial_arm64.deb
+Size: 216414
+MD5sum: f9ca5e548b5c2bc7e55b978071ce0432
+SHA1: 796035c9fdf507b8aa683d259b3f0dd2da079a8f
+SHA256: b07ed846219fa8eb5179fdf05432883ba6bd3a8f4bffd55bae3ad24a4826b682
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (examples)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-examples package provide examples.
+
+Package: libnugu-plugins-default
+Source: nugu
+Version: 0.22.0ubuntu2020111691b2fa8~xenial
+Architecture: arm64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 166
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.17), libglib2.0-0 (>= 2.12.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu, libopus0 (>= 1.1), libportaudio2 (>= 19+svn20101113), gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
+Filename: dists/xenial/pool/libnugu-plugins-default_0.22.0ubuntu2020111691b2fa8.xenial_arm64.deb
+Size: 27844
+MD5sum: c87118ca2e493afd8cacdc8a54273dce
+SHA1: 8b743372caa7c385f999f5fb5c656c5aadc96dfd
+SHA256: f5a474d195e0d6b316ad10b0e42141adad95b879ded54a96e040ba510ca08dd2
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (plugins)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-plugins-default package provide default plugins.
+
