@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/nugulinux/sdk-unstable.svg?branch=master)](https://travis-ci.org/nugulinux/sdk-unstable)
-
 # NUGU SDK for Linux unstable repository
 
 Unstable release page: <https://nugulinux.github.io/sdk-unstable/>
