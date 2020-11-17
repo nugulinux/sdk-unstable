@@ -1,0 +1,129 @@
+name: Build Allwinner
+on:
+  release:
+    types:
+      - created
+
+env:
+  REPO: nugu-linux
+  REPOSLUG: nugu-developers/nugu-linux
+
+#
+# Jobs
+#   -> build
+#      - Generate .tgz
+#      - Upload to Github release
+#
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get SHA and ID from Release ${{ github.ref }}
+        id: check
+        run: |
+          # Remove "refs/tags/" from "refs/tags/xxxxxxx"
+          SHORTSHA=$(echo ${GITHUB_REF} | cut -c11-)
+          echo "SHA: $SHORTSHA"
+
+          # Get ID for Release-tag
+          ID=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${SHORTSHA} | jq '.id' -r)
+          echo "> Release ID = ${ID}"
+          if [[ ${ID} == "null" ]]; then
+            echo "Release ${ID} not exist."
+            exit
+          fi
+          echo "Release-ID: $ID"
+
+          echo "::set-output name=id::$ID"
+          echo "::set-output name=sha::$SHORTSHA"
+
+      - name: Check for duplicated files
+        id: dupcheck
+        run: |
+          COUNT=0
+          MATCH_COUNT=1
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.check.outputs.id }}/assets?per_page=50)
+          FILES=$(echo $RESULT  | jq '.[].name' -r)
+
+          for item in $FILES
+          do
+            echo "Check artifacts - $item"
+
+            if [[ $item == *"allwinner"* ]]; then
+                :
+            else
+                continue;
+            fi
+
+            declare -i COUNT; COUNT+=1
+            echo "> Found build artifacts: [${COUNT}/${MATCH_COUNT}] ${item}"
+          done
+
+          # Mark to flag file to trigger the build
+          if [[ $COUNT == $MATCH_COUNT ]]; then
+            echo "> There is no need to rebuild."
+            echo "::set-output name=exist::1"
+          else
+            echo "> Rebuild required"
+            echo "::set-output name=exist::0"
+          fi
+
+      - name: The build artifact already exists, so the build is skipped.
+        if: ${{ steps.dupcheck.outputs.exist == '1'}}
+        run: echo "Done"
+
+      - name: Build
+        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        run: |
+          git clone https://github.com/${REPOSLUG} --recursive
+          cd ${REPO}
+          git checkout ${{ steps.setup.outputs.sha }}
+          git reset --hard
+          rm -rf .git
+
+          # Fix permissions for docker
+          chmod 777 $PWD
+
+          cat <<EOF > sdkbuild.sh
+          #!/bin/zsh
+          set -e
+
+          mkdir -p /mnt/UDISK
+
+          rm -rf build
+          mkdir build
+          cd build
+
+          cmake .. \
+              -DCMAKE_INSTALL_PREFIX=/mnt/UDISK \
+              -DCMAKE_INSTALL_LIBDIR=/mnt/UDISK/lib \
+              -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/Toolchain.cmake
+          make -j6
+          make install
+          mv /mnt/UDISK ./SDK
+          tar cvfz files_allwinner_${{ steps.setup.outputs.sha }}.tgz SDK
+          EOF
+
+          chmod 755 sdkbuild.sh
+
+          echo "> Build cross-compile"
+          docker run -t --rm -v $PWD:$PWD -w $PWD \
+              nugulinux/devenv:allwinner ./sdkbuild.sh
+
+          mkdir /tmp/result
+          cp build/files_*.tgz /tmp/result/
+
+          cd ..
+          whoami
+          ls -l
+
+      - name: Upload
+        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        uses: svenstaro/upload-release-action@2.2.0
+        with:
+          file: /tmp/result/*
+          file_glob: true
+          repo_token: ${{ secrets.GH_TOKEN }}
+          overwrite: true
+          tag: ${{ github.ref }}

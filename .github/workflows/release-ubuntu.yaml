@@ -1,0 +1,393 @@
+name: Build Ubuntu
+on:
+  release:
+    types:
+      - created
+
+env:
+  REPO: nugu-linux
+  REPOSLUG: nugu-developers/nugu-linux
+
+#
+# Jobs
+#   check
+#   -> build (matrix)
+#      - Generate DEB package and .tgz
+#      - Upload to Github release
+#   -> pages
+#      - Doxygen
+#      - DEB Repository
+#      - Upload to Github pages
+#   -> docker
+#      - Generate nugulinux/sdk:unstable docker image
+#
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      release_id: ${{ steps.check.outputs.id }}
+      sha: ${{ steps.check.outputs.sha }}
+    steps:
+      - name: Get SHA and ID from Release ${{ github.ref }}
+        id: check
+        run: |
+          # Remove "refs/tags/" from "refs/tags/xxxxxxx"
+          SHORTSHA=$(echo ${GITHUB_REF} | cut -c11-)
+          echo "SHA: $SHORTSHA"
+
+          # Get ID for Release-tag
+          ID=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${SHORTSHA} | jq '.id' -r)
+          echo "> Release ID = ${ID}"
+          if [[ ${ID} == "null" ]]; then
+            echo "Release ${ID} not exist."
+            exit
+          fi
+          echo "Release-ID: $ID"
+
+          echo "::set-output name=id::$ID"
+          echo "::set-output name=sha::$SHORTSHA"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: check
+    strategy:
+      fail-fast: true
+      matrix:
+        target: [xenial_x64, xenial_arm64, xenial_armhf, bionic_x64, bionic_arm64, bionic_armhf]
+    steps:
+      - name: Setup
+        id: setup
+        run: |
+          UBUNTU_VER=$(echo ${{ matrix.target }} | cut -d "_" -f 1)
+          ARCH=$(echo ${{ matrix.target }} | cut -d "_" -f 2)
+          if [ "$ARCH" == "x64" ]; then
+            ARCH2="amd64"
+          else
+            ARCH2="${ARCH}"
+          fi
+
+          echo "::set-output name=ubuntuver::$UBUNTU_VER"
+          echo "::set-output name=arch::$ARCH"
+          echo "::set-output name=arch2::$ARCH2"
+          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
+          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
+
+      - name: Check for duplicated files
+        id: check
+        run: |
+          COUNT=0
+          MATCH_COUNT=6
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=50)
+          FILES=$(echo $RESULT  | jq '.[].name' -r)
+
+          for item in $FILES
+          do
+            echo "Check artifacts - $item"
+
+            # Check ARCH or ARCH2
+            if [[ $item == *"${{ steps.setup.outputs.arch }}"* ]]; then
+              :
+            elif [[ $item == *"${{ steps.setup.outputs.arch2 }}"* ]]; then
+              :
+            else
+              continue;
+            fi
+
+            # Check Ubuntu version (bionic / xenial)
+            if [[ $item == *"${{ steps.setup.outputs.ubuntuver }}"* ]]; then
+              :
+            else
+              continue;
+            fi
+
+            declare -i COUNT; COUNT+=1
+            echo "> Found build artifacts: [${COUNT}/${MATCH_COUNT}] ${item}"
+          done
+
+          # Mark to flag file to trigger the build
+          if [[ $COUNT == $MATCH_COUNT ]]; then
+            echo "> There is no need to rebuild."
+            echo "::set-output name=exist::1"
+          else
+            echo "> Rebuild required"
+            echo "::set-output name=exist::0"
+          fi
+
+      - name: The build artifact already exists, so the build is skipped.
+        if: ${{ steps.check.outputs.exist == '1'}}
+        run: echo "Done"
+
+      - name: Start Ubuntu build
+        id: build
+        if: ${{ steps.check.outputs.exist == '0'}}
+        run: |
+          # Get date for commit to generate version
+          DATETIME=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/${{ steps.setup.outputs.sha }} | jq '.commit.committer.date' -r)
+          echo "commit.committer.date = ${DATETIME}"
+
+          STAMP=$(date -d ${DATETIME} +%Y%m%d)
+          VERSION="${STAMP}${{ steps.setup.outputs.sha }}"
+          echo "package version = ${VERSION}"
+
+          echo "Clone the sdk repository"
+          git clone https://github.com/${REPOSLUG} --recursive
+          cd ${REPO}
+          git checkout ${{ steps.setup.outputs.sha }}
+          git reset --hard
+          rm -rf .git
+
+          echo "Add commit-id(${{ steps.setup.outputs.sha }}) to package version"
+          sed -i "1 s/ubuntu[0-9]*~xenial/ubuntu${VERSION}~xenial/" packaging/xenial/changelog
+          sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${VERSION}~bionic/" packaging/bionic/changelog
+          head -1 packaging/xenial/changelog
+          head -1 packaging/bionic/changelog
+          cd -
+
+          # Fix permissions for docker
+          chmod 777 $PWD
+          chmod 777 $PWD/${REPO}
+
+          echo "Build debian package"
+          docker run -t --rm --privileged -v $PWD:$PWD -w $PWD/${REPO} \
+              -v /var/lib/schroot/chroots \
+              nugulinux/buildenv:${{ matrix.target }} sdkbuild.sh
+
+          ls -l
+
+          echo "Create /tmp/result"
+          mkdir /tmp/result
+
+          cp *.deb /tmp/result/
+
+          echo "Completed"
+          echo "::set-output name=files::1"
+
+      - name: Generate tgz
+        if: ${{ steps.build.outputs.files == '1'}}
+        run: |
+          FILENAME=files_${{ matrix.target }}_${{ steps.setup.outputs.sha }}
+
+          # Create temporary directory
+          mkdir dest
+
+          # Extract all deb packages
+          FILES=$(ls *.deb)
+          for item in $FILES
+          do
+            echo "Extract ${item}"
+            ar x ${item}
+            tar -C dest -xvf data.tar.xz
+          done
+
+          # Generate tgz
+          cd dest
+          tar cvfz ../${FILENAME}.tgz .
+          cd -
+
+          cp ${FILENAME}.tgz /tmp/result/
+
+      - name: Upload artifact to release
+        if: ${{ steps.build.outputs.files == '1'}}
+        uses: svenstaro/upload-release-action@2.2.0
+        with:
+          file: /tmp/result/*
+          file_glob: true
+          repo_token: ${{ secrets.GH_TOKEN }}
+          overwrite: true
+          tag: ${{ github.ref }}
+
+  pages:
+    runs-on: ubuntu-latest
+    needs: [check, build]
+    env:
+      BASEROOT: /tmp/www
+    steps:
+      - name: Setup
+        id: setup
+        run: |
+          sudo apt-get install doxygen graphviz
+
+          POOL_XENIAL=${BASEROOT}/ubuntu/dists/xenial/pool
+          POOL_BIONIC=${BASEROOT}/ubuntu/dists/bionic/pool
+
+          DIRS=(
+              ${POOL_XENIAL}
+              ${POOL_BIONIC}
+              ${BASEROOT}/ubuntu/dists/xenial/main/binary-amd64
+              ${BASEROOT}/ubuntu/dists/xenial/main/binary-arm64
+              ${BASEROOT}/ubuntu/dists/xenial/main/binary-armhf
+              ${BASEROOT}/ubuntu/dists/bionic/main/binary-amd64
+              ${BASEROOT}/ubuntu/dists/bionic/main/binary-arm64
+              ${BASEROOT}/ubuntu/dists/bionic/main/binary-armhf
+          )
+
+          for item in "${DIRS[@]}"
+          do
+              echo "- Create ${item}"
+              if [[ ! -d ${item} ]]; then
+                  mkdir -p ${item}
+              fi
+          done
+
+          # Generate index.html
+          DATE=$(date)
+          cat <<EOF > ${BASEROOT}/index.html
+          <html>
+          <body>
+          <h1>DEB Package repository for unstable release</h1>
+
+          <p>
+          last unstable commit: <a href="https://github.com/nugu-developers/nugu-linux/commit/${{ steps.setup.outputs.sha }}">${{ steps.setup.outputs.sha }}</a>
+          </p>
+
+          <p>
+          API Document(doxygen): <a href="https://nugulinux.github.io/sdk-unstable/doxygen/">https://nugulinux.github.io/sdk-unstable/doxygen/</a>
+          </p>
+
+          <hr/>
+
+          <h2>NUGU SDK for Linux PPA Setup (stable release)</h2>
+          <pre>
+              add-apt-repository ppa:nugulinux/sdk
+              apt-get update
+          </pre>
+
+          <hr/>
+
+          <h2>Unstable package repository setup</h2>
+
+          <h3>Bionic (18.04)</h3>
+          <pre>
+              echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main" > /etc/apt/sources.list.d/nugudev.list
+              apt-get update
+          </pre>
+
+          <h3>Xenial (16.04)</h3>
+          <pre>
+              echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ xenial main" > /etc/apt/sources.list.d/nugudev.list
+              apt-get update
+          </pre>
+
+          <hr/>
+
+          <p>Generated at ${DATE}</p>
+
+          </body>
+          </html>
+          EOF
+
+          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
+          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
+          echo "::set-output name=pool_xenial::${POOL_XENIAL}"
+          echo "::set-output name=pool_bionic::${POOL_BIONIC}"
+
+      - name: Generate doxygen
+        run: |
+          git clone https://github.com/${REPOSLUG}
+          cd ${REPO}
+          git checkout ${{ steps.setup.outputs.sha }}
+          git reset --hard
+          rm -rf .git
+
+          doxygen
+          mv doc/html ${BASEROOT}/doxygen
+          cd ..
+          rm -rf ${REPO}
+
+      - name: Generate unstable DEB repository
+        run: |
+          function generate {
+            DIST=$1
+            HOST=$2
+            PKGSREPO="dists/${DIST}/pool"
+            PKGS="dists/${DIST}/main/binary-${HOST}/"
+
+            echo "> DEB Repo: ${PKGSREPO}"
+            echo "> Packages path: ${PKGS}"
+
+            cd ${BASEROOT}/ubuntu
+            dpkg-scanpackages -m -a $HOST ${PKGSREPO} > ${PKGS}/Packages
+            cd -
+          }
+
+          echo "> Get file list"
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=50)
+          FILES=$(echo $RESULT  | jq '.[].browser_download_url' -r)
+          for item in $FILES
+          do
+            if [[ $item != *.deb ]]; then
+              echo "- ignore: ${item}"
+              continue
+            fi
+
+            echo "Download ${item}"
+
+            if [[ $item == *"xenial"* ]]; then
+              echo "- 16.04: ${item}"
+              wget -nv ${item} -P ${{ steps.setup.outputs.pool_xenial }}
+              if [[ $item == *"amd64"* ]]; then
+                generate "xenial" "amd64"
+              elif [[ $item == *"armhf"* ]]; then
+                generate "xenial" "armhf"
+              elif [[ $item == *"arm64"* ]]; then
+                generate "xenial" "arm64"
+              fi
+            elif [[ $item == *"bionic"* ]]; then
+              echo "- 18.04: ${item}"
+              wget -nv ${item} -P ${{ steps.setup.outputs.pool_bionic }}
+              if [[ $item == *"amd64"* ]]; then
+                generate "bionic" "amd64"
+              elif [[ $item == *"armhf"* ]]; then
+                generate "bionic" "armhf"
+              elif [[ $item == *"arm64"* ]]; then
+                generate "bionic" "arm64"
+              fi
+            else
+              echo "- unknown version: ${item}"
+            fi
+          done
+
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: /tmp/www
+          CLEAN: true
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: [check, build, pages]
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Generate docker image
+        run: |
+          echo "OS=$OSTYPE"
+
+          LAST_COMMIT=`docker run -t --rm nugulinux/sdk:unstable printenv | grep LAST_COMMIT`
+          echo $LAST_COMMIT
+
+          if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+              COMMIT=$(echo $LAST_COMMIT | sed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
+          elif [[ "$OSTYPE" == "darwin"* ]]; then
+              COMMIT=$(echo $LAST_COMMIT | gsed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
+          fi
+
+          echo "SHORTSHA='${{ needs.check.outputs.sha }}'"
+          echo "nugulinux/sdk:unstable commit='${COMMIT}'"
+
+          if [[ "${COMMIT}" == "${{ needs.check.outputs.sha }}" ]]; then
+            echo "Same version"
+            exit 0
+          else
+            echo "not match"
+            cd docker
+            docker build --build-arg LAST_COMMIT=${{ needs.check.outputs.sha }} . -t nugulinux/sdk:unstable
+            cd -
+          fi
+      - name: Docker login
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Publish
+        run: docker push nugulinux/sdk:unstable

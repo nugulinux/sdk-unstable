@@ -1,0 +1,169 @@
+name: Build Tizen
+on:
+  release:
+    types:
+      - created
+
+env:
+  REPO: nugu-linux
+  REPOSLUG: nugu-developers/nugu-linux
+
+#
+# Jobs
+#   check
+#   -> build (matrix: emulator, device)
+#      - Generate .tgz
+#      - Upload to Github release
+#
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      release_id: ${{ steps.check.outputs.id }}
+      sha: ${{ steps.check.outputs.sha }}
+    steps:
+      - name: Get SHA and ID from Release ${{ github.ref }}
+        id: check
+        run: |
+          # Remove "refs/tags/" from "refs/tags/xxxxxxx"
+          SHORTSHA=$(echo ${GITHUB_REF} | cut -c11-)
+          echo "SHA: $SHORTSHA"
+
+          # Get ID for Release-tag
+          ID=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${SHORTSHA} | jq '.id' -r)
+          echo "> Release ID = ${ID}"
+          if [[ ${ID} == "null" ]]; then
+            echo "Release ${ID} not exist."
+            exit
+          fi
+          echo "Release-ID: $ID"
+
+          echo "::set-output name=id::$ID"
+          echo "::set-output name=sha::$SHORTSHA"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: check
+    strategy:
+      fail-fast: true
+      matrix:
+        target: [emulator, device]
+    steps:
+      - name: Setup
+        id: setup
+        run: |
+          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
+          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
+
+      - name: Check for duplicated files
+        id: check
+        run: |
+          COUNT=0
+          MATCH_COUNT=1
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=50)
+          FILES=$(echo $RESULT  | jq '.[].name' -r)
+
+          for item in $FILES
+          do
+            echo "Check artifacts - $item"
+
+            if [[ $item == *"tizen"* ]]; then
+                :
+            else
+                continue;
+            fi
+
+            if [[ $item == *"${{ matrix.target }}"* ]]; then
+                :
+            else
+                continue;
+            fi
+
+            declare -i COUNT; COUNT+=1
+            echo "> Found build artifacts: [${COUNT}/${MATCH_COUNT}] ${item}"
+          done
+
+          # Mark to flag file to trigger the build
+          if [[ $COUNT == $MATCH_COUNT ]]; then
+            echo "> There is no need to rebuild."
+            echo "::set-output name=exist::1"
+          else
+            echo "> Rebuild required"
+            echo "::set-output name=exist::0"
+          fi
+
+      - name: The build artifact already exists, so the build is skipped.
+        if: ${{ steps.check.outputs.exist == '1'}}
+        run: echo "Done"
+
+      - name: Build
+        if: ${{ steps.check.outputs.exist == '0'}}
+        run: |
+          git clone https://github.com/${REPOSLUG} --recursive
+          cd ${REPO}
+          git checkout ${{ steps.setup.outputs.sha }}
+          git reset --hard
+          rm -rf .git
+
+          # Fix permissions for docker
+          chmod 777 $PWD -R
+
+          SDKPATH=$PWD/SDK
+          echo "> SDK Install PATH=$SDKPATH"
+
+          cat <<EOF > sdkbuild.sh
+          #!/bin/zsh
+          set -e
+
+          source ~/${{ matrix.target }}.env
+
+          echo $PWD
+
+          rm -rf SDK
+          mkdir SDK
+
+          rm -rf build
+          mkdir build
+
+          cd build
+          cmake .. \
+              -DCMAKE_INSTALL_PREFIX=/ \
+              -DCMAKE_TOOLCHAIN_FILE=~/Toolchain.cmake \
+              -DENABLE_LOG_ANSICOLOR=OFF \
+              -DENABLE_OPUS_PLUGIN=ON \
+              -DENABLE_GSTREAMER_PLUGIN=OFF \
+              -DENABLE_PORTAUDIO_PLUGIN=OFF \
+              -DENABLE_VENDOR_LIBRARY=ON \
+              -DENABLE_OPUS_LIBRARY=ON
+
+          make -j6
+
+          DESTDIR=$SDKPATH make install
+
+          cd ..
+          tar cvfz files_tizen_${{ matrix.target }}_${{ steps.setup.outputs.sha }}.tgz SDK
+          EOF
+
+          chmod 755 sdkbuild.sh
+
+          echo "> Build cross-compile"
+          docker run -t --rm -v $PWD:$PWD -w $PWD \
+              nugulinux/devenv:tizen ./sdkbuild.sh
+
+          mkdir /tmp/result
+          cp files_*.tgz /tmp/result/
+
+          cd ..
+          whoami
+          ls -l
+
+      - name: Upload
+        if: ${{ steps.check.outputs.exist == '0'}}
+        uses: svenstaro/upload-release-action@2.2.0
+        with:
+          file: /tmp/result/*
+          file_glob: true
+          repo_token: ${{ secrets.GH_TOKEN }}
+          overwrite: true
+          tag: ${{ github.ref }}

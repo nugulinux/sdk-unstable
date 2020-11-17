@@ -1,0 +1,34 @@
+name: Build CHANGES.txt
+on:
+  release:
+    types:
+      - created
+
+env:
+  REPO: nugu-linux
+  REPOSLUG: nugu-developers/nugu-linux
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate CHANGES.txt
+        run: |
+          # Remove "refs/tags/" from "refs/tags/xxxxxxx"
+          SHORTSHA=$(echo ${GITHUB_REF} | cut -c11-)
+
+          git clone https://github.com/${REPOSLUG}
+          cd ${REPO}
+          git checkout ${SHORTSHA}
+          git reset --hard
+          git log $(git describe --tags --abbrev=0)..HEAD --oneline > ../CHANGES.txt
+          cd ..
+          cat CHANGES.txt
+
+      - name: Upload
+        uses: svenstaro/upload-release-action@2.2.0
+        with:
+          file: CHANGES.txt
+          repo_token: ${{ secrets.GH_TOKEN }}
+          overwrite: true
+          tag: ${{ github.ref }}
