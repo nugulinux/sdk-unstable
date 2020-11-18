@@ -78,7 +78,7 @@ jobs:
         run: |
           git clone https://github.com/${REPOSLUG} --recursive
           cd ${REPO}
-          git checkout ${{ steps.setup.outputs.sha }}
+          git checkout ${{ steps.check.outputs.sha }}
           git reset --hard
           rm -rf .git
 
@@ -102,7 +102,7 @@ jobs:
           make -j6
           make install
           mv /mnt/UDISK ./SDK
-          tar cvfz files_allwinner_${{ steps.setup.outputs.sha }}.tgz SDK
+          tar cvfz files_allwinner_${{ steps.check.outputs.sha }}.tgz SDK
           EOF
 
           chmod 755 sdkbuild.sh
