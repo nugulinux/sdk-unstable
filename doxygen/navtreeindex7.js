@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"nugu__directive_8h.html":[3,0,18],
 "nugu__directive_8h_source.html":[3,0,18],
 "nugu__equeue_8h.html":[3,0,19],
 "nugu__equeue_8h_source.html":[3,0,19],

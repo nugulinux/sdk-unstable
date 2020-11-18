@@ -27,7 +27,7 @@ var searchData=
   ['prev',['prev',['../classNuguCapability_1_1IAudioPlayerHandler.html#ac4ebdbcffe07553cc44e71f78c7737ff',1,'NuguCapability::IAudioPlayerHandler']]],
   ['previous',['PREVIOUS',['../group__DisplayInterface.html#gga99d4ad071b8f547cadd4a1852c9ca3f6a315ba7a868d45a9cb131c8dca3166b51',1,'NuguCapability']]],
   ['priority',['priority',['../structnugu__plugin__desc.html#a79b1174d996dcf7df84aa33607361210',1,'nugu_plugin_desc::priority()'],['../group__FocusManagerInterface.html#gaf4dae3160301fc11c3fd6a6aa9540aff',1,'NuguClientKit::FocusConfiguration::priority()']]],
-  ['processdirective',['processDirective',['../classNuguClientKit_1_1Capability.html#a44e0dd54327626ef5902b55b92c3579b',1,'NuguClientKit::Capability::processDirective()'],['../classNuguClientKit_1_1ICapabilityInterface.html#a32b3c3172d411f9d4b87c172f2066078',1,'NuguClientKit::ICapabilityInterface::processDirective()']]],
+  ['processdirective',['processDirective',['../classNuguClientKit_1_1Capability.html#af1a294ba01c24abb0bc222467138964d',1,'NuguClientKit::Capability::processDirective()'],['../classNuguClientKit_1_1ICapabilityInterface.html#a32b3c3172d411f9d4b87c172f2066078',1,'NuguClientKit::ICapabilityInterface::processDirective()']]],
   ['profiling',['Profiling',['../group__Profiling.html',1,'']]],
   ['protocol',['protocol',['../structnugu__network__server__policy.html#a6cbf2c9a865fad38b2b55e1d5987f1df',1,'nugu_network_server_policy']]],
   ['ps_5fid',['ps_id',['../structNuguClientKit_1_1Session.html#a700b2fb4d066e47e9ff529b33323886c',1,'NuguClientKit::Session']]],

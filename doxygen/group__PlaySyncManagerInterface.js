@@ -1,7 +1,7 @@
 var group__PlaySyncManagerInterface =
 [
     [ "IPlaySyncManager", "classNuguClientKit_1_1IPlaySyncManager.html", [
-      [ "PlaySyncContainer", "classNuguClientKit_1_1IPlaySyncManager.html#aa1b14f20661ab114e81e89f616226eb8", null ],
+      [ "PlaySyncContainer", "classNuguClientKit_1_1IPlaySyncManager.html#a8ec85a0fe21167868a7403c7bc8ccaed", null ],
       [ "PlayStacks", "classNuguClientKit_1_1IPlaySyncManager.html#aa9566efe181d6f6e00f5d33053d783dc", null ],
       [ "~IPlaySyncManager", "classNuguClientKit_1_1IPlaySyncManager.html#a9b89a8ddc144c7b04814b82e6a34102f", null ],
       [ "registerCapabilityForSync", "classNuguClientKit_1_1IPlaySyncManager.html#a67226c6cb1b77d4ed5825906b5310671", null ],
@@ -17,6 +17,7 @@ var group__PlaySyncManagerInterface =
       [ "continueRelease", "classNuguClientKit_1_1IPlaySyncManager.html#a5eebf9023193a331f52709e246329465", null ],
       [ "stopHolding", "classNuguClientKit_1_1IPlaySyncManager.html#a8a9dfd81efab9b66881e31d57713d392", null ],
       [ "resetHolding", "classNuguClientKit_1_1IPlaySyncManager.html#aac5186353e255533370547434447791f", null ],
+      [ "clearHolding", "classNuguClientKit_1_1IPlaySyncManager.html#a1a0e795464aba59343d48f35ce7ad25c", null ],
       [ "isConditionToHandlePrevDialog", "classNuguClientKit_1_1IPlaySyncManager.html#a9b8b814ba34f90cb7a3c55b05abf8728", null ],
       [ "hasLayer", "classNuguClientKit_1_1IPlaySyncManager.html#a68ebb8daed979861665da7670a6cdd28", null ],
       [ "hasNextPlayStack", "classNuguClientKit_1_1IPlaySyncManager.html#a7a690e691ce704a5fa593ed1df23f9b6", null ],
@@ -25,7 +26,7 @@ var group__PlaySyncManagerInterface =
     [ "IPlaySyncManagerListener", "classNuguClientKit_1_1IPlaySyncManagerListener.html", [
       [ "~IPlaySyncManagerListener", "classNuguClientKit_1_1IPlaySyncManagerListener.html#afa13820115fa84e0b55f04b48a66ef43", null ],
       [ "onSyncState", "classNuguClientKit_1_1IPlaySyncManagerListener.html#a90652fef37148893c1cf37545acf19d1", null ],
-      [ "onDataChanged", "classNuguClientKit_1_1IPlaySyncManagerListener.html#af80ed395842fd2b50e9e6fa1b166775f", null ]
+      [ "onDataChanged", "classNuguClientKit_1_1IPlaySyncManagerListener.html#a695ff4e1f416b799e86863819d1e5403", null ]
     ] ],
     [ "PlaySyncState", "group__PlaySyncManagerInterface.html#ga5d9f5e0329e5706191b9a4682615d4d0", [
       [ "None", "group__PlaySyncManagerInterface.html#gga5d9f5e0329e5706191b9a4682615d4d0a6adf97f83acf6453d4a6a4b1070f3754", null ],

@@ -25,7 +25,7 @@ var classNuguClientKit_1_1Capability =
     [ "getInteractionMode", "classNuguClientKit_1_1Capability.html#a2abdf585895f3a0a6c5187de90324fd6", null ],
     [ "preprocessDirective", "classNuguClientKit_1_1Capability.html#a8f4ad2d7bfae818d7e5f91a2b4ec02ac", null ],
     [ "cancelDirective", "classNuguClientKit_1_1Capability.html#a37e752ad287c002f1fc9b023c9f8c319", null ],
-    [ "processDirective", "classNuguClientKit_1_1Capability.html#a44e0dd54327626ef5902b55b92c3579b", null ],
+    [ "processDirective", "classNuguClientKit_1_1Capability.html#af1a294ba01c24abb0bc222467138964d", null ],
     [ "destroyDirective", "classNuguClientKit_1_1Capability.html#aa03298b48d3d73bd0d7c6f1b512c4650", null ],
     [ "getNuguDirective", "classNuguClientKit_1_1Capability.html#a8354027497ae65feca713f52fee1381e", null ],
     [ "sendEvent", "classNuguClientKit_1_1Capability.html#aa1dc3ec2be4d9fa905992a19a544f98c", null ],
