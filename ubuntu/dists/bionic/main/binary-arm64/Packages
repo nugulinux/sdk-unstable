@@ -7,10 +7,10 @@ Installed-Size: 1568
 Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.28.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl1.1 (>= 1.1.1), libstdc++6 (>= 6), zlib1g (>= 1:1.1.4)
 Recommends: libnugu-plugins-default
 Filename: dists/bionic/pool/libnugu_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 393196
-MD5sum: a07b1fc99bb86f064aa00fc06ef7c53f
-SHA1: 0857442927125b06cbb92c4cee87e4056c4c2ef0
-SHA256: c2fe1c4d35734fcd4d702ea3a283db0b77db990e494d9704a84c39e4cf37bcec
+Size: 392740
+MD5sum: d552fd19b2e224ed7660c7f1b17622c5
+SHA1: 5337844602bd96a9563cd808adf0a8ecf52e53e4
+SHA256: 7757dbfb6f7d507eac8d69d2e7fbe6a4a0510300b960d47aa75404d982e3bebf
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform
@@ -25,13 +25,13 @@ Source: nugu
 Version: 0.22.0ubuntu20201117b7967ac~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
-Installed-Size: 5399
+Installed-Size: 5400
 Depends: libnugu (= 0.22.0ubuntu20201117b7967ac~bionic)
 Filename: dists/bionic/pool/libnugu-dbg_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 4640768
-MD5sum: b87d767247e08c2e37494198eec7d72e
-SHA1: fdddeb8ad0e408db4aa3b60b5b636126293e7a5c
-SHA256: 00b3bdcaed63c43cafe26a1fcfe1550b7d65113ce1bb6e74b7820b646ce00ba1
+Size: 4641916
+MD5sum: 466c508da2f20fd97d4257d768b139f6
+SHA1: 293c5c135145417f2135977561bcf9c17acfa2b1
+SHA256: 78f7c077c7a22cebfcdabcfdc696cea36a9657ca7580e7e9f038fcf917c52541
 Section: debug
 Priority: optional
 Description: NUGU is an AI service platform (debugging symbols)
@@ -40,7 +40,7 @@ Description: NUGU is an AI service platform (debugging symbols)
  NUGU is an AI platform that supports ASR and TTS.
  .
  The libnugu-dbg package provide debugging symbols.
-Build-Ids: 06938c6050be3a7eef690a3472dd403b8272bcff 286519b86537f277501de9157bf8bc8c2e627456 49cfaf55934d29dc95c7194081f2be61d2b41e1d 49d52fbaf4c3cc82e6c689454d4e0313eaf0b12e 4cca4fe119c507dab606153d5f38d46626b2682e 69e9864221be0411522e7be4141a25e404674fc3 8808220999b1905aa0154449e02c68680953cc08 923022942a972231ef4a590b420870113e08267f a46551e12d77057327371f078c5cb61e4e02516e aedb15829a710bba20fb6ce1f17242828c22ea5d c7d32e1e54e035cf4a01bccfb836475d225446ad c9a88fa7d0668c0f9d6c66f507572264c6618ae4 d1bcee4dcec38ddfb27f93b93ddc268a76478307 d96373b1ca3a59e199f3642f58249656cd540ba3 d9a702fbbffd23075135c35917863c5f0bbaa45e db6e11bef58e30afda5180adfdd41b8b5856703a f163a046f05b8e91ddc72557611e4e3af69ff97c f761ce68bf17f5239ef90ef17856d75f36ed2f75
+Build-Ids: 06938c6050be3a7eef690a3472dd403b8272bcff 286519b86537f277501de9157bf8bc8c2e627456 49cfaf55934d29dc95c7194081f2be61d2b41e1d 49d52fbaf4c3cc82e6c689454d4e0313eaf0b12e 4cca4fe119c507dab606153d5f38d46626b2682e 69e9864221be0411522e7be4141a25e404674fc3 8808220999b1905aa0154449e02c68680953cc08 923022942a972231ef4a590b420870113e08267f a46551e12d77057327371f078c5cb61e4e02516e aedb15829a710bba20fb6ce1f17242828c22ea5d b4dc72f47bb57ac5152f6f2f864eda8c0b958040 c7d32e1e54e035cf4a01bccfb836475d225446ad c9a88fa7d0668c0f9d6c66f507572264c6618ae4 d1bcee4dcec38ddfb27f93b93ddc268a76478307 d96373b1ca3a59e199f3642f58249656cd540ba3 db6e11bef58e30afda5180adfdd41b8b5856703a f163a046f05b8e91ddc72557611e4e3af69ff97c f761ce68bf17f5239ef90ef17856d75f36ed2f75
 
 Package: libnugu-dev
 Source: nugu
