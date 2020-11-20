@@ -1,16 +1,16 @@
 Package: libnugu
 Source: nugu
-Version: 0.22.0ubuntu20201117b7967ac~bionic
+Version: 0.22.0ubuntu20201119fd510ec~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
-Installed-Size: 1568
+Installed-Size: 1580
 Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.28.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl1.1 (>= 1.1.1), libstdc++6 (>= 6), zlib1g (>= 1:1.1.4)
 Recommends: libnugu-plugins-default
-Filename: dists/bionic/pool/libnugu_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 392740
-MD5sum: d552fd19b2e224ed7660c7f1b17622c5
-SHA1: 5337844602bd96a9563cd808adf0a8ecf52e53e4
-SHA256: 7757dbfb6f7d507eac8d69d2e7fbe6a4a0510300b960d47aa75404d982e3bebf
+Filename: dists/bionic/pool/libnugu_0.22.0ubuntu20201119fd510ec.bionic_arm64.deb
+Size: 393868
+MD5sum: 242adc9ff507f300d8b67519248547fc
+SHA1: e55f93b9113355d1cdf0694be0074930f684b752
+SHA256: 8483f812eaba20acb687ec33114feaab878a16ab0ca9ad87d46e5d78f231769a
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform
@@ -22,16 +22,16 @@ Description: NUGU is an AI service platform
 
 Package: libnugu-dbg
 Source: nugu
-Version: 0.22.0ubuntu20201117b7967ac~bionic
+Version: 0.22.0ubuntu20201119fd510ec~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
-Installed-Size: 5400
-Depends: libnugu (= 0.22.0ubuntu20201117b7967ac~bionic)
-Filename: dists/bionic/pool/libnugu-dbg_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 4641916
-MD5sum: 466c508da2f20fd97d4257d768b139f6
-SHA1: 293c5c135145417f2135977561bcf9c17acfa2b1
-SHA256: 78f7c077c7a22cebfcdabcfdc696cea36a9657ca7580e7e9f038fcf917c52541
+Installed-Size: 5403
+Depends: libnugu (= 0.22.0ubuntu20201119fd510ec~bionic)
+Filename: dists/bionic/pool/libnugu-dbg_0.22.0ubuntu20201119fd510ec.bionic_arm64.deb
+Size: 4644896
+MD5sum: 2e35bc42fe58274c08873aaefe1ee1a6
+SHA1: 6e16b705d4284a1e52e6bb0cc81aab6c16796bdf
+SHA256: 98fd5fc10e3eed13c4cef71390405f3529c332c40dc09bf637719325f7c1ce87
 Section: debug
 Priority: optional
 Description: NUGU is an AI service platform (debugging symbols)
@@ -40,20 +40,20 @@ Description: NUGU is an AI service platform (debugging symbols)
  NUGU is an AI platform that supports ASR and TTS.
  .
  The libnugu-dbg package provide debugging symbols.
-Build-Ids: 06938c6050be3a7eef690a3472dd403b8272bcff 286519b86537f277501de9157bf8bc8c2e627456 49cfaf55934d29dc95c7194081f2be61d2b41e1d 49d52fbaf4c3cc82e6c689454d4e0313eaf0b12e 4cca4fe119c507dab606153d5f38d46626b2682e 69e9864221be0411522e7be4141a25e404674fc3 8808220999b1905aa0154449e02c68680953cc08 923022942a972231ef4a590b420870113e08267f a46551e12d77057327371f078c5cb61e4e02516e aedb15829a710bba20fb6ce1f17242828c22ea5d b4dc72f47bb57ac5152f6f2f864eda8c0b958040 c7d32e1e54e035cf4a01bccfb836475d225446ad c9a88fa7d0668c0f9d6c66f507572264c6618ae4 d1bcee4dcec38ddfb27f93b93ddc268a76478307 d96373b1ca3a59e199f3642f58249656cd540ba3 db6e11bef58e30afda5180adfdd41b8b5856703a f163a046f05b8e91ddc72557611e4e3af69ff97c f761ce68bf17f5239ef90ef17856d75f36ed2f75
+Build-Ids: 286519b86537f277501de9157bf8bc8c2e627456 3c3dc11d5888ef9dd6b32134569e18fa39079793 43d155622afde7a01e0474f6c99d0dc85677490b 49cfaf55934d29dc95c7194081f2be61d2b41e1d 49d52fbaf4c3cc82e6c689454d4e0313eaf0b12e 4cca4fe119c507dab606153d5f38d46626b2682e 69e9864221be0411522e7be4141a25e404674fc3 6f9cbfe8886368f85254c667cafafedb67c4b07f 85fa8e7a20d37763a1679ecb90a0ad4dcb278c82 8808220999b1905aa0154449e02c68680953cc08 a46551e12d77057327371f078c5cb61e4e02516e aedb15829a710bba20fb6ce1f17242828c22ea5d c7d32e1e54e035cf4a01bccfb836475d225446ad d1bcee4dcec38ddfb27f93b93ddc268a76478307 d96373b1ca3a59e199f3642f58249656cd540ba3 ead02b4fd4f19b713da44232d04597ff30c6e945 f163a046f05b8e91ddc72557611e4e3af69ff97c f761ce68bf17f5239ef90ef17856d75f36ed2f75
 
 Package: libnugu-dev
 Source: nugu
-Version: 0.22.0ubuntu20201117b7967ac~bionic
+Version: 0.22.0ubuntu20201119fd510ec~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 334
 Depends: libnugu
-Filename: dists/bionic/pool/libnugu-dev_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 47916
-MD5sum: d43be0f4d115baa60a660619961ae0a1
-SHA1: bcc0852ea967e8c6c2bb109fd0a51a18db7aaf44
-SHA256: 80bc26741e3c0f119edb5fb2e4ae1d9ea938f162be0ddeca94fc4fd913df4f25
+Filename: dists/bionic/pool/libnugu-dev_0.22.0ubuntu20201119fd510ec.bionic_arm64.deb
+Size: 47936
+MD5sum: 774d34375e96b45c09b6f78d66b4998c
+SHA1: e48f1d53230024e36429853fd7b8ae2126e95fca
+SHA256: c4ac207bf0ce9af302ead7dac742392be57262077f44e809e30b8eba3ed5402a
 Section: libdevel
 Priority: optional
 Description: NUGU is an AI service platform (development files)
@@ -65,16 +65,16 @@ Description: NUGU is an AI service platform (development files)
 
 Package: libnugu-examples
 Source: nugu
-Version: 0.22.0ubuntu20201117b7967ac~bionic
+Version: 0.22.0ubuntu20201119fd510ec~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 717
 Depends: libnugu, libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.16.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libstdc++6 (>= 5.2), python, python-flask-restful, python-requests-oauthlib, curl, jq
-Filename: dists/bionic/pool/libnugu-examples_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
-Size: 216420
-MD5sum: 8cf2e2c44a30eb7de0615e9d7bdc5f74
-SHA1: bed37e6a582129bedb891bb8af6da868c23246ec
-SHA256: f0311abbedd96fc12c62fecbd167c8aee09535f27b47cdeb4e6dd1edcd509748
+Filename: dists/bionic/pool/libnugu-examples_0.22.0ubuntu20201119fd510ec.bionic_arm64.deb
+Size: 216312
+MD5sum: a412dc35c404688e0e216893141bcb39
+SHA1: 826ed4c390f89aa7c8f4a7f954180f87941d6d26
+SHA256: b1bf2aba4dcb86e3419695c938a89c782083ad2bcff25b929afe1638ff834b30
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform (examples)
@@ -86,16 +86,16 @@ Description: NUGU is an AI service platform (examples)
 
 Package: libnugu-plugins-default
 Source: nugu
-Version: 0.22.0ubuntu20201117b7967ac~bionic
+Version: 0.22.0ubuntu20201119fd510ec~bionic
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 161
 Depends: libasound2 (>= 1.0.16), libc6 (>= 2.17), libglib2.0-0 (>= 2.12.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu, libopus0 (>= 1.1), libportaudio2 (>= 19+svn20101113), gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
-Filename: dists/bionic/pool/libnugu-plugins-default_0.22.0ubuntu20201117b7967ac.bionic_arm64.deb
+Filename: dists/bionic/pool/libnugu-plugins-default_0.22.0ubuntu20201119fd510ec.bionic_arm64.deb
 Size: 28032
-MD5sum: 71ac8d156ae2532a5f5e721daae8bd14
-SHA1: 39addedffbeee016805b450196c4cae9674ff3dc
-SHA256: ef7c4580cde5949843a050bb8cd34a46541e1da36bf0016efd9ab888ddd9e440
+MD5sum: 2f1ecf577436925d9d26ccb77e6e1d88
+SHA1: b797a621720af64cd5a87cd11e681a0042a2f500
+SHA256: 97052473b2a60de45d20e156769986ca8da483578e5d77b90eba79cc58147eb2
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform (plugins)
