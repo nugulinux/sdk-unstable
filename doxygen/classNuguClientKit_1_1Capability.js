@@ -40,7 +40,7 @@ var classNuguClientKit_1_1Capability =
     [ "getContextInfo", "classNuguClientKit_1_1Capability.html#a48ef514fde84116ad1d653626b432f5a", null ],
     [ "getCapabilityHelper", "classNuguClientKit_1_1Capability.html#a3b57ca76e07f7ffe56bcf1c738be059b", null ],
     [ "initialized", "classNuguClientKit_1_1Capability.html#ac208e94ea13143d4503824230d04c296", null ],
-    [ "has_attachment", "classNuguClientKit_1_1Capability.html#a2d59bed897187304183060ec48e640ab", null ],
+    [ "destroy_directive_by_agent", "classNuguClientKit_1_1Capability.html#a2b7910d3feda791de178d7dcc82ee30d", null ],
     [ "suspended", "classNuguClientKit_1_1Capability.html#ace9c6353b965699b775b78e9aae40718", null ],
     [ "core_container", "classNuguClientKit_1_1Capability.html#adc924045cd58b8367e18581b391eba9f", null ],
     [ "capa_helper", "classNuguClientKit_1_1Capability.html#aee3253116a858a09e6e0f7462240ad3d", null ],
