@@ -44,5 +44,6 @@ var files =
     [ "system_interface.hh", "system__interface_8hh.html", "system__interface_8hh" ],
     [ "text_interface.hh", "text__interface_8hh.html", "text__interface_8hh" ],
     [ "tts_interface.hh", "tts__interface_8hh.html", "tts__interface_8hh" ],
+    [ "utility_interface.hh", "utility__interface_8hh.html", null ],
     [ "wakeup_interface.hh", "wakeup__interface_8hh.html", "wakeup__interface_8hh" ]
 ];
