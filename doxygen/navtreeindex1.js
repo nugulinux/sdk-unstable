@@ -226,6 +226,7 @@ var NAVTREEINDEX1 =
 "directive__sequencer__interface_8hh.html":[3,0,6],
 "directive__sequencer__interface_8hh.html#ga27f22301768541185c29c12af55aa862":[3,0,6,0],
 "directive__sequencer__interface_8hh.html#gga27f22301768541185c29c12af55aa862a8daf3496602a64f00b16ce266e7084dc":[3,0,6,0,1],
+"directive__sequencer__interface_8hh.html#gga27f22301768541185c29c12af55aa862a8e1bde3c3d303163521522cf1d62f21f":[3,0,6,0,3],
 "directive__sequencer__interface_8hh.html#gga27f22301768541185c29c12af55aa862ab50339a10e1de285ac99d4c3990b8693":[3,0,6,0,2],
 "directive__sequencer__interface_8hh.html#gga27f22301768541185c29c12af55aa862ae423b8bde9bfbfd7e9409b23b23aed91":[3,0,6,0,0],
 "directive__sequencer__interface_8hh_source.html":[3,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "functions.html":[2,3,0,0],
 "functions_c.html":[2,3,0,1],
 "functions_d.html":[2,3,0,2],
-"functions_e.html":[2,3,0,3],
-"functions_enum.html":[2,3,4]
+"functions_e.html":[2,3,0,3]
 };

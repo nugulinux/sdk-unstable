@@ -82,6 +82,7 @@ $(document).ready(function(){initNavTree('nugu__directive_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">nugu_directive.h File Reference</div>  </div>
@@ -130,6 +131,20 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memdesc:gad7b2a8a9e6127f5240532e38d55813ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback prototype for receiving an attachment. <br /></td></tr>
 <tr class="separator:gad7b2a8a9e6127f5240532e38d55813ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gae3bc153e4b821722bfcc20aee94727fd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gae3bc153e4b821722bfcc20aee94727fd">nugu_directive_medium</a> { <br />
+&#160;&#160;<a class="el" href="group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdaef9d453b9bf85d3e2ecba7cf468409c7">NUGU_DIRECTIVE_MEDIUM_AUDIO</a> = 0, 
+<a class="el" href="group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdaa275cd912e1e2a2b98c02dd9adb59806">NUGU_DIRECTIVE_MEDIUM_VISUAL</a> = 1, 
+<a class="el" href="group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fda2eaf7c456a90163040568638bb6b39a8">NUGU_DIRECTIVE_MEDIUM_NONE</a> = 2, 
+<a class="el" href="group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fda28ebbe65bc0951506ac046dc3359f995">NUGU_DIRECTIVE_MEDIUM_ANY</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdab74f2629ca667bbee05214a1864e5ded">NUGU_DIRECTIVE_MEDIUM_MAX</a>
+<br />
+ }<tr class="memdesc:gae3bc153e4b821722bfcc20aee94727fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">event types  <a href="group__NuguDirective.html#gae3bc153e4b821722bfcc20aee94727fd">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gae3bc153e4b821722bfcc20aee94727fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga7e418328bf1e91d48fcb5e5a06933da9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#ga7e418328bf1e91d48fcb5e5a06933da9">nugu_directive_add_data</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir, size_t length, const unsigned char *data)</td></tr>
@@ -138,6 +153,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2b8ea1315f4e3ec572a8876c4ebf06ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#ga2b8ea1315f4e3ec572a8876c4ebf06ab">nugu_directive_close_data</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
 <tr class="memdesc:ga2b8ea1315f4e3ec572a8876c4ebf06ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the attachment data status to "Received all data".  <a href="group__NuguDirective.html#ga2b8ea1315f4e3ec572a8876c4ebf06ab">More...</a><br /></td></tr>
 <tr class="separator:ga2b8ea1315f4e3ec572a8876c4ebf06ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb35d246fb45c4a79c0e8baf63d1f165"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="group__NuguDirective.html#gae3bc153e4b821722bfcc20aee94727fd">nugu_directive_medium</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gabb35d246fb45c4a79c0e8baf63d1f165">nugu_directive_get_blocking_medium</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
+<tr class="memdesc:gabb35d246fb45c4a79c0e8baf63d1f165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the medium of BlockingPolicy for the directive.  <a href="group__NuguDirective.html#gabb35d246fb45c4a79c0e8baf63d1f165">More...</a><br /></td></tr>
+<tr class="separator:gabb35d246fb45c4a79c0e8baf63d1f165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bd7c9ed8771d61c10346f3644f29049"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#ga0bd7c9ed8771d61c10346f3644f29049">nugu_directive_get_blocking_medium_string</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
+<tr class="memdesc:ga0bd7c9ed8771d61c10346f3644f29049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the medium string of BlockingPolicy for the directive.  <a href="group__NuguDirective.html#ga0bd7c9ed8771d61c10346f3644f29049">More...</a><br /></td></tr>
+<tr class="separator:ga0bd7c9ed8771d61c10346f3644f29049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc8529bf95587a8cf019bf072c6462fe"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gafc8529bf95587a8cf019bf072c6462fe">nugu_directive_get_data</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir, size_t *length)</td></tr>
 <tr class="memdesc:gafc8529bf95587a8cf019bf072c6462fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the attachment data received so far. When this function is called, the internal receive buffer is cleared.  <a href="group__NuguDirective.html#gafc8529bf95587a8cf019bf072c6462fe">More...</a><br /></td></tr>
 <tr class="separator:gafc8529bf95587a8cf019bf072c6462fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaee9f335c3006f600356cf403c8c8931c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gaee9f335c3006f600356cf403c8c8931c">nugu_directive_is_active</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
 <tr class="memdesc:gaee9f335c3006f600356cf403c8c8931c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the active status of directive. "active" means the directive is added to the directive sequencer.  <a href="group__NuguDirective.html#gaee9f335c3006f600356cf403c8c8931c">More...</a><br /></td></tr>
 <tr class="separator:gaee9f335c3006f600356cf403c8c8931c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe62fb21cf2f8d66b212dbd11792e9eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gafe62fb21cf2f8d66b212dbd11792e9eb">nugu_directive_is_blocking</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
+<tr class="memdesc:gafe62fb21cf2f8d66b212dbd11792e9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the blocking status of BlockingPolicy for the directive.  <a href="group__NuguDirective.html#gafe62fb21cf2f8d66b212dbd11792e9eb">More...</a><br /></td></tr>
+<tr class="separator:gafe62fb21cf2f8d66b212dbd11792e9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2cf2d7ec9d5ed9b7c7eb36ef48ccc2db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#ga2cf2d7ec9d5ed9b7c7eb36ef48ccc2db">nugu_directive_is_data_end</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)</td></tr>
 <tr class="memdesc:ga2cf2d7ec9d5ed9b7c7eb36ef48ccc2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the attachment data status.  <a href="group__NuguDirective.html#ga2cf2d7ec9d5ed9b7c7eb36ef48ccc2db">More...</a><br /></td></tr>
 <tr class="separator:ga2cf2d7ec9d5ed9b7c7eb36ef48ccc2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +213,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga702da3c3ced0c3877befccd329664c00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#ga702da3c3ced0c3877befccd329664c00">nugu_directive_set_active</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir, int flag)</td></tr>
 <tr class="memdesc:ga702da3c3ced0c3877befccd329664c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active status of directive.  <a href="group__NuguDirective.html#ga702da3c3ced0c3877befccd329664c00">More...</a><br /></td></tr>
 <tr class="separator:ga702da3c3ced0c3877befccd329664c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad30fdaa34dcc565330f2b27984371db1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gad30fdaa34dcc565330f2b27984371db1">nugu_directive_set_blocking_policy</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir, enum <a class="el" href="group__NuguDirective.html#gae3bc153e4b821722bfcc20aee94727fd">nugu_directive_medium</a> medium, int is_block)</td></tr>
+<tr class="memdesc:gad30fdaa34dcc565330f2b27984371db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the medium of BlockingPolicy for the directive.  <a href="group__NuguDirective.html#gad30fdaa34dcc565330f2b27984371db1">More...</a><br /></td></tr>
+<tr class="separator:gad30fdaa34dcc565330f2b27984371db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd2cba337252d647492bdb3b7e758ed5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__NuguDirective.html#gabd2cba337252d647492bdb3b7e758ed5">nugu_directive_set_data_callback</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir, <a class="el" href="group__NuguDirective.html#gad7b2a8a9e6127f5240532e38d55813ee">NuguDirectiveDataCallback</a> callback, void *userdata)</td></tr>
 <tr class="memdesc:gabd2cba337252d647492bdb3b7e758ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attachment received event callback.  <a href="group__NuguDirective.html#gabd2cba337252d647492bdb3b7e758ed5">More...</a><br /></td></tr>
 <tr class="separator:gabd2cba337252d647492bdb3b7e758ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,7 +232,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ab1c81409f0df724f17c9ef30afee877.html">base</a></li><li class="navelem"><a class="el" href="nugu__directive_8h.html">nugu_directive.h</a></li>
-    <li class="footer">Generated on Mon Nov 23 2020 09:43:41 for NUGU SDK Linux by
+    <li class="footer">Generated on Sat Nov 28 2020 00:56:38 for NUGU SDK Linux by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
