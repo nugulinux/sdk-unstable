@@ -6,6 +6,7 @@ var searchData=
   ['clear',['clear',['../classNuguClientKit_1_1IInteractionControlManager.html#a4df4438d06df547c4244533f8162426f',1,'NuguClientKit::IInteractionControlManager::clear()'],['../classNuguClientKit_1_1ISessionManager.html#a626713cfb36793f7d7b4499c64e55946',1,'NuguClientKit::ISessionManager::clear()']]],
   ['cleardisplay',['clearDisplay',['../classNuguCapability_1_1IDisplayListener.html#acb4335f753d470a7ca73dbc2a0a12152',1,'NuguCapability::IDisplayListener']]],
   ['clearholding',['clearHolding',['../classNuguClientKit_1_1IPlaySyncManager.html#a1a0e795464aba59343d48f35ce7ad25c',1,'NuguClientKit::IPlaySyncManager']]],
+  ['commandissued',['CommandIssued',['../classNuguCapability_1_1IExtensionHandler.html#a774beca5bf26649447dfee46ad7df92e',1,'NuguCapability::IExtensionHandler']]],
   ['complete',['complete',['../classNuguClientKit_1_1IDirectiveSequencer.html#a90ea647f44a1c899d3afd170eed5dbef',1,'NuguClientKit::IDirectiveSequencer']]],
   ['connect',['connect',['../classNuguClientKit_1_1INetworkManager.html#acccae4f8cac190e9702fe8e13a73bca1',1,'NuguClientKit::INetworkManager']]],
   ['construct',['construct',['../classNuguClientKit_1_1NuguClient_1_1CapabilityBuilder.html#a5fa03281804df2c704003347666b84bc',1,'NuguClientKit::NuguClient::CapabilityBuilder']]],

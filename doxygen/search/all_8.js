@@ -13,6 +13,8 @@ var searchData=
   ['idisplayhandler',['IDisplayHandler',['../classNuguCapability_1_1IDisplayHandler.html',1,'NuguCapability']]],
   ['idisplaylistener',['IDisplayListener',['../classNuguCapability_1_1IDisplayListener.html',1,'NuguCapability']]],
   ['idle',['IDLE',['../group__ASRInterface.html#ggafe4f48f063bafec608e5060090a9543baa5daf7f2ebbba4975d61dab1c40188c7',1,'NuguCapability::IDLE()'],['../group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94aa5daf7f2ebbba4975d61dab1c40188c7',1,'NuguCapability::IDLE()'],['../group__TextInterface.html#gga69b7f95a5985645bb3a5d3be597ad35aaa5daf7f2ebbba4975d61dab1c40188c7',1,'NuguCapability::IDLE()'],['../group__MediaPlayerInterface.html#gga4394cbf300e5382612ec50d08e05317eaa5daf7f2ebbba4975d61dab1c40188c7',1,'NuguClientKit::IDLE()']]],
+  ['iextensionhandler',['IExtensionHandler',['../classNuguCapability_1_1IExtensionHandler.html',1,'NuguCapability']]],
+  ['iextensionlistener',['IExtensionListener',['../classNuguCapability_1_1IExtensionListener.html',1,'NuguCapability']]],
   ['ifocusmanager',['IFocusManager',['../classNuguClientKit_1_1IFocusManager.html',1,'NuguClientKit']]],
   ['ifocusmanagerobserver',['IFocusManagerObserver',['../classNuguClientKit_1_1IFocusManagerObserver.html',1,'NuguClientKit']]],
   ['ifocusresourcelistener',['IFocusResourceListener',['../classNuguClientKit_1_1IFocusResourceListener.html',1,'NuguClientKit']]],

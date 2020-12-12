@@ -10,6 +10,8 @@ var annotated_dup =
       [ "IAudioPlayerListener", "classNuguCapability_1_1IAudioPlayerListener.html", "classNuguCapability_1_1IAudioPlayerListener" ],
       [ "IDisplayHandler", "classNuguCapability_1_1IDisplayHandler.html", "classNuguCapability_1_1IDisplayHandler" ],
       [ "IDisplayListener", "classNuguCapability_1_1IDisplayListener.html", "classNuguCapability_1_1IDisplayListener" ],
+      [ "IExtensionHandler", "classNuguCapability_1_1IExtensionHandler.html", "classNuguCapability_1_1IExtensionHandler" ],
+      [ "IExtensionListener", "classNuguCapability_1_1IExtensionListener.html", "classNuguCapability_1_1IExtensionListener" ],
       [ "IMicHandler", "classNuguCapability_1_1IMicHandler.html", "classNuguCapability_1_1IMicHandler" ],
       [ "IMicListener", "classNuguCapability_1_1IMicListener.html", "classNuguCapability_1_1IMicListener" ],
       [ "ISessionHandler", "classNuguCapability_1_1ISessionHandler.html", "classNuguCapability_1_1ISessionHandler" ],

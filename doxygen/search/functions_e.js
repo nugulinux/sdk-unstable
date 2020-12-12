@@ -12,6 +12,7 @@ var searchData=
   ['setcallback',['setCallback',['../classNuguClientKit_1_1INuguTimer.html#aa38e93688f9795c74f0532e86c6c5b10',1,'NuguClientKit::INuguTimer']]],
   ['setcapabilitylistener',['setCapabilityListener',['../classNuguClientKit_1_1Capability.html#acae3e0c4ac110181e9052d5a7cc2cc7d',1,'NuguClientKit::Capability::setCapabilityListener()'],['../classNuguClientKit_1_1ICapabilityInterface.html#a924d11bcb69848094ba34699fec5ebf5',1,'NuguClientKit::ICapabilityInterface::setCapabilityListener()']]],
   ['setconfigurations',['setConfigurations',['../group__FocusManagerInterface.html#gaecffd6cb69d70ebd465a59aedf35223e',1,'NuguClientKit::IFocusManager']]],
+  ['setcontextinformation',['setContextInformation',['../classNuguCapability_1_1IExtensionHandler.html#abbef154a1f6ae870717a011849ccee7b',1,'NuguCapability::IExtensionHandler']]],
   ['setdialogrequestid',['setDialogRequestId',['../classNuguClientKit_1_1CapabilityEvent.html#af27155047a57dd5720218b515849d9e6',1,'NuguClientKit::CapabilityEvent']]],
   ['setduration',['setDuration',['../classNuguClientKit_1_1IMediaPlayer.html#a0a3600cc12f2a049cd142ccdd03a794e',1,'NuguClientKit::IMediaPlayer']]],
   ['setepdattribute',['setEpdAttribute',['../classNuguCapability_1_1IASRHandler.html#afc93c6551640bb44cbd0fc5565f01657',1,'NuguCapability::IASRHandler::setEpdAttribute()'],['../classNuguClientKit_1_1ISpeechRecognizer.html#a3a321088712cb74f775063b408ea5bb7',1,'NuguClientKit::ISpeechRecognizer::setEpdAttribute()']]],

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['actionfailed',['ActionFailed',['../classNuguCapability_1_1IExtensionHandler.html#ac5ba95d5d87ef2bc875dead0e36bd58c',1,'NuguCapability::IExtensionHandler']]],
+  ['actionsucceeded',['ActionSucceeded',['../classNuguCapability_1_1IExtensionHandler.html#a2f85dd69e3995fdbc4e4b588661c03af',1,'NuguCapability::IExtensionHandler']]],
   ['activate',['activate',['../classNuguClientKit_1_1ISessionManager.html#a031783e6131c9ed38cab7ba87e159616',1,'NuguClientKit::ISessionManager']]],
   ['activated',['activated',['../classNuguClientKit_1_1ISessionManagerListener.html#a1dbd0f76c9f8fec2518838defc9db303',1,'NuguClientKit::ISessionManagerListener']]],
   ['add',['add',['../classNuguClientKit_1_1IDirectiveSequencer.html#aeb41bc841fce2f6e7d0c581408ae3afc',1,'NuguClientKit::IDirectiveSequencer::add()'],['../classNuguClientKit_1_1NuguClient_1_1CapabilityBuilder.html#a234a8b1a0eedb5d374aad7c92d98efa3',1,'NuguClientKit::NuguClient::CapabilityBuilder::add()']]],

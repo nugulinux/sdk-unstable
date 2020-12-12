@@ -12,6 +12,8 @@ var searchData=
   ['idirectivesequencerlistener',['IDirectiveSequencerListener',['../classNuguClientKit_1_1IDirectiveSequencerListener.html',1,'NuguClientKit']]],
   ['idisplayhandler',['IDisplayHandler',['../classNuguCapability_1_1IDisplayHandler.html',1,'NuguCapability']]],
   ['idisplaylistener',['IDisplayListener',['../classNuguCapability_1_1IDisplayListener.html',1,'NuguCapability']]],
+  ['iextensionhandler',['IExtensionHandler',['../classNuguCapability_1_1IExtensionHandler.html',1,'NuguCapability']]],
+  ['iextensionlistener',['IExtensionListener',['../classNuguCapability_1_1IExtensionListener.html',1,'NuguCapability']]],
   ['ifocusmanager',['IFocusManager',['../classNuguClientKit_1_1IFocusManager.html',1,'NuguClientKit']]],
   ['ifocusmanagerobserver',['IFocusManagerObserver',['../classNuguClientKit_1_1IFocusManagerObserver.html',1,'NuguClientKit']]],
   ['ifocusresourcelistener',['IFocusResourceListener',['../classNuguClientKit_1_1IFocusResourceListener.html',1,'NuguClientKit']]],
