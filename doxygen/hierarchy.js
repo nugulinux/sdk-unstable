@@ -5,12 +5,14 @@ var hierarchy =
     [ "NuguClientKit::NuguClient::CapabilityBuilder", "classNuguClientKit_1_1NuguClient_1_1CapabilityBuilder.html", null ],
     [ "NuguClientKit::CapabilityEvent", "classNuguClientKit_1_1CapabilityEvent.html", null ],
     [ "NuguCapability::CapabilityFactory", "classNuguCapability_1_1CapabilityFactory.html", null ],
+    [ "NuguCapability::ChipContent", "structNuguCapability_1_1ChipContent.html", null ],
     [ "NuguClientKit::EpdAttribute", "structNuguClientKit_1_1EpdAttribute.html", null ],
     [ "NuguClientKit::FocusConfiguration", "structNuguClientKit_1_1FocusConfiguration.html", null ],
     [ "NuguClientKit::ICapabilityHelper", "classNuguClientKit_1_1ICapabilityHelper.html", null ],
     [ "NuguClientKit::ICapabilityInterface", "classNuguClientKit_1_1ICapabilityInterface.html", [
       [ "NuguCapability::IASRHandler", "classNuguCapability_1_1IASRHandler.html", null ],
       [ "NuguCapability::IAudioPlayerHandler", "classNuguCapability_1_1IAudioPlayerHandler.html", null ],
+      [ "NuguCapability::IChipsHandler", "classNuguCapability_1_1IChipsHandler.html", null ],
       [ "NuguCapability::IDisplayHandler", "classNuguCapability_1_1IDisplayHandler.html", [
         [ "NuguCapability::IAudioPlayerHandler", "classNuguCapability_1_1IAudioPlayerHandler.html", null ]
       ] ],
@@ -27,6 +29,7 @@ var hierarchy =
     ] ],
     [ "NuguClientKit::ICapabilityListener", "classNuguClientKit_1_1ICapabilityListener.html", [
       [ "NuguCapability::IASRListener", "classNuguCapability_1_1IASRListener.html", null ],
+      [ "NuguCapability::IChipsListener", "classNuguCapability_1_1IChipsListener.html", null ],
       [ "NuguCapability::IDisplayListener", "classNuguCapability_1_1IDisplayListener.html", [
         [ "NuguCapability::IAudioPlayerDisplayListener", "classNuguCapability_1_1IAudioPlayerDisplayListener.html", [
           [ "NuguCapability::IAudioPlayerListener", "classNuguCapability_1_1IAudioPlayerListener.html", null ]

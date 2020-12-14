@@ -8,6 +8,8 @@ var searchData=
   ['icapabilityhelper',['ICapabilityHelper',['../classNuguClientKit_1_1ICapabilityHelper.html',1,'NuguClientKit']]],
   ['icapabilityinterface',['ICapabilityInterface',['../classNuguClientKit_1_1ICapabilityInterface.html',1,'NuguClientKit']]],
   ['icapabilitylistener',['ICapabilityListener',['../classNuguClientKit_1_1ICapabilityListener.html',1,'NuguClientKit']]],
+  ['ichipshandler',['IChipsHandler',['../classNuguCapability_1_1IChipsHandler.html',1,'NuguCapability']]],
+  ['ichipslistener',['IChipsListener',['../classNuguCapability_1_1IChipsListener.html',1,'NuguCapability']]],
   ['idirectivesequencer',['IDirectiveSequencer',['../classNuguClientKit_1_1IDirectiveSequencer.html',1,'NuguClientKit']]],
   ['idirectivesequencerlistener',['IDirectiveSequencerListener',['../classNuguClientKit_1_1IDirectiveSequencerListener.html',1,'NuguClientKit']]],
   ['idisplayhandler',['IDisplayHandler',['../classNuguCapability_1_1IDisplayHandler.html',1,'NuguCapability']]],
