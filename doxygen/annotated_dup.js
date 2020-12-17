@@ -3,7 +3,7 @@ var annotated_dup =
     [ "NuguCapability", null, [
       [ "ASRAttribute", "structNuguCapability_1_1ASRAttribute.html", "structNuguCapability_1_1ASRAttribute" ],
       [ "CapabilityFactory", "classNuguCapability_1_1CapabilityFactory.html", "classNuguCapability_1_1CapabilityFactory" ],
-      [ "ChipContent", "structNuguCapability_1_1ChipContent.html", "structNuguCapability_1_1ChipContent" ],
+      [ "ChipsInfo", "structNuguCapability_1_1ChipsInfo.html", "structNuguCapability_1_1ChipsInfo" ],
       [ "IASRHandler", "classNuguCapability_1_1IASRHandler.html", "classNuguCapability_1_1IASRHandler" ],
       [ "IASRListener", "classNuguCapability_1_1IASRListener.html", "classNuguCapability_1_1IASRListener" ],
       [ "IAudioPlayerDisplayListener", "classNuguCapability_1_1IAudioPlayerDisplayListener.html", "classNuguCapability_1_1IAudioPlayerDisplayListener" ],
