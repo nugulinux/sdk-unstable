@@ -115,17 +115,17 @@ $(document).ready(function(){initNavTree('classNuguCapability_1_1IExtensionHandl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5ba95d5d87ef2bc875dead0e36bd58c"><td class="memItemLeft" align="right" valign="top"><a id="ac5ba95d5d87ef2bc875dead0e36bd58c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#ac5ba95d5d87ef2bc875dead0e36bd58c">ActionFailed</a> ()=0</td></tr>
-<tr class="memdesc:ac5ba95d5d87ef2bc875dead0e36bd58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call if handling action fail. <br /></td></tr>
-<tr class="separator:ac5ba95d5d87ef2bc875dead0e36bd58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f85dd69e3995fdbc4e4b588661c03af"><td class="memItemLeft" align="right" valign="top"><a id="a2f85dd69e3995fdbc4e4b588661c03af"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#a2f85dd69e3995fdbc4e4b588661c03af">ActionSucceeded</a> ()=0</td></tr>
-<tr class="memdesc:a2f85dd69e3995fdbc4e4b588661c03af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call if handling action succeed. <br /></td></tr>
-<tr class="separator:a2f85dd69e3995fdbc4e4b588661c03af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a774beca5bf26649447dfee46ad7df92e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#a774beca5bf26649447dfee46ad7df92e">CommandIssued</a> (const std::string &amp;data)=0</td></tr>
-<tr class="memdesc:a774beca5bf26649447dfee46ad7df92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the specific command to Play.  <a href="#a774beca5bf26649447dfee46ad7df92e">More...</a><br /></td></tr>
-<tr class="separator:a774beca5bf26649447dfee46ad7df92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f3bf9d072551708454d04e01ff156f"><td class="memItemLeft" align="right" valign="top"><a id="a72f3bf9d072551708454d04e01ff156f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#a72f3bf9d072551708454d04e01ff156f">actionFailed</a> ()=0</td></tr>
+<tr class="memdesc:a72f3bf9d072551708454d04e01ff156f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call if handling action fail. <br /></td></tr>
+<tr class="separator:a72f3bf9d072551708454d04e01ff156f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5cf653fa287f81e3a778240d1151b1"><td class="memItemLeft" align="right" valign="top"><a id="a6c5cf653fa287f81e3a778240d1151b1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#a6c5cf653fa287f81e3a778240d1151b1">actionSucceeded</a> ()=0</td></tr>
+<tr class="memdesc:a6c5cf653fa287f81e3a778240d1151b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call if handling action succeed. <br /></td></tr>
+<tr class="separator:a6c5cf653fa287f81e3a778240d1151b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce34c53b42611bd7d0dc5349d8e81f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#a9ce34c53b42611bd7d0dc5349d8e81f5">commandIssued</a> (const std::string &amp;ps_id, const std::string &amp;data)=0</td></tr>
+<tr class="memdesc:a9ce34c53b42611bd7d0dc5349d8e81f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the specific command to Play.  <a href="#a9ce34c53b42611bd7d0dc5349d8e81f5">More...</a><br /></td></tr>
+<tr class="separator:a9ce34c53b42611bd7d0dc5349d8e81f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbef154a1f6ae870717a011849ccee7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html#abbef154a1f6ae870717a011849ccee7b">setContextInformation</a> (const std::string &amp;ctx)=0</td></tr>
 <tr class="memdesc:abbef154a1f6ae870717a011849ccee7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current context information.  <a href="#abbef154a1f6ae870717a011849ccee7b">More...</a><br /></td></tr>
 <tr class="separator:abbef154a1f6ae870717a011849ccee7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,8 +248,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a774beca5bf26649447dfee46ad7df92e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a774beca5bf26649447dfee46ad7df92e">&#9670;&nbsp;</a></span>CommandIssued()</h2>
+<a id="a9ce34c53b42611bd7d0dc5349d8e81f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce34c53b42611bd7d0dc5349d8e81f5">&#9670;&nbsp;</a></span>commandIssued()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,11 +258,21 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void NuguCapability::IExtensionHandler::CommandIssued </td>
+          <td class="memname">virtual void NuguCapability::IExtensionHandler::commandIssued </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>ps_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -275,6 +285,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Request the specific command to Play. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ps_id</td><td>playServiceId for handling request </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>raw data to request </td></tr>
   </table>
   </dd>
@@ -291,7 +302,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>NuguCapability</b></li><li class="navelem"><a class="el" href="classNuguCapability_1_1IExtensionHandler.html">IExtensionHandler</a></li>
-    <li class="footer">Generated on Fri Dec 25 2020 01:13:45 for NUGU SDK Linux by
+    <li class="footer">Generated on Tue Jan 5 2021 01:22:19 for NUGU SDK Linux by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
