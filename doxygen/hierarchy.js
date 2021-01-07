@@ -7,6 +7,7 @@ var hierarchy =
     [ "NuguCapability::CapabilityFactory", "classNuguCapability_1_1CapabilityFactory.html", null ],
     [ "NuguCapability::ChipsInfo", "structNuguCapability_1_1ChipsInfo.html", null ],
     [ "NuguCapability::ChipsInfo::Content", "structNuguCapability_1_1ChipsInfo_1_1Content.html", null ],
+    [ "NuguClientKit::DirectiveCancelPolicy", "structNuguClientKit_1_1DirectiveCancelPolicy.html", null ],
     [ "NuguClientKit::EpdAttribute", "structNuguClientKit_1_1EpdAttribute.html", null ],
     [ "NuguClientKit::FocusConfiguration", "structNuguClientKit_1_1FocusConfiguration.html", null ],
     [ "NuguClientKit::ICapabilityHelper", "classNuguClientKit_1_1ICapabilityHelper.html", null ],

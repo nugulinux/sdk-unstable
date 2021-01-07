@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"mic__interface_8hh.html#gaafad2a241855a2d3848567c69b00c076":[3,0,13,0],
+"mic__interface_8hh.html#ggaafad2a241855a2d3848567c69b00c076a88559a0cfd8250c9d65970cc145c92d4":[3,0,13,0,1],
 "mic__interface_8hh.html#ggaafad2a241855a2d3848567c69b00c076a90651ebea9a35ec4e018c8157492e17c":[3,0,13,0,0],
 "mic__interface_8hh_source.html":[3,0,13],
 "modules.html":[1],
@@ -146,6 +148,9 @@ var NAVTREEINDEX7 =
 "structNuguClientKit_1_1BlockingPolicy.html":[1,0,3,0],
 "structNuguClientKit_1_1BlockingPolicy.html#a090fba7200b307b6f19bed8beb9962f2":[1,0,3,0,1],
 "structNuguClientKit_1_1BlockingPolicy.html#a9720ec0a99692a1c4ee1d46d47feeb28":[1,0,3,0,0],
+"structNuguClientKit_1_1DirectiveCancelPolicy.html":[1,0,2,0],
+"structNuguClientKit_1_1DirectiveCancelPolicy.html#a95f6706c542e7efc815aa40d327397db":[1,0,2,0,1],
+"structNuguClientKit_1_1DirectiveCancelPolicy.html#ae4759a57cdd2edc560e103335b48b8d2":[1,0,2,0,0],
 "structNuguClientKit_1_1EpdAttribute.html":[1,0,13,0],
 "structNuguClientKit_1_1EpdAttribute.html#a4fcdc24866b9e347447d5bc8212c2943":[1,0,13,0,0],
 "structNuguClientKit_1_1EpdAttribute.html#a51bf6dd5f5034a36f557aafb67c23be4":[1,0,13,0,1],

@@ -39,6 +39,7 @@ var annotated_dup =
       [ "BlockingPolicy", "structNuguClientKit_1_1BlockingPolicy.html", "structNuguClientKit_1_1BlockingPolicy" ],
       [ "Capability", "classNuguClientKit_1_1Capability.html", "classNuguClientKit_1_1Capability" ],
       [ "CapabilityEvent", "classNuguClientKit_1_1CapabilityEvent.html", "classNuguClientKit_1_1CapabilityEvent" ],
+      [ "DirectiveCancelPolicy", "structNuguClientKit_1_1DirectiveCancelPolicy.html", "structNuguClientKit_1_1DirectiveCancelPolicy" ],
       [ "EpdAttribute", "structNuguClientKit_1_1EpdAttribute.html", "structNuguClientKit_1_1EpdAttribute" ],
       [ "FocusConfiguration", "structNuguClientKit_1_1FocusConfiguration.html", "structNuguClientKit_1_1FocusConfiguration" ],
       [ "ICapabilityHelper", "classNuguClientKit_1_1ICapabilityHelper.html", "classNuguClientKit_1_1ICapabilityHelper" ],
