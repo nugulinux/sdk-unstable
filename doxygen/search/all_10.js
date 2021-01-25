@@ -12,6 +12,7 @@ var searchData=
   ['timer_5fcallback',['timer_callback',['../classNuguClientKit_1_1INuguTimer.html#acc3f8a178cfe77ffbc0ce6327c411b51',1,'NuguClientKit::INuguTimer']]],
   ['token',['token',['../structNuguCapability_1_1ChipsInfo_1_1Content.html#a61a6ebd1860c3ab2723c149b1f8bbecf',1,'NuguCapability::ChipsInfo::Content']]],
   ['token_5ferror',['TOKEN_ERROR',['../group__NetworkManagerInterface.html#gga6aff79e2435c590ea44de8c43754e015ade5fb169ea8d8790ec07c79a01246313',1,'NuguClientKit']]],
+  ['tts',['TTS',['../group__PlaySyncManagerInterface.html#gga42c294733588594b84ae16137eb054c5a4616606d5a8590d8c1d305d50dce2f73',1,'NuguClientKit']]],
   ['tts_5fengine',['tts_engine',['../structNuguCapability_1_1TTSAttribute.html#a3d27107d98ea2fbdff928b47ffa7c432',1,'NuguCapability::TTSAttribute']]],
   ['tts_5finterface_2ehh',['tts_interface.hh',['../tts__interface_8hh.html',1,'']]],
   ['tts_5fspeaking_5fexception',['TTS_SPEAKING_EXCEPTION',['../group__SystemInterface.html#ggae95aa9037a85a223126f51c1efcbe671a4728a21f19c4b81a354edbcd5a1ad9c1',1,'NuguCapability']]],

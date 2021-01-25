@@ -12,7 +12,7 @@ var searchData=
   ['playing',['PLAYING',['../group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a50366a49630a416ab3ccaa004196027e',1,'NuguCapability::PLAYING()'],['../group__MediaPlayerInterface.html#gga4394cbf300e5382612ec50d08e05317ea50366a49630a416ab3ccaa004196027e',1,'NuguClientKit::PLAYING()']]],
   ['playing_5fmedia_5ffinished',['PLAYING_MEDIA_FINISHED',['../group__MediaPlayerInterface.html#gga998b178629fb2f7d4eb807ece397c28ca8aa89e3b945415649b8fa48f74865763',1,'NuguClientKit']]],
   ['playing_5fmedia_5funderrun',['PLAYING_MEDIA_UNDERRUN',['../group__MediaPlayerInterface.html#gga998b178629fb2f7d4eb807ece397c28cafdba45ec1356247b452fb7c37ab7f72d',1,'NuguClientKit']]],
-  ['playstacklayer',['PlayStackLayer',['../group__PlaySyncManagerInterface.html#ga4095ed0fa5de9f5140dd656317ab44a5',1,'NuguClientKit']]],
+  ['playstackactivity',['PlayStackActivity',['../group__PlaySyncManagerInterface.html#ga42c294733588594b84ae16137eb054c5',1,'NuguClientKit']]],
   ['playsync_5fmanager',['playsync_manager',['../classNuguClientKit_1_1Capability.html#a1d89744b57d7a967d6e06dc7592acc5b',1,'NuguClientKit::Capability']]],
   ['playsync_5fmanager_5finterface_2ehh',['playsync_manager_interface.hh',['../playsync__manager__interface_8hh.html',1,'']]],
   ['playsyncmanagerinterface',['PlaySyncManagerInterface',['../group__PlaySyncManagerInterface.html',1,'']]],

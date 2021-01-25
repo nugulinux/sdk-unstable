@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['call',['CALL',['../group__SpeakerInterface.html#gga8601f6be80368c9d1a7c7b346c99a698aca3547acb9162b49fb4a6594ed9b3030',1,'NuguCapability::CALL()'],['../group__PlaySyncManagerInterface.html#gga4095ed0fa5de9f5140dd656317ab44a5ac3755e61202abd74da5885d2e9c9160e',1,'NuguClientKit::Call()']]],
+  ['call',['CALL',['../group__SpeakerInterface.html#gga8601f6be80368c9d1a7c7b346c99a698aca3547acb9162b49fb4a6594ed9b3030',1,'NuguCapability::CALL()'],['../group__PlaySyncManagerInterface.html#gga42c294733588594b84ae16137eb054c5ac3755e61202abd74da5885d2e9c9160e',1,'NuguClientKit::Call()']]],
   ['can_5fcontrol',['can_control',['../classNuguCapability_1_1SpeakerInfo.html#abb9c5ec9b7f9d6aeaf285fe91a16505e',1,'NuguCapability::SpeakerInfo']]],
   ['cancel',['cancel',['../classNuguClientKit_1_1IDirectiveSequencer.html#a6e7fb841d186057c4b2e256292672c06',1,'NuguClientKit::IDirectiveSequencer::cancel(const std::string &amp;dialog_id)=0'],['../classNuguClientKit_1_1IDirectiveSequencer.html#a95a0ba5128c7367497a6089dc07fc744',1,'NuguClientKit::IDirectiveSequencer::cancel(const std::string &amp;dialog_id, std::set&lt; std::string &gt; groups)=0']]],
   ['cancel_5fall',['cancel_all',['../structNuguClientKit_1_1DirectiveCancelPolicy.html#ae4759a57cdd2edc560e103335b48b8d2',1,'NuguClientKit::DirectiveCancelPolicy']]],
