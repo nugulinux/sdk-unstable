@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"display__interface_8hh.html":[3,0,8],
 "display__interface_8hh.html#ga28c3d18871d6c4af0e5f53dcd3ac1762":[3,0,8,1],
 "display__interface_8hh.html#ga99d4ad071b8f547cadd4a1852c9ca3f6":[3,0,8,0],
 "display__interface_8hh.html#gga28c3d18871d6c4af0e5f53dcd3ac1762a105078d294d30c978ca2badf7f376934":[3,0,8,1,1],
@@ -58,13 +59,13 @@ var NAVTREEINDEX2 =
 "functions_v.html":[2,3,0,17],
 "functions_vars.html":[2,3,2],
 "functions_w.html":[2,3,0,18],
-"globals.html":[3,1,0],
 "globals.html":[3,1,0,0],
+"globals.html":[3,1,0],
 "globals_defs.html":[3,1,5],
 "globals_enum.html":[3,1,3],
 "globals_eval.html":[3,1,4],
-"globals_func.html":[3,1,1],
 "globals_func.html":[3,1,1,0],
+"globals_func.html":[3,1,1],
 "globals_type.html":[3,1,2],
 "group__ASRInterface.html":[1,1,0],
 "group__ASRInterface.html#ga5419ab10266ab89d5d5a405bf2f209cd":[3,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "group__Log.html#ga860e8aea9bbff532c81e4acbc1f7504e":[1,2,5,25],
 "group__Log.html#ga8830d523cfb27148de726b161e1712fe":[3,0,23,40],
 "group__Log.html#ga8830d523cfb27148de726b161e1712fe":[1,2,5,18],
-"group__Log.html#ga93dae7a7cd39bce31484794c08c3bcbb":[3,0,23,25],
-"group__Log.html#ga9dfe5ed26e2a83b98f8cda52a44d41cc":[3,0,23,36]
+"group__Log.html#ga93dae7a7cd39bce31484794c08c3bcbb":[3,0,23,25]
 };

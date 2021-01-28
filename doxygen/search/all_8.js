@@ -53,6 +53,7 @@ var searchData=
   ['isessionlistener',['ISessionListener',['../classNuguCapability_1_1ISessionListener.html',1,'NuguCapability']]],
   ['isessionmanager',['ISessionManager',['../classNuguClientKit_1_1ISessionManager.html',1,'NuguClientKit']]],
   ['isessionmanagerlistener',['ISessionManagerListener',['../classNuguClientKit_1_1ISessionManagerListener.html',1,'NuguClientKit']]],
+  ['ismultiturnactive',['isMultiTurnActive',['../classNuguClientKit_1_1IInteractionControlManager.html#a79def97a0033b7370aee7edd0fa85a13',1,'NuguClientKit::IInteractionControlManager']]],
   ['ismute',['isMute',['../classNuguClientKit_1_1ISpeechRecognizer.html#aa40f6a1419ab2c0de8460ee20e8c70eb',1,'NuguClientKit::ISpeechRecognizer']]],
   ['isoundhandler',['ISoundHandler',['../classNuguCapability_1_1ISoundHandler.html',1,'NuguCapability']]],
   ['isoundlistener',['ISoundListener',['../classNuguCapability_1_1ISoundListener.html',1,'NuguCapability']]],
