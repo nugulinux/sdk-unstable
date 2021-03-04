@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voice_20recorder_2084',['Voice recorder',['../group__NuguRecorder.html',1,'']]]
+  ['voice_20recorder_2096',['Voice recorder',['../group__NuguRecorder.html',1,'']]]
 ];

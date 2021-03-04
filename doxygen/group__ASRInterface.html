@@ -142,6 +142,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga9aa11256d9ce8a3aa14ac9a24e1d8e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASR error list.  <a href="group__ASRInterface.html#ga9aa11256d9ce8a3aa14ac9a24e1d8e21">More...</a><br /></td></tr>
 <tr class="separator:ga9aa11256d9ce8a3aa14ac9a24e1d8e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd27d783b014cca3e5aca7510b36f8a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a">NuguCapability::ASRInitiator</a> { <br />
+&#160;&#160;<a class="el" href="group__ASRInterface.html#gga0dd27d783b014cca3e5aca7510b36f8aa646e5558f4e20f45fbd651b653f8dbc3">NuguCapability::ASRInitiator::WAKE_UP_WORD</a>, 
+<a class="el" href="group__ASRInterface.html#gga0dd27d783b014cca3e5aca7510b36f8aa56d48be09b7b10cc583583453bc87a9b">NuguCapability::ASRInitiator::PRESS_AND_HOLD</a>, 
+<a class="el" href="group__ASRInterface.html#gga0dd27d783b014cca3e5aca7510b36f8aafcd6420c60a17418a6de745d6546d966">NuguCapability::ASRInitiator::TAP</a>, 
+<a class="el" href="group__ASRInterface.html#gga0dd27d783b014cca3e5aca7510b36f8aae93ac2a078fa28db0eb331bf67e35021">NuguCapability::ASRInitiator::EXPECT_SPEECH</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__ASRInterface.html#gga0dd27d783b014cca3e5aca7510b36f8aa6f9af525f01e8f64a9d550cfd8484613">NuguCapability::ASRInitiator::EARSET</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga0dd27d783b014cca3e5aca7510b36f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASR initiator list.  <a href="group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a">More...</a><br /></td></tr>
+<tr class="separator:ga0dd27d783b014cca3e5aca7510b36f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe4f48f063bafec608e5060090a9543b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ASRInterface.html#gafe4f48f063bafec608e5060090a9543b">NuguCapability::ASRState</a> { <br />
 &#160;&#160;<a class="el" href="group__ASRInterface.html#ggafe4f48f063bafec608e5060090a9543baa5daf7f2ebbba4975d61dab1c40188c7">NuguCapability::ASRState::IDLE</a>, 
 <a class="el" href="group__ASRInterface.html#ggafe4f48f063bafec608e5060090a9543ba2ad686da9d27bb3646616a1620173f83">NuguCapability::ASRState::EXPECTING_SPEECH</a>, 
@@ -195,6 +206,43 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ga0dd27d783b014cca3e5aca7510b36f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0dd27d783b014cca3e5aca7510b36f8a">&#9670;&nbsp;</a></span>ASRInitiator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a">NuguCapability::ASRInitiator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ASR initiator list. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNuguCapability_1_1IASRHandler.html#aeb6cfdd1d86a2031dca35a3eb9e51b63" title="Turn on the microphone and start speech recognition (support multi-wakeup)">IASRHandler::startRecognition</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga0dd27d783b014cca3e5aca7510b36f8aa646e5558f4e20f45fbd651b653f8dbc3"></a>WAKE_UP_WORD&#160;</td><td class="fielddoc"><p>initiated by wakeup </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0dd27d783b014cca3e5aca7510b36f8aa56d48be09b7b10cc583583453bc87a9b"></a>PRESS_AND_HOLD&#160;</td><td class="fielddoc"><p>initiated by button press and hold </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0dd27d783b014cca3e5aca7510b36f8aafcd6420c60a17418a6de745d6546d966"></a>TAP&#160;</td><td class="fielddoc"><p>initiated by button tap </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0dd27d783b014cca3e5aca7510b36f8aae93ac2a078fa28db0eb331bf67e35021"></a>EXPECT_SPEECH&#160;</td><td class="fielddoc"><p>initiated by ASR.EXPECT_SPEECH directive </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0dd27d783b014cca3e5aca7510b36f8aa6f9af525f01e8f64a9d550cfd8484613"></a>EARSET&#160;</td><td class="fielddoc"><p>initiated by earset voice command </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga9aa11256d9ce8a3aa14ac9a24e1d8e21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9aa11256d9ce8a3aa14ac9a24e1d8e21">&#9670;&nbsp;</a></span>ASRError</h2>
 
@@ -238,7 +286,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Feb 18 2021 00:53:12 for NUGU SDK Linux by
+    <li class="footer">Generated on Thu Mar 4 2021 05:59:29 for NUGU SDK Linux by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

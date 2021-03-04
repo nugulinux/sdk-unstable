@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ringbuffer_2071',['RingBuffer',['../group__NuguRingBuffer.html',1,'']]]
+  ['ringbuffer_2083',['RingBuffer',['../group__NuguRingBuffer.html',1,'']]]
 ];

@@ -21,13 +21,14 @@ var searchData=
   ['asr_5frecognizing_5fexception_18',['ASR_RECOGNIZING_EXCEPTION',['../group__SystemInterface.html#ggae95aa9037a85a223126f51c1efcbe671ac980b55619ee70eb68682784c0a9e34e',1,'NuguCapability']]],
   ['asrattribute_19',['ASRAttribute',['../structNuguCapability_1_1ASRAttribute.html',1,'NuguCapability']]],
   ['asrerror_20',['ASRError',['../group__ASRInterface.html#ga9aa11256d9ce8a3aa14ac9a24e1d8e21',1,'NuguCapability']]],
-  ['asrinterface_21',['ASRInterface',['../group__ASRInterface.html',1,'']]],
-  ['asrrecognizecallback_22',['AsrRecognizeCallback',['../classNuguCapability_1_1IASRHandler.html#ad49e6bf6b6f66c6ab0ed3dcfbede937f',1,'NuguCapability::IASRHandler']]],
-  ['asrstate_23',['ASRState',['../group__ASRInterface.html#gafe4f48f063bafec608e5060090a9543b',1,'NuguCapability']]],
-  ['audio_24',['AUDIO',['../group__DirectiveSequencerInterface.html#gga27f22301768541185c29c12af55aa862ae423b8bde9bfbfd7e9409b23b23aed91',1,'NuguClientKit']]],
-  ['audio_5fplayer_5finterface_2ehh_25',['audio_player_interface.hh',['../audio__player__interface_8hh.html',1,'']]],
-  ['audioplayerevent_26',['AudioPlayerEvent',['../group__AudioPlayerInterface.html#ga7e30478d0a2b8276e02040b468c32910',1,'NuguCapability']]],
-  ['audioplayerinterface_27',['AudioPlayerInterface',['../group__AudioPlayerInterface.html',1,'']]],
-  ['audioplayerstate_28',['AudioPlayerState',['../group__AudioPlayerInterface.html#gadb28ffbfa534751260baf341f9819f94',1,'NuguCapability']]],
-  ['audio_20recorder_20driver_29',['Audio recorder driver',['../group__NuguRecorderDriver.html',1,'']]]
+  ['asrinitiator_21',['ASRInitiator',['../group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a',1,'NuguCapability']]],
+  ['asrinterface_22',['ASRInterface',['../group__ASRInterface.html',1,'']]],
+  ['asrrecognizecallback_23',['AsrRecognizeCallback',['../classNuguCapability_1_1IASRHandler.html#ad49e6bf6b6f66c6ab0ed3dcfbede937f',1,'NuguCapability::IASRHandler']]],
+  ['asrstate_24',['ASRState',['../group__ASRInterface.html#gafe4f48f063bafec608e5060090a9543b',1,'NuguCapability']]],
+  ['audio_25',['AUDIO',['../group__DirectiveSequencerInterface.html#gga27f22301768541185c29c12af55aa862ae423b8bde9bfbfd7e9409b23b23aed91',1,'NuguClientKit']]],
+  ['audio_5fplayer_5finterface_2ehh_26',['audio_player_interface.hh',['../audio__player__interface_8hh.html',1,'']]],
+  ['audioplayerevent_27',['AudioPlayerEvent',['../group__AudioPlayerInterface.html#ga7e30478d0a2b8276e02040b468c32910',1,'NuguCapability']]],
+  ['audioplayerinterface_28',['AudioPlayerInterface',['../group__AudioPlayerInterface.html',1,'']]],
+  ['audioplayerstate_29',['AudioPlayerState',['../group__AudioPlayerInterface.html#gadb28ffbfa534751260baf341f9819f94',1,'NuguCapability']]],
+  ['audio_20recorder_20driver_30',['Audio recorder driver',['../group__NuguRecorderDriver.html',1,'']]]
 ];
