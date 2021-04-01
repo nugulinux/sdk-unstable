@@ -20,7 +20,7 @@ var searchData=
   ['chips_5finterface_2ehh_54',['chips_interface.hh',['../chips__interface_8hh.html',1,'']]],
   ['chipsinfo_55',['ChipsInfo',['../structNuguCapability_1_1ChipsInfo.html',1,'NuguCapability']]],
   ['chipsinterface_56',['ChipsInterface',['../group__ChipsInterface.html',1,'']]],
-  ['clear_57',['clear',['../classNuguClientKit_1_1IInteractionControlManager.html#a4df4438d06df547c4244533f8162426f',1,'NuguClientKit::IInteractionControlManager::clear()'],['../classNuguClientKit_1_1ISessionManager.html#a626713cfb36793f7d7b4499c64e55946',1,'NuguClientKit::ISessionManager::clear()']]],
+  ['clear_57',['clear',['../classNuguClientKit_1_1IInteractionControlManager.html#a4df4438d06df547c4244533f8162426f',1,'NuguClientKit::IInteractionControlManager::clear()'],['../classNuguClientKit_1_1IPlaySyncManager.html#aa2f2b27e5e833ced20d1bd3e3572dd94',1,'NuguClientKit::IPlaySyncManager::clear()'],['../classNuguClientKit_1_1ISessionManager.html#a626713cfb36793f7d7b4499c64e55946',1,'NuguClientKit::ISessionManager::clear()']]],
   ['cleardisplay_58',['clearDisplay',['../classNuguCapability_1_1IDisplayListener.html#acb4335f753d470a7ca73dbc2a0a12152',1,'NuguCapability::IDisplayListener']]],
   ['clearholding_59',['clearHolding',['../classNuguClientKit_1_1IPlaySyncManager.html#a1a0e795464aba59343d48f35ce7ad25c',1,'NuguClientKit::IPlaySyncManager']]],
   ['commandissued_60',['commandIssued',['../classNuguCapability_1_1IExtensionHandler.html#a9ce34c53b42611bd7d0dc5349d8e81f5',1,'NuguCapability::IExtensionHandler']]],
