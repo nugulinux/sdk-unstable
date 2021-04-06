@@ -6,9 +6,7 @@ var files_dup =
     [ "capability_factory.hh", "capability__factory_8hh.html", null ],
     [ "capability_helper_interface.hh", "capability__helper__interface_8hh.html", null ],
     [ "capability_interface.hh", "capability__interface_8hh.html", null ],
-    [ "chips_interface.hh", "chips__interface_8hh.html", [
-      [ "Content", "structNuguCapability_1_1ChipsInfo_1_1Content.html", "structNuguCapability_1_1ChipsInfo_1_1Content" ]
-    ] ],
+    [ "chips_interface.hh", "chips__interface_8hh.html", "chips__interface_8hh" ],
     [ "directive_sequencer_interface.hh", "directive__sequencer__interface_8hh.html", "directive__sequencer__interface_8hh" ],
     [ "display_interface.hh", "display__interface_8hh.html", "display__interface_8hh" ],
     [ "extension_interface.hh", "extension__interface_8hh.html", null ],
