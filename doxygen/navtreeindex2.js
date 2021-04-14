@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classNuguClientKit_1_1NuguClient.html#a1d3014c080d1f098c56b7fda5ddc505d":[1,0,8,0,4],
+"classNuguClientKit_1_1NuguClient.html#a27631157bc56e59781c78f950ecdd17b":[1,0,8,0,2],
 "classNuguClientKit_1_1NuguClient.html#a2bc2fae5314b8759d8fd385677bd69ae":[1,0,8,0,5],
 "classNuguClientKit_1_1NuguClient.html#a32def4bda93b3a706d6e7757c5e41220":[1,0,8,0,8],
 "classNuguClientKit_1_1NuguClient.html#a77535b326be3a36c359d8c7708068b5d":[1,0,8,0,3],
@@ -84,8 +86,8 @@ var NAVTREEINDEX2 =
 "globals_defs.html":[3,1,5],
 "globals_enum.html":[3,1,3],
 "globals_eval.html":[3,1,4],
-"globals_func.html":[3,1,1,0],
 "globals_func.html":[3,1,1],
+"globals_func.html":[3,1,1,0],
 "globals_type.html":[3,1,2],
 "group__ASRInterface.html":[1,1,0],
 "group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a":[1,1,0,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "group__InteractionControlManagerInterface.html#ga7ed168a573888495a90b6f74bdfb5e2d":[1,0,5,2],
 "group__InteractionControlManagerInterface.html#gga7ed168a573888495a90b6f74bdfb5e2da840044d2d261feb9f03ae3390e681323":[1,0,5,2,1],
 "group__InteractionControlManagerInterface.html#gga7ed168a573888495a90b6f74bdfb5e2dab50339a10e1de285ac99d4c3990b8693":[1,0,5,2,0],
-"group__Log.html":[1,2,5],
-"group__Log.html#ga06ed753e9946392fe99db5a90fac744d":[3,0,24,7],
-"group__Log.html#ga087457802942b6cddead13bf0e061851":[3,0,24,34]
+"group__Log.html":[1,2,5]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"structnugu__recorder__driver__ops.html":[1,3,3,0],
+"structnugu__recorder__driver__ops.html#a1a89476c8c76a299c2ba3597f811174f":[1,3,3,0,0],
 "structnugu__recorder__driver__ops.html#a252bdbed8526702b04666bf0d402e15d":[1,3,3,0,1],
 "system__interface_8hh.html":[3,0,42],
 "system__interface_8hh.html#ga210ca95bced11e44b9558947bb31a2eb":[3,0,42,1],
