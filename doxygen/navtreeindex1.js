@@ -243,11 +243,11 @@ var NAVTREEINDEX1 =
 "classNuguClientKit_1_1IWakeupHandler.html":[1,0,14,0],
 "classNuguClientKit_1_1IWakeupHandler.html#a26800967ca4b90caa23359f629361acc":[1,0,14,0,3],
 "classNuguClientKit_1_1IWakeupHandler.html#a538df6480701a3b241d1d1c28f455146":[1,0,14,0,0],
+"classNuguClientKit_1_1IWakeupHandler.html#aa3d32f85853d19202ec17507afc33c05":[1,0,14,0,4],
 "classNuguClientKit_1_1IWakeupHandler.html#ac5725f07b3b20a9ff39b18261df4280c":[1,0,14,0,1],
 "classNuguClientKit_1_1IWakeupHandler.html#af03bb635a82ec3143d534ca5b8f90413":[1,0,14,0,2],
 "classNuguClientKit_1_1IWakeupListener.html":[1,0,14,1],
 "classNuguClientKit_1_1IWakeupListener.html#a0588a6789cfdfaad012505d21a6874c0":[1,0,14,1,0],
 "classNuguClientKit_1_1IWakeupListener.html#a1d622bddce42ade2425524dc534b6929":[1,0,14,1,1],
-"classNuguClientKit_1_1NuguClient.html":[1,0,8,0],
-"classNuguClientKit_1_1NuguClient.html#a0ad308f320bd4431bcb3edae6e806972":[1,0,8,0,9]
+"classNuguClientKit_1_1NuguClient.html":[1,0,8,0]
 };

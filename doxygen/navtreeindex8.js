@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"structnugu__player__driver__ops.html#aabc656ad1a1b0e7229af74ef94842c97":[1,3,2,0,5],
 "structnugu__player__driver__ops.html#ab1e9c7a681e56b2a4f32ac691bec305f":[1,3,2,0,0],
 "structnugu__player__driver__ops.html#ad234b453ae727334c1bfab2690c5a0b9":[1,3,2,0,3],
 "structnugu__player__driver__ops.html#ae4bb8d776de9c2d1910be32e48d8855b":[1,3,2,0,9],

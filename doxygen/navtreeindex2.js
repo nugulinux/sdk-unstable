@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classNuguClientKit_1_1NuguClient.html#a0ad308f320bd4431bcb3edae6e806972":[1,0,8,0,9],
 "classNuguClientKit_1_1NuguClient.html#a1d3014c080d1f098c56b7fda5ddc505d":[1,0,8,0,4],
 "classNuguClientKit_1_1NuguClient.html#a27631157bc56e59781c78f950ecdd17b":[1,0,8,0,2],
 "classNuguClientKit_1_1NuguClient.html#a2bc2fae5314b8759d8fd385677bd69ae":[1,0,8,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "group__InteractionControlManagerInterface.html":[1,0,5],
 "group__InteractionControlManagerInterface.html#ga7ed168a573888495a90b6f74bdfb5e2d":[1,0,5,2],
 "group__InteractionControlManagerInterface.html#gga7ed168a573888495a90b6f74bdfb5e2da840044d2d261feb9f03ae3390e681323":[1,0,5,2,1],
-"group__InteractionControlManagerInterface.html#gga7ed168a573888495a90b6f74bdfb5e2dab50339a10e1de285ac99d4c3990b8693":[1,0,5,2,0],
-"group__Log.html":[1,2,5]
+"group__InteractionControlManagerInterface.html#gga7ed168a573888495a90b6f74bdfb5e2dab50339a10e1de285ac99d4c3990b8693":[1,0,5,2,0]
 };
