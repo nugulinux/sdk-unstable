@@ -16,6 +16,7 @@ var nugu__network__manager_8h =
     [ "nugu_network_status", "group__nugu__network.html#gab3b96f22ffa5e42cc058222a04a129c4", [
       [ "NUGU_NETWORK_DISCONNECTED", "group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4ab0ae183c7eb1cbe7496b59f796f11d08", null ],
       [ "NUGU_NETWORK_CONNECTING", "group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4a8a1871ebd99b8eb45a62e720c3d0e260", null ],
+      [ "NUGU_NETWORK_READY", "group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4a419e61fe56c227ab24f87edd217cbe49", null ],
       [ "NUGU_NETWORK_CONNECTED", "group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4a9b9a320a23cfa4c1882c18f3ad153e1f", null ],
       [ "NUGU_NETWORK_TOKEN_ERROR", "group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4a6daa9efc152da3f99d19f913c7dda2ce", null ]
     ] ],
