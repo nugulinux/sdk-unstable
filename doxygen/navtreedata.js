@@ -58,14 +58,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classNuguClientKit_1_1Capability.html#a795e47c7ff66192e5bcf9aabc24aadf6",
+"classNuguClientKit_1_1Capability.html#a78f047155213eedfa33973e88b58bb62",
 "classNuguClientKit_1_1NuguClient.html#a1d3014c080d1f098c56b7fda5ddc505d",
 "group__Log.html#ga06ed753e9946392fe99db5a90fac744d",
 "group__NuguDirective.html#ga2b8ea1315f4e3ec572a8876c4ebf06ab",
 "group__NuguPlayer.html#ga7ab0d860f47f6eb63bf7fd687031d21b",
 "group__Profiling.html#gga29547fb0921eb21d78568eff10a4eadca43dd9209086048beb868bfd68c23b2ab",
-"group__uuid.html#ga7cce59fa0ba778c8a46707df02003d2c",
-"structnugu__recorder__driver__ops.html"
+"group__nugu__network.html#ggab3b96f22ffa5e42cc058222a04a129c4a9b9a320a23cfa4c1882c18f3ad153e1f",
+"structnugu__plugin__desc.html#a3f0f0e80e02f75d01507e06c4279e498"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

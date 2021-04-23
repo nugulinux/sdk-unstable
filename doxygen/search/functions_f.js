@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['unholdfocus_1671',['unholdFocus',['../group__FocusManagerInterface.html#ga3e0546b71fb3396af9f7db486e4fa3b6',1,'NuguClientKit::IFocusManager']]],
-  ['unloadplugins_1672',['unloadPlugins',['../classNuguClientKit_1_1NuguClient.html#aa0e0601ef277de5262faf1aefb3c23d2',1,'NuguClientKit::NuguClient']]],
-  ['updatedisplay_1673',['updateDisplay',['../classNuguCapability_1_1IDisplayListener.html#a3f05f36603ccdcae311671d00dac42c8',1,'NuguCapability::IDisplayListener']]],
-  ['updateinfoforcontext_1674',['updateInfoForContext',['../classNuguClientKit_1_1ICapabilityInterface.html#a743711b81aacc194fef39f00d5c5c5d7',1,'NuguClientKit::ICapabilityInterface']]],
-  ['updatemetadata_1675',['updateMetaData',['../classNuguCapability_1_1IAudioPlayerDisplayListener.html#a4e5ba3d6f4c43b4410f73afea19169ef',1,'NuguCapability::IAudioPlayerDisplayListener']]],
-  ['updateuseractivity_1676',['updateUserActivity',['../classNuguCapability_1_1ISystemHandler.html#a0abd34eae4a26c09b8f4dcb3388c5860',1,'NuguCapability::ISystemHandler']]],
-  ['url_1677',['url',['../classNuguClientKit_1_1IMediaPlayer.html#a6c6f3e65e27c64dc4fe5bde9d4ccfbe0',1,'NuguClientKit::IMediaPlayer']]]
+  ['unholdfocus_1679',['unholdFocus',['../group__FocusManagerInterface.html#ga3e0546b71fb3396af9f7db486e4fa3b6',1,'NuguClientKit::IFocusManager']]],
+  ['unloadplugins_1680',['unloadPlugins',['../classNuguClientKit_1_1NuguClient.html#aa0e0601ef277de5262faf1aefb3c23d2',1,'NuguClientKit::NuguClient']]],
+  ['updatedisplay_1681',['updateDisplay',['../classNuguCapability_1_1IDisplayListener.html#a3f05f36603ccdcae311671d00dac42c8',1,'NuguCapability::IDisplayListener']]],
+  ['updateinfoforcontext_1682',['updateInfoForContext',['../classNuguClientKit_1_1ICapabilityInterface.html#a743711b81aacc194fef39f00d5c5c5d7',1,'NuguClientKit::ICapabilityInterface']]],
+  ['updatemetadata_1683',['updateMetaData',['../classNuguCapability_1_1IAudioPlayerDisplayListener.html#a4e5ba3d6f4c43b4410f73afea19169ef',1,'NuguCapability::IAudioPlayerDisplayListener']]],
+  ['updateuseractivity_1684',['updateUserActivity',['../classNuguCapability_1_1ISystemHandler.html#a0abd34eae4a26c09b8f4dcb3388c5860',1,'NuguCapability::ISystemHandler']]],
+  ['url_1685',['url',['../classNuguClientKit_1_1IMediaPlayer.html#a6c6f3e65e27c64dc4fe5bde9d4ccfbe0',1,'NuguClientKit::IMediaPlayer']]]
 ];

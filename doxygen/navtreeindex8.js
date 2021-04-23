@@ -1,5 +1,17 @@
 var NAVTREEINDEX8 =
 {
+"structnugu__plugin__desc.html#a3f0f0e80e02f75d01507e06c4279e498":[1,2,10,0,0],
+"structnugu__plugin__desc.html#a6974e1009410fd2e79c433c49a21cea8":[1,2,10,0,5],
+"structnugu__plugin__desc.html#a79b1174d996dcf7df84aa33607361210":[1,2,10,0,1],
+"structnugu__plugin__desc.html#a7d868309c226e5470c7af3fd5f2b238e":[1,2,10,0,2],
+"structnugu__plugin__desc.html#aaf3aa968711c64ffbeed877d28860eaa":[1,2,10,0,4],
+"structnugu__plugin__desc.html#afef3d74c5f09b6dbc1d82c43640d3093":[1,2,10,0,3],
+"structnugu__prof__data.html":[1,2,11,0],
+"structnugu__prof__data.html#a062ca9707171a1f9ffce1efc0682e06f":[1,2,11,0,0],
+"structnugu__prof__data.html#a1b91f49957872b7b5e78b6f14e53cdb9":[1,2,11,0,2],
+"structnugu__prof__data.html#a1bad250798c022c071a5c1d08bfee990":[1,2,11,0,1],
+"structnugu__prof__data.html#a5c6c0568076c7392e46cedba34350a00":[1,2,11,0,4],
+"structnugu__prof__data.html#aa955ea88f1c2e3830274bf140ae674a4":[1,2,11,0,3],
 "structnugu__recorder__driver__ops.html":[1,3,3,0],
 "structnugu__recorder__driver__ops.html#a1a89476c8c76a299c2ba3597f811174f":[1,3,3,0,0],
 "structnugu__recorder__driver__ops.html#a252bdbed8526702b04666bf0d402e15d":[1,3,3,0,1],

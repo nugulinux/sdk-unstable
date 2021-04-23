@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['epdattribute_1074',['EpdAttribute',['../structNuguClientKit_1_1EpdAttribute.html',1,'NuguClientKit']]]
+  ['epdattribute_1080',['EpdAttribute',['../structNuguClientKit_1_1EpdAttribute.html',1,'NuguClientKit']]]
 ];
