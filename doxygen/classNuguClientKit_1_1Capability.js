@@ -50,5 +50,6 @@ var classNuguClientKit_1_1Capability =
     [ "session_manager", "classNuguClientKit_1_1Capability.html#a3fa525ae220091b2dbab1bdc1a5b7139", null ],
     [ "interaction_control_manager", "classNuguClientKit_1_1Capability.html#a0f3b7c451056a734824e98de6a98bb40", null ],
     [ "directive_sequencer", "classNuguClientKit_1_1Capability.html#a8658b77a46b306bfb8289c2220fd099b", null ],
+    [ "routine_manager", "classNuguClientKit_1_1Capability.html#a24064f01e45072bb5cc6aeabe2bed400", null ],
     [ "suspend_policy", "classNuguClientKit_1_1Capability.html#a55e1b7727b78c2e7cf57c2cebc6f195a", null ]
 ];
