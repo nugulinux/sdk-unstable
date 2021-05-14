@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blockingpolicy_1097',['BlockingPolicy',['../structNuguClientKit_1_1BlockingPolicy.html',1,'NuguClientKit']]]
+  ['blockingpolicy_1098',['BlockingPolicy',['../structNuguClientKit_1_1BlockingPolicy.html',1,'NuguClientKit']]]
 ];

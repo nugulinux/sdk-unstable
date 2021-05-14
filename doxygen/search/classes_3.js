@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directivecancelpolicy_1104',['DirectiveCancelPolicy',['../structNuguClientKit_1_1DirectiveCancelPolicy.html',1,'NuguClientKit']]]
+  ['directivecancelpolicy_1105',['DirectiveCancelPolicy',['../structNuguClientKit_1_1DirectiveCancelPolicy.html',1,'NuguClientKit']]]
 ];

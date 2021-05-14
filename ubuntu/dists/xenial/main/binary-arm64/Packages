@@ -1,16 +1,16 @@
 Package: libnugu
 Source: nugu
-Version: 1.1.0ubuntu20210512d1a6657~xenial
+Version: 1.1.0ubuntu2021051376b0306~xenial
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
-Installed-Size: 1830
+Installed-Size: 1838
 Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.28.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl1.0.0 (>= 1.0.2~beta3), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
 Recommends: libnugu-plugins-default
-Filename: dists/xenial/pool/libnugu_1.1.0ubuntu20210512d1a6657.xenial_arm64.deb
-Size: 431110
-MD5sum: 2dcbd81fc2201064d2af13fed058f7ca
-SHA1: 8ca62b7ae5f581d90dd072b3300506670199ea83
-SHA256: bcb52dc8c9b22bf94073be936c0ad70ed53b28148fff8f7910060bb7a2ec37a9
+Filename: dists/xenial/pool/libnugu_1.1.0ubuntu2021051376b0306.xenial_arm64.deb
+Size: 431630
+MD5sum: 018336abf9ea2a3da2be980cc876dc27
+SHA1: cb223a5b3b3671d124677b0f6d012d9e18163baa
+SHA256: a8c10bc9499c6d31c30c875ecb5400b520928901e0c8219c0ccd636474e065f1
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform
@@ -22,16 +22,16 @@ Description: NUGU is an AI service platform
 
 Package: libnugu-dbg
 Source: nugu
-Version: 1.1.0ubuntu20210512d1a6657~xenial
+Version: 1.1.0ubuntu2021051376b0306~xenial
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 5839
-Depends: libnugu (= 1.1.0ubuntu20210512d1a6657~xenial)
-Filename: dists/xenial/pool/libnugu-dbg_1.1.0ubuntu20210512d1a6657.xenial_arm64.deb
-Size: 4978794
-MD5sum: 17d2c2c681ec1e69897d006e1e5e33b7
-SHA1: 4a041c14f081ddd8bff39c87aec4d44a4fb564b3
-SHA256: 353f5c55e4b060d383ca683a4dd66aa71ed85f347515d8ce04a0de9aacb77b18
+Depends: libnugu (= 1.1.0ubuntu2021051376b0306~xenial)
+Filename: dists/xenial/pool/libnugu-dbg_1.1.0ubuntu2021051376b0306.xenial_arm64.deb
+Size: 4981290
+MD5sum: d8204d6ddaf8a5bc1d127a31d95943ef
+SHA1: 142ce468f2a4e6ccdbd96013dc76efe5cc68bca9
+SHA256: b710acf0a544df180d537248f950ce99f19f68af5fdd2a5fc8713a5995f745e1
 Section: debug
 Priority: extra
 Description: NUGU is an AI service platform (debugging symbols)
@@ -40,20 +40,20 @@ Description: NUGU is an AI service platform (debugging symbols)
  NUGU is an AI platform that supports ASR and TTS.
  .
  The libnugu-dbg package provide debugging symbols.
-Build-Ids: 0c0627adfeedf20a1b3357af3e6852f78c306d69
+Build-Ids: 2c4407e92539a263913c2e5cebcd48fac3c44bbe
 
 Package: libnugu-dev
 Source: nugu
-Version: 1.1.0ubuntu20210512d1a6657~xenial
+Version: 1.1.0ubuntu2021051376b0306~xenial
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 357
 Depends: libnugu
-Filename: dists/xenial/pool/libnugu-dev_1.1.0ubuntu20210512d1a6657.xenial_arm64.deb
-Size: 50520
-MD5sum: c5302036eb80bf94ad29488fc80395fd
-SHA1: c4d3682f7b39c8b9e32e9cc2e18d7b4e30ac59d4
-SHA256: 168a4241afed5ac4b3420e0738bcdfd0e92534d4c7f7494520b9121794c89feb
+Filename: dists/xenial/pool/libnugu-dev_1.1.0ubuntu2021051376b0306.xenial_arm64.deb
+Size: 50546
+MD5sum: 2569759679fb723f6a693d021a69b115
+SHA1: 4f36694ae3e44e5222f1d95a970aa18a0246d212
+SHA256: 701b2cc76fe67cf2e6f120729125d72cee03a0ce216b48895821a1bd05db4500
 Section: libdevel
 Priority: optional
 Description: NUGU is an AI service platform (development files)
@@ -65,16 +65,16 @@ Description: NUGU is an AI service platform (development files)
 
 Package: libnugu-examples
 Source: nugu
-Version: 1.1.0ubuntu20210512d1a6657~xenial
+Version: 1.1.0ubuntu2021051376b0306~xenial
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 671
 Depends: libnugu, libc6 (>= 2.17), libgcc1 (>= 1:3.0), libglib2.0-0 (>= 2.16.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libstdc++6 (>= 5.2), python, python-flask-restful, python-requests-oauthlib, curl, jq
-Filename: dists/xenial/pool/libnugu-examples_1.1.0ubuntu20210512d1a6657.xenial_arm64.deb
-Size: 216394
-MD5sum: a68e3f5318e65c0c945c14ce43f84da1
-SHA1: 032268925474aed6d097d02a8cdcef70266b7cec
-SHA256: 5c02d0d487df9127465ae9707966633d5b1d146b23ea6d698673da781575e5bf
+Filename: dists/xenial/pool/libnugu-examples_1.1.0ubuntu2021051376b0306.xenial_arm64.deb
+Size: 215926
+MD5sum: 86eb4733992428359010b2ef6b206d67
+SHA1: edded05ef40f3f8115c83cce67d7a9cb10c87af5
+SHA256: d4dbed77be1c6cf9b8ffc923143929f3f08dda5df107b067da8e8ea344f785fd
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform (examples)
@@ -86,16 +86,16 @@ Description: NUGU is an AI service platform (examples)
 
 Package: libnugu-plugins-default
 Source: nugu
-Version: 1.1.0ubuntu20210512d1a6657~xenial
+Version: 1.1.0ubuntu2021051376b0306~xenial
 Architecture: arm64
 Maintainer: Inho Oh <inho.oh@sk.com>
 Installed-Size: 167
 Depends: libasound2 (>= 1.0.16), libc6 (>= 2.17), libglib2.0-0 (>= 2.12.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu, libopus0 (>= 1.1), libportaudio2 (>= 19+svn20101113), gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
-Filename: dists/xenial/pool/libnugu-plugins-default_1.1.0ubuntu20210512d1a6657.xenial_arm64.deb
-Size: 27852
-MD5sum: e9c7517cfad00ae62730e3469bf3c339
-SHA1: e73b9b5fe847e8ee0fc4eafd479adf0c4b17404a
-SHA256: 72cd003197262f6c2c40ec65d870c6336cf9580f0f9c8a560b7016065361ce5b
+Filename: dists/xenial/pool/libnugu-plugins-default_1.1.0ubuntu2021051376b0306.xenial_arm64.deb
+Size: 27888
+MD5sum: 2ad53659b24ff7ee05a0dfd67a085eb6
+SHA1: d71b78395da566594bc438ffc317c2a41562b106
+SHA256: f165638440b692a52cc8d26f58daaa1712ef988d1d37670a0f5b978465ee2a80
 Section: libs
 Priority: optional
 Description: NUGU is an AI service platform (plugins)
