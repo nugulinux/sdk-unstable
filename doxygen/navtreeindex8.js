@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"structNuguCapability_1_1TTSAttribute.html":[1,1,14,2],
+"structNuguCapability_1_1TTSAttribute.html#a3d27107d98ea2fbdff928b47ffa7c432":[1,1,14,2,0],
 "structNuguCapability_1_1TextAttribute.html":[1,1,13,2],
 "structNuguCapability_1_1TextAttribute.html#ae72d79a9d75aade383869bbc3f0de2c6":[1,1,13,2,0],
 "structNuguClientKit_1_1BlockingPolicy.html":[1,0,3,0],
