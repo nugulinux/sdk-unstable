@@ -34,6 +34,7 @@ var NAVTREEINDEX0 =
 "audio__player__interface_8hh.html#gga7e30478d0a2b8276e02040b468c32910a5fac8c63be4469a35faa1ccde324a3a7":[3,0,1,1,0],
 "audio__player__interface_8hh.html#gga7e30478d0a2b8276e02040b468c32910a7b0d329a6efd1e7a527acf8970807616":[3,0,1,1,1],
 "audio__player__interface_8hh.html#gga7e30478d0a2b8276e02040b468c32910a9ba423abc90614e7ec03992f6484517a":[3,0,1,1,3],
+"audio__player__interface_8hh.html#gga7e30478d0a2b8276e02040b468c32910abc79587c7fe1e3a94a8b0b577a8e459e":[3,0,1,1,4],
 "audio__player__interface_8hh.html#ggadb28ffbfa534751260baf341f9819f94a09d4d696b4e935115b9313e3c412509a":[3,0,1,0,2],
 "audio__player__interface_8hh.html#ggadb28ffbfa534751260baf341f9819f94a2c616b2713e2e0aed04b4c4752c88133":[3,0,1,0,4],
 "audio__player__interface_8hh.html#ggadb28ffbfa534751260baf341f9819f94a50366a49630a416ab3ccaa004196027e":[3,0,1,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classNuguClientKit_1_1Capability.html#a50165ca1f2ee361619308a7ae944a8c4":[1,0,0,0,2],
 "classNuguClientKit_1_1Capability.html#a517562d581457af86a33bb304ccdc0e4":[1,0,0,0,32],
 "classNuguClientKit_1_1Capability.html#a55e1b7727b78c2e7cf57c2cebc6f195a":[1,0,0,0,52],
-"classNuguClientKit_1_1Capability.html#a61dc9b3e269075e4e8434b88f28e53ce":[1,0,0,0,5],
-"classNuguClientKit_1_1Capability.html#a6471602c56611f2032930f2ea6dc1454":[1,0,0,0,3]
+"classNuguClientKit_1_1Capability.html#a61dc9b3e269075e4e8434b88f28e53ce":[1,0,0,0,5]
 };

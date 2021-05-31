@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classNuguClientKit_1_1ISessionManager.html#abf696022474d865619797ac032ec2590":[1,0,13,0,1],
 "classNuguClientKit_1_1ISessionManager.html#aee13d23c0f297903cd5e293f06d37eaf":[1,0,13,0,3],
 "classNuguClientKit_1_1ISessionManagerListener.html":[1,0,13,1],
 "classNuguClientKit_1_1ISessionManagerListener.html#a1dbd0f76c9f8fec2518838defc9db303":[1,0,13,1,1],
@@ -154,6 +155,7 @@ var NAVTREEINDEX2 =
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a5fac8c63be4469a35faa1ccde324a3a7":[1,1,1,3,0],
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a7b0d329a6efd1e7a527acf8970807616":[1,1,1,3,1],
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a9ba423abc90614e7ec03992f6484517a":[1,1,1,3,3],
+"group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910abc79587c7fe1e3a94a8b0b577a8e459e":[1,1,1,3,4],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a09d4d696b4e935115b9313e3c412509a":[1,1,1,2,2],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a2c616b2713e2e0aed04b4c4752c88133":[1,1,1,2,4],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a50366a49630a416ab3ccaa004196027e":[1,1,1,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "group__FocusManagerInterface.html#ga8933b1cf841c43789cc29166d679ccce":[3,0,10,6],
 "group__FocusManagerInterface.html#ga9715ca6a77ca93ba9c76a5569cecabbc":[3,0,10,21],
 "group__FocusManagerInterface.html#gaa036b27fb566ef0c3e3818d768b8c0ed":[3,0,10,5],
-"group__FocusManagerInterface.html#gaa4a33e5d89941e07ab5c3d11b092ce3d":[1,0,4,1,9],
-"group__FocusManagerInterface.html#gaa4a33e5d89941e07ab5c3d11b092ce3d":[1,0,4,16],
-"group__FocusManagerInterface.html#gaaea80a31df369f5a45126c9b17843d1e":[1,0,4,1,7]
+"group__FocusManagerInterface.html#gaa4a33e5d89941e07ab5c3d11b092ce3d":[1,0,4,1,9]
 };

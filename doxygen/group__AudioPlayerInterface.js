@@ -40,7 +40,8 @@ var group__AudioPlayerInterface =
       [ "UNDERRUN", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a5fac8c63be4469a35faa1ccde324a3a7", null ],
       [ "LOAD_FAILED", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a7b0d329a6efd1e7a527acf8970807616", null ],
       [ "LOAD_DONE", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a36e295bd2bd5227fed19835511cd9c17", null ],
-      [ "INVALID_URL", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a9ba423abc90614e7ec03992f6484517a", null ]
+      [ "INVALID_URL", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a9ba423abc90614e7ec03992f6484517a", null ],
+      [ "HOLD_PAUSE", "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910abc79587c7fe1e3a94a8b0b577a8e459e", null ]
     ] ],
     [ "RepeatType", "group__AudioPlayerInterface.html#ga0cb2048ef5fb507017eb53ee3e52716d", [
       [ "NONE", "group__AudioPlayerInterface.html#gga0cb2048ef5fb507017eb53ee3e52716dab50339a10e1de285ac99d4c3990b8693", null ],
