@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classNuguClientKit_1_1ISessionManager.html#a96d1caa170d96dd48a36f71086f11401":[1,0,13,0,2],
+"classNuguClientKit_1_1ISessionManager.html#a99e5ce28175393565e6263270a704580":[1,0,13,0,6],
 "classNuguClientKit_1_1ISessionManager.html#abf696022474d865619797ac032ec2590":[1,0,13,0,1],
 "classNuguClientKit_1_1ISessionManager.html#aee13d23c0f297903cd5e293f06d37eaf":[1,0,13,0,3],
 "classNuguClientKit_1_1ISessionManagerListener.html":[1,0,13,1],
@@ -154,8 +156,10 @@ var NAVTREEINDEX2 =
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a36e295bd2bd5227fed19835511cd9c17":[1,1,1,3,2],
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a5fac8c63be4469a35faa1ccde324a3a7":[1,1,1,3,0],
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a7b0d329a6efd1e7a527acf8970807616":[1,1,1,3,1],
+"group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a94ad5892ffef8d9e87dfc842b22fc7cd":[1,1,1,3,4],
 "group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910a9ba423abc90614e7ec03992f6484517a":[1,1,1,3,3],
-"group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910abc79587c7fe1e3a94a8b0b577a8e459e":[1,1,1,3,4],
+"group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910ae0331bef8392778b3984b9a6cea4dd84":[1,1,1,3,5],
+"group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910aeae18e18491252c439d9ded73e20966c":[1,1,1,3,6],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a09d4d696b4e935115b9313e3c412509a":[1,1,1,2,2],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a2c616b2713e2e0aed04b4c4752c88133":[1,1,1,2,4],
 "group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a50366a49630a416ab3ccaa004196027e":[1,1,1,2,1],
@@ -184,10 +188,10 @@ var NAVTREEINDEX2 =
 "group__Buffer.html#ga505b48bbb39128531e1ea281ac7dac44":[3,0,17,3],
 "group__Buffer.html#ga56b97f3aa4d3badc9f88207f59ffed45":[3,0,17,6],
 "group__Buffer.html#ga56b97f3aa4d3badc9f88207f59ffed45":[1,2,0,6],
-"group__Buffer.html#ga943ac429f9b17b6898f422129b3d97c6":[3,0,17,7],
 "group__Buffer.html#ga943ac429f9b17b6898f422129b3d97c6":[1,2,0,7],
-"group__Buffer.html#gaacefd9e2f61220e4b88a519c6c34be05":[3,0,17,4],
+"group__Buffer.html#ga943ac429f9b17b6898f422129b3d97c6":[3,0,17,7],
 "group__Buffer.html#gaacefd9e2f61220e4b88a519c6c34be05":[1,2,0,4],
+"group__Buffer.html#gaacefd9e2f61220e4b88a519c6c34be05":[3,0,17,4],
 "group__Buffer.html#gad80f1cc9f7ba8b332a1c4c55fc156aaa":[3,0,17,11],
 "group__Buffer.html#gad80f1cc9f7ba8b332a1c4c55fc156aaa":[1,2,0,11],
 "group__Capability.html":[1,0,0],
@@ -235,8 +239,8 @@ var NAVTREEINDEX2 =
 "group__FocusManagerInterface.html#ga42611c05ef19e07a6ee8b1a8405c822d":[3,0,10,23],
 "group__FocusManagerInterface.html#ga48c34bb22bfd01a2cda99d90d55f32b9":[3,0,10,10],
 "group__FocusManagerInterface.html#ga4b606ab8433d6311a4af3e4507d678fb":[1,0,4,3,0],
-"group__FocusManagerInterface.html#ga503b896522f9271ee8f08a55ba361add":[1,0,4,13],
 "group__FocusManagerInterface.html#ga503b896522f9271ee8f08a55ba361add":[1,0,4,1,6],
+"group__FocusManagerInterface.html#ga503b896522f9271ee8f08a55ba361add":[1,0,4,13],
 "group__FocusManagerInterface.html#ga5e1f4eb42bf182f1eb4398577ea6a361":[3,0,10,24],
 "group__FocusManagerInterface.html#ga5fa2cc120e70a7e1dd696e902ee0fcf8":[1,0,4,1,2],
 "group__FocusManagerInterface.html#ga5fa2cc120e70a7e1dd696e902ee0fcf8":[1,0,4,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "group__FocusManagerInterface.html#ga74134fe1ccea3dbd8755d14dc184b7e5":[3,0,10,16],
 "group__FocusManagerInterface.html#ga75aa24467b127e0c8a2a305332e317c2":[3,0,10,1],
 "group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,1,8],
-"group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,15],
-"group__FocusManagerInterface.html#ga8933b1cf841c43789cc29166d679ccce":[3,0,10,6],
-"group__FocusManagerInterface.html#ga9715ca6a77ca93ba9c76a5569cecabbc":[3,0,10,21],
-"group__FocusManagerInterface.html#gaa036b27fb566ef0c3e3818d768b8c0ed":[3,0,10,5],
-"group__FocusManagerInterface.html#gaa4a33e5d89941e07ab5c3d11b092ce3d":[1,0,4,1,9]
+"group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,15]
 };

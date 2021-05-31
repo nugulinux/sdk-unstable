@@ -6,7 +6,6 @@ var searchData=
   ['hasnextplaystack_177',['hasNextPlayStack',['../classNuguClientKit_1_1IPlaySyncManager.html#a7a690e691ce704a5fa593ed1df23f9b6',1,'NuguClientKit::IPlaySyncManager']]],
   ['hasroutinedirective_178',['hasRoutineDirective',['../classNuguClientKit_1_1IRoutineManager.html#a49b8da040ea7e86f563decfbe5d7a818',1,'NuguClientKit::IRoutineManager']]],
   ['hidelyrics_179',['hideLyrics',['../classNuguCapability_1_1IAudioPlayerDisplayListener.html#ad67886d53306c9b81444fbc6c12ee917',1,'NuguCapability::IAudioPlayerDisplayListener']]],
-  ['hold_5fpause_180',['HOLD_PAUSE',['../group__AudioPlayerInterface.html#gga7e30478d0a2b8276e02040b468c32910abc79587c7fe1e3a94a8b0b577a8e459e',1,'NuguCapability']]],
-  ['holdfocus_181',['holdFocus',['../group__FocusManagerInterface.html#ga5fa2cc120e70a7e1dd696e902ee0fcf8',1,'NuguClientKit::IFocusManager']]],
-  ['hostname_182',['hostname',['../structnugu__network__server__policy.html#ac85cb3c6450e66de87ac51e0e94b8dec',1,'nugu_network_server_policy']]]
+  ['holdfocus_180',['holdFocus',['../group__FocusManagerInterface.html#ga5fa2cc120e70a7e1dd696e902ee0fcf8',1,'NuguClientKit::IFocusManager']]],
+  ['hostname_181',['hostname',['../structnugu__network__server__policy.html#ac85cb3c6450e66de87ac51e0e94b8dec',1,'nugu_network_server_policy']]]
 ];

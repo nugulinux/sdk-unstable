@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"structNuguCapability_1_1ChipsInfo.html#a39e0710076ba8ebda04f2533522b3c91":[1,1,3,0,1],
+"structNuguCapability_1_1ChipsInfo.html#afccead43325148798ea8371656aa752c":[1,1,3,0,2],
+"structNuguCapability_1_1ChipsInfo_1_1Content.html":[1,1,3,0,0],
+"structNuguCapability_1_1ChipsInfo_1_1Content.html#a49d56aeaf919a1da7448952dcd78cc89":[1,1,3,0,0,1],
 "structNuguCapability_1_1ChipsInfo_1_1Content.html#a61a6ebd1860c3ab2723c149b1f8bbecf":[1,1,3,0,0,2],
 "structNuguCapability_1_1ChipsInfo_1_1Content.html#a7bc1fd4285e9dcd63cdba9c0e4d014e6":[1,1,3,0,0,0],
 "structNuguCapability_1_1TTSAttribute.html":[1,1,14,2],
