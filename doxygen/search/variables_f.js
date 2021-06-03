@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unload_1803',['unload',['../structnugu__plugin__desc.html#aaf3aa968711c64ffbeed877d28860eaa',1,'nugu_plugin_desc']]]
+  ['unload_1809',['unload',['../structnugu__plugin__desc.html#aaf3aa968711c64ffbeed877d28860eaa',1,'nugu_plugin_desc']]]
 ];

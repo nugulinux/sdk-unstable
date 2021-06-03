@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['focus_5fmanager_5finterface_2ehh_1193',['focus_manager_interface.hh',['../focus__manager__interface_8hh.html',1,'']]]
+  ['focus_5fmanager_5finterface_2ehh_1197',['focus_manager_interface.hh',['../focus__manager__interface_8hh.html',1,'']]]
 ];

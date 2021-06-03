@@ -17,7 +17,7 @@ var searchData=
   ['capabilityfactory_52',['CapabilityFactory',['../classNuguCapability_1_1CapabilityFactory.html',1,'NuguCapability::CapabilityFactory'],['../group__CapabilityFactory.html',1,'(Global Namespace)']]],
   ['capabilityhelperinterface_53',['CapabilityHelperInterface',['../group__CapabilityHelperInterface.html',1,'']]],
   ['capabilityinterface_54',['CapabilityInterface',['../group__CapabilityInterface.html',1,'']]],
-  ['changemodel_55',['changeModel',['../classNuguClientKit_1_1IWakeupHandler.html#aa3d32f85853d19202ec17507afc33c05',1,'NuguClientKit::IWakeupHandler']]],
+  ['changemodel_55',['changeModel',['../classNuguClientKit_1_1IWakeupHandler.html#ab44237672cd041751f94985676bca0a4',1,'NuguClientKit::IWakeupHandler']]],
   ['chips_5finterface_2ehh_56',['chips_interface.hh',['../chips__interface_8hh.html',1,'']]],
   ['chipsinfo_57',['ChipsInfo',['../structNuguCapability_1_1ChipsInfo.html',1,'NuguCapability']]],
   ['chipsinterface_58',['ChipsInterface',['../group__ChipsInterface.html',1,'']]],
@@ -46,5 +46,5 @@ var searchData=
   ['createnugutimer_81',['createNuguTimer',['../classNuguClientKit_1_1INuguCoreContainer.html#a6cc4e4815d9b9b23b53d8e3702bbeeda',1,'NuguClientKit::INuguCoreContainer']]],
   ['createspeechrecognizer_82',['createSpeechRecognizer',['../classNuguClientKit_1_1INuguCoreContainer.html#ad9ee8298c16dc85112c769881b217292',1,'NuguClientKit::INuguCoreContainer']]],
   ['createttsplayer_83',['createTTSPlayer',['../classNuguClientKit_1_1INuguCoreContainer.html#a6822799b6ef54efd22577ec1ebd8c249',1,'NuguClientKit::INuguCoreContainer']]],
-  ['createwakeuphandler_84',['createWakeupHandler',['../classNuguClientKit_1_1INuguCoreContainer.html#afcaf2009b84f60ff1f1ade40632042ee',1,'NuguClientKit::INuguCoreContainer']]]
+  ['createwakeuphandler_84',['createWakeupHandler',['../classNuguClientKit_1_1INuguCoreContainer.html#afb5319d8108fbab13847f159ff274e33',1,'NuguClientKit::INuguCoreContainer']]]
 ];
