@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classNuguClientKit_1_1ISessionManager.html#a626713cfb36793f7d7b4499c64e55946":[1,0,13,0,7],
 "classNuguClientKit_1_1ISessionManager.html#a96d1caa170d96dd48a36f71086f11401":[1,0,13,0,2],
 "classNuguClientKit_1_1ISessionManager.html#a99e5ce28175393565e6263270a704580":[1,0,13,0,6],
 "classNuguClientKit_1_1ISessionManager.html#abf696022474d865619797ac032ec2590":[1,0,13,0,1],
@@ -121,8 +122,8 @@ var NAVTREEINDEX2 =
 "globals_defs.html":[3,1,5],
 "globals_enum.html":[3,1,3],
 "globals_eval.html":[3,1,4],
-"globals_func.html":[3,1,1],
 "globals_func.html":[3,1,1,0],
+"globals_func.html":[3,1,1],
 "globals_type.html":[3,1,2],
 "group__ASRInterface.html":[1,1,0],
 "group__ASRInterface.html#ga0dd27d783b014cca3e5aca7510b36f8a":[1,1,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "group__FocusManagerInterface.html#ga72bd41914850aa1dc8179ce527705fc9":[3,0,10,4],
 "group__FocusManagerInterface.html#ga74134fe1ccea3dbd8755d14dc184b7e5":[3,0,10,16],
 "group__FocusManagerInterface.html#ga75aa24467b127e0c8a2a305332e317c2":[3,0,10,1],
-"group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,1,8],
-"group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,15]
+"group__FocusManagerInterface.html#ga7fa5acd493280fcf74ae877b781d4488":[1,0,4,1,8]
 };

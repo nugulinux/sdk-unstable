@@ -220,8 +220,9 @@ var NAVTREEINDEX1 =
 "classNuguClientKit_1_1IPlaySyncManager.html#af4ccf0a65663e311732a424441e91681":[1,0,11,0,13],
 "classNuguClientKit_1_1IPlaySyncManager.html#af7e598ba1e9afd95ba6151c4d7f27bc0":[1,0,11,0,4],
 "classNuguClientKit_1_1IPlaySyncManagerListener.html":[1,0,11,1],
-"classNuguClientKit_1_1IPlaySyncManagerListener.html#a90652fef37148893c1cf37545acf19d1":[1,0,11,1,1],
-"classNuguClientKit_1_1IPlaySyncManagerListener.html#af80ed395842fd2b50e9e6fa1b166775f":[1,0,11,1,2],
+"classNuguClientKit_1_1IPlaySyncManagerListener.html#a083c20c7187973da7917c5d9279804b8":[1,0,11,1,2],
+"classNuguClientKit_1_1IPlaySyncManagerListener.html#a255b59b068d4478b5ead4b6aa12c4f46":[1,0,11,1,1],
+"classNuguClientKit_1_1IPlaySyncManagerListener.html#a8aa0d286ec7d21711644a6c8a9b0bc1b":[1,0,11,1,3],
 "classNuguClientKit_1_1IPlaySyncManagerListener.html#afa13820115fa84e0b55f04b48a66ef43":[1,0,11,1,0],
 "classNuguClientKit_1_1IRoutineManager.html":[1,0,12,0],
 "classNuguClientKit_1_1IRoutineManager.html#a02586cd365a1392a8c986960c5944c14":[1,0,12,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classNuguClientKit_1_1ISessionManager.html":[1,0,13,0],
 "classNuguClientKit_1_1ISessionManager.html#a031783e6131c9ed38cab7ba87e159616":[1,0,13,0,4],
 "classNuguClientKit_1_1ISessionManager.html#a18a12639f138f2490ce3a730ce8a1ff6":[1,0,13,0,0],
-"classNuguClientKit_1_1ISessionManager.html#a3d05ff2597d22c036fb9e8bf8aa3600d":[1,0,13,0,5],
-"classNuguClientKit_1_1ISessionManager.html#a626713cfb36793f7d7b4499c64e55946":[1,0,13,0,7]
+"classNuguClientKit_1_1ISessionManager.html#a3d05ff2597d22c036fb9e8bf8aa3600d":[1,0,13,0,5]
 };
