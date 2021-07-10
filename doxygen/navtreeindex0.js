@@ -157,6 +157,7 @@ var NAVTREEINDEX0 =
 "classNuguCapability_1_1INudgeListener.html#a070fba17518bbebd7a5d4484568e0f41":[1,1,7,1,0],
 "classNuguCapability_1_1IRoutineHandler.html":[1,1,8,0],
 "classNuguCapability_1_1IRoutineHandler.html#a6f87d0bfbe33ab96ff24b3941fc50148":[1,1,8,0,0],
+"classNuguCapability_1_1IRoutineHandler.html#a8a1be84935f9eef76d8e72d0233ecf9c":[1,1,8,0,1],
 "classNuguCapability_1_1IRoutineListener.html":[1,1,8,1],
 "classNuguCapability_1_1IRoutineListener.html#aced968e3234ea516566da176f9013fb1":[1,1,8,1,0],
 "classNuguCapability_1_1ISessionHandler.html":[1,1,9,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classNuguClientKit_1_1Capability.html#a3b57ca76e07f7ffe56bcf1c738be059b":[1,0,0,0,40],
 "classNuguClientKit_1_1Capability.html#a3fa525ae220091b2dbab1bdc1a5b7139":[1,0,0,0,48],
 "classNuguClientKit_1_1Capability.html#a48ef514fde84116ad1d653626b432f5a":[1,0,0,0,38],
-"classNuguClientKit_1_1Capability.html#a50165ca1f2ee361619308a7ae944a8c4":[1,0,0,0,2],
-"classNuguClientKit_1_1Capability.html#a517562d581457af86a33bb304ccdc0e4":[1,0,0,0,32]
+"classNuguClientKit_1_1Capability.html#a50165ca1f2ee361619308a7ae944a8c4":[1,0,0,0,2]
 };

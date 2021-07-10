@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classNuguClientKit_1_1Capability.html#a517562d581457af86a33bb304ccdc0e4":[1,0,0,0,32],
 "classNuguClientKit_1_1Capability.html#a55e1b7727b78c2e7cf57c2cebc6f195a":[1,0,0,0,52],
 "classNuguClientKit_1_1Capability.html#a61dc9b3e269075e4e8434b88f28e53ce":[1,0,0,0,5],
 "classNuguClientKit_1_1Capability.html#a6471602c56611f2032930f2ea6dc1454":[1,0,0,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classNuguClientKit_1_1IRoutineManagerListener.html#afe81fe525f181a9c20220bc5a5b13728":[1,0,12,1,1],
 "classNuguClientKit_1_1ISessionManager.html":[1,0,13,0],
 "classNuguClientKit_1_1ISessionManager.html#a031783e6131c9ed38cab7ba87e159616":[1,0,13,0,4],
-"classNuguClientKit_1_1ISessionManager.html#a18a12639f138f2490ce3a730ce8a1ff6":[1,0,13,0,0],
-"classNuguClientKit_1_1ISessionManager.html#a3d05ff2597d22c036fb9e8bf8aa3600d":[1,0,13,0,5]
+"classNuguClientKit_1_1ISessionManager.html#a18a12639f138f2490ce3a730ce8a1ff6":[1,0,13,0,0]
 };
