@@ -106,9 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a58e146063347cf40e2dac38e728674af"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a58e146063347cf40e2dac38e728674af">addPolicy</a> (const std::string &amp;name_space, const std::string &amp;name, <a class="el" href="structNuguClientKit_1_1BlockingPolicy.html">BlockingPolicy</a> policy)=0</td></tr>
 <tr class="memdesc:a58e146063347cf40e2dac38e728674af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the <a class="el" href="structNuguClientKit_1_1BlockingPolicy.html" title="BlockingPolicy.">BlockingPolicy</a>.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a58e146063347cf40e2dac38e728674af">More...</a><br /></td></tr>
 <tr class="separator:a58e146063347cf40e2dac38e728674af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e7fb841d186057c4b2e256292672c06"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a6e7fb841d186057c4b2e256292672c06">cancel</a> (const std::string &amp;dialog_id)=0</td></tr>
-<tr class="memdesc:a6e7fb841d186057c4b2e256292672c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel all pending directives related to the dialog_id. The canceled directives are freed.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a6e7fb841d186057c4b2e256292672c06">More...</a><br /></td></tr>
-<tr class="separator:a6e7fb841d186057c4b2e256292672c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebee90a42d7ab6dd9759633f5a43b769"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#aebee90a42d7ab6dd9759633f5a43b769">cancel</a> (const std::string &amp;dialog_id, bool cancel_active_directive=true)=0</td></tr>
+<tr class="memdesc:aebee90a42d7ab6dd9759633f5a43b769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel all pending directives related to the dialog_id. The canceled directives are freed.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#aebee90a42d7ab6dd9759633f5a43b769">More...</a><br /></td></tr>
+<tr class="separator:aebee90a42d7ab6dd9759633f5a43b769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95a0ba5128c7367497a6089dc07fc744"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a95a0ba5128c7367497a6089dc07fc744">cancel</a> (const std::string &amp;dialog_id, std::set&lt; std::string &gt; groups)=0</td></tr>
 <tr class="memdesc:a95a0ba5128c7367497a6089dc07fc744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels specific pending directives related to the dialog_id. The canceled directives are freed.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a95a0ba5128c7367497a6089dc07fc744">More...</a><br /></td></tr>
 <tr class="separator:a95a0ba5128c7367497a6089dc07fc744"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,8 +322,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e7fb841d186057c4b2e256292672c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e7fb841d186057c4b2e256292672c06">&#9670;&nbsp;</a></span>cancel() <span class="overload">[1/2]</span></h2>
+<a id="aebee90a42d7ab6dd9759633f5a43b769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebee90a42d7ab6dd9759633f5a43b769">&#9670;&nbsp;</a></span>cancel() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,8 +335,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool NuguClientKit::IDirectiveSequencer::cancel </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>dialog_id</em></td><td>)</td>
+          <td class="paramname"><em>dialog_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cancel_active_directive</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -350,6 +360,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dialog_id</td><td>dialog-request-id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel_active_directive</td><td>cancel including currently active directives </td></tr>
   </table>
   </dd>
 </dl>
@@ -510,7 +521,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>NuguClientKit</b></li><li class="navelem"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html">IDirectiveSequencer</a></li>
-    <li class="footer">Generated on Sat Jul 10 2021 00:13:55 for NUGU SDK Linux by
+    <li class="footer">Generated on Tue Jul 13 2021 03:03:17 for NUGU SDK Linux by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

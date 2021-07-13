@@ -80,7 +80,7 @@ var searchData=
   ['stopholding_1033',['stopHolding',['../classNuguClientKit_1_1IPlaySyncManager.html#a8a9dfd81efab9b66881e31d57713d392',1,'NuguClientKit::IPlaySyncManager']]],
   ['stoplistening_1034',['stopListening',['../classNuguClientKit_1_1ISpeechRecognizer.html#a4f986b4e62598b626221bcaec1f7f33e',1,'NuguClientKit::ISpeechRecognizer']]],
   ['stopped_1035',['STOPPED',['../group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a09d4d696b4e935115b9313e3c412509a',1,'NuguCapability::STOPPED()'],['../group__MediaPlayerInterface.html#gga4394cbf300e5382612ec50d08e05317ea09d4d696b4e935115b9313e3c412509a',1,'NuguClientKit::STOPPED()'],['../group__RoutineManagerInterface.html#gga85ba501685094b1c1d34f42229ed227ba09d4d696b4e935115b9313e3c412509a',1,'NuguClientKit::STOPPED()']]],
-  ['stoprecognition_1036',['stopRecognition',['../classNuguCapability_1_1IASRHandler.html#aa34a87fcc0d03e9f3ebd0116f52dac14',1,'NuguCapability::IASRHandler']]],
+  ['stoprecognition_1036',['stopRecognition',['../classNuguCapability_1_1IASRHandler.html#a26bdfa437e889529c32489d0493441d8',1,'NuguCapability::IASRHandler']]],
   ['stoprenderingtimer_1037',['stopRenderingTimer',['../classNuguCapability_1_1IDisplayHandler.html#a91f02053eac057732c36b05324283615',1,'NuguCapability::IDisplayHandler']]],
   ['stoptts_1038',['stopTTS',['../classNuguCapability_1_1ITTSHandler.html#af250d2068fc2a6f6edc49b70360cbaa5',1,'NuguCapability::ITTSHandler']]],
   ['stopwakeup_1039',['stopWakeup',['../classNuguClientKit_1_1IWakeupHandler.html#a26800967ca4b90caa23359f629361acc',1,'NuguClientKit::IWakeupHandler']]],

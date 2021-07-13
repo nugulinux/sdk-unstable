@@ -54,7 +54,7 @@ var searchData=
   ['stopforegroundfocus_1727',['stopForegroundFocus',['../group__FocusManagerInterface.html#ga503b896522f9271ee8f08a55ba361add',1,'NuguClientKit::IFocusManager']]],
   ['stopholding_1728',['stopHolding',['../classNuguClientKit_1_1IPlaySyncManager.html#a8a9dfd81efab9b66881e31d57713d392',1,'NuguClientKit::IPlaySyncManager']]],
   ['stoplistening_1729',['stopListening',['../classNuguClientKit_1_1ISpeechRecognizer.html#a4f986b4e62598b626221bcaec1f7f33e',1,'NuguClientKit::ISpeechRecognizer']]],
-  ['stoprecognition_1730',['stopRecognition',['../classNuguCapability_1_1IASRHandler.html#aa34a87fcc0d03e9f3ebd0116f52dac14',1,'NuguCapability::IASRHandler']]],
+  ['stoprecognition_1730',['stopRecognition',['../classNuguCapability_1_1IASRHandler.html#a26bdfa437e889529c32489d0493441d8',1,'NuguCapability::IASRHandler']]],
   ['stoprenderingtimer_1731',['stopRenderingTimer',['../classNuguCapability_1_1IDisplayHandler.html#a91f02053eac057732c36b05324283615',1,'NuguCapability::IDisplayHandler']]],
   ['stoptts_1732',['stopTTS',['../classNuguCapability_1_1ITTSHandler.html#af250d2068fc2a6f6edc49b70360cbaa5',1,'NuguCapability::ITTSHandler']]],
   ['stopwakeup_1733',['stopWakeup',['../classNuguClientKit_1_1IWakeupHandler.html#a26800967ca4b90caa23359f629361acc',1,'NuguClientKit::IWakeupHandler']]],
