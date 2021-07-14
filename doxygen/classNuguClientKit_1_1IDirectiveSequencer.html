@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90ea647f44a1c899d3afd170eed5dbef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a90ea647f44a1c899d3afd170eed5dbef">complete</a> (<a class="el" href="group__NuguDirective.html#ga0e689d212db128a33b2869181169e216">NuguDirective</a> *ndir)=0</td></tr>
 <tr class="memdesc:a90ea647f44a1c899d3afd170eed5dbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete the blocking directive. The NuguDirective object will be destroyed. If there are pending directives, those directives will be processed at the next idle time.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a90ea647f44a1c899d3afd170eed5dbef">More...</a><br /></td></tr>
 <tr class="separator:a90ea647f44a1c899d3afd170eed5dbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a91d062c2d97f16d3d06ec2440370d4"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a7a91d062c2d97f16d3d06ec2440370d4">getCanceledDialogId</a> ()=0</td></tr>
+<tr class="memdesc:a7a91d062c2d97f16d3d06ec2440370d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last canceled dialog_id.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a7a91d062c2d97f16d3d06ec2440370d4">More...</a><br /></td></tr>
+<tr class="separator:a7a91d062c2d97f16d3d06ec2440370d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dd736f2a022b3c51766beda1cc1d209"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structNuguClientKit_1_1BlockingPolicy.html">BlockingPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html#a8dd736f2a022b3c51766beda1cc1d209">getPolicy</a> (const std::string &amp;name_space, const std::string &amp;name)=0</td></tr>
 <tr class="memdesc:a8dd736f2a022b3c51766beda1cc1d209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structNuguClientKit_1_1BlockingPolicy.html" title="BlockingPolicy.">BlockingPolicy</a> for namespace.name.  <a href="classNuguClientKit_1_1IDirectiveSequencer.html#a8dd736f2a022b3c51766beda1cc1d209">More...</a><br /></td></tr>
 <tr class="separator:a8dd736f2a022b3c51766beda1cc1d209"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -512,6 +515,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7a91d062c2d97f16d3d06ec2440370d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a91d062c2d97f16d3d06ec2440370d4">&#9670;&nbsp;</a></span>getCanceledDialogId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string&amp; NuguClientKit::IDirectiveSequencer::getCanceledDialogId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the last canceled dialog_id. </p>
+<dl class="section return"><dt>Returns</dt><dd>dialog_id </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="directive__sequencer__interface_8hh_source.html">directive_sequencer_interface.hh</a></li>
 </ul>
@@ -521,7 +552,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>NuguClientKit</b></li><li class="navelem"><a class="el" href="classNuguClientKit_1_1IDirectiveSequencer.html">IDirectiveSequencer</a></li>
-    <li class="footer">Generated on Tue Jul 13 2021 03:03:17 for NUGU SDK Linux by
+    <li class="footer">Generated on Wed Jul 14 2021 02:35:25 for NUGU SDK Linux by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

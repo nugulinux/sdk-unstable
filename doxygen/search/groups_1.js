@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_2151',['Buffer',['../group__Buffer.html',1,'']]]
+  ['buffer_2153',['Buffer',['../group__Buffer.html',1,'']]]
 ];

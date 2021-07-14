@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['session_1184',['Session',['../structNuguClientKit_1_1Session.html',1,'NuguClientKit']]],
-  ['speakerinfo_1185',['SpeakerInfo',['../classNuguCapability_1_1SpeakerInfo.html',1,'NuguCapability']]]
+  ['session_1185',['Session',['../structNuguClientKit_1_1Session.html',1,'NuguClientKit']]],
+  ['speakerinfo_1186',['SpeakerInfo',['../classNuguCapability_1_1SpeakerInfo.html',1,'NuguCapability']]]
 ];
