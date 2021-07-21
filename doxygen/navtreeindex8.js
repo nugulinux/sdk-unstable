@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"structNuguCapability_1_1ASRAttribute.html#ae504d2e2415d00bafb6e45cdbe0800db":[1,1,0,0,1],
 "structNuguCapability_1_1ASRAttribute.html#af9c89e2373e575694f5a756677ca782f":[1,1,0,0,3],
 "structNuguCapability_1_1ChipsInfo.html":[1,1,3,0],
 "structNuguCapability_1_1ChipsInfo.html#a281231d7a29dcb053726509b52b8d289":[1,1,3,0,3],
@@ -103,7 +104,8 @@ var NAVTREEINDEX8 =
 "text__interface_8hh_source.html":[3,0,45],
 "tts__interface_8hh.html":[3,0,46],
 "tts__interface_8hh.html#ga7d4f4423b5757b9a2b029a5ce5fbcccf":[3,0,46,1],
-"tts__interface_8hh.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa334b1664f6e8ae94f40877279035593b":[3,0,46,1,1],
+"tts__interface_8hh.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa334b1664f6e8ae94f40877279035593b":[3,0,46,1,2],
+"tts__interface_8hh.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa5403a575dd609954035245918942cacb":[3,0,46,1,1],
 "tts__interface_8hh.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa6bd04d658b5dee0510833fa07ead4543":[3,0,46,1,0],
 "tts__interface_8hh_source.html":[3,0,46],
 "utility__interface_8hh.html":[3,0,47],

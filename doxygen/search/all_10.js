@@ -19,8 +19,9 @@ var searchData=
   ['tts_5fspeaking_5fexception_1068',['TTS_SPEAKING_EXCEPTION',['../group__SystemInterface.html#ggae95aa9037a85a223126f51c1efcbe671a4728a21f19c4b81a354edbcd5a1ad9c1',1,'NuguCapability']]],
   ['tts_5fspeech_5ffinish_1069',['TTS_SPEECH_FINISH',['../group__TTSInterface.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa334b1664f6e8ae94f40877279035593b',1,'NuguCapability']]],
   ['tts_5fspeech_5fstart_1070',['TTS_SPEECH_START',['../group__TTSInterface.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa6bd04d658b5dee0510833fa07ead4543',1,'NuguCapability']]],
-  ['ttsattribute_1071',['TTSAttribute',['../structNuguCapability_1_1TTSAttribute.html',1,'NuguCapability']]],
-  ['ttsinterface_1072',['TTSInterface',['../group__TTSInterface.html',1,'']]],
-  ['ttsstate_1073',['TTSState',['../group__TTSInterface.html#ga7d4f4423b5757b9a2b029a5ce5fbcccf',1,'NuguCapability']]],
-  ['type_1074',['type',['../structnugu__prof__data.html#a062ca9707171a1f9ffce1efc0682e06f',1,'nugu_prof_data::type()'],['../structNuguCapability_1_1ChipsInfo_1_1Content.html#a7bc1fd4285e9dcd63cdba9c0e4d014e6',1,'NuguCapability::ChipsInfo::Content::type()'],['../classNuguCapability_1_1SpeakerInfo.html#ae8a602ed2f1acabfe439030ac269061c',1,'NuguCapability::SpeakerInfo::type()'],['../group__FocusManagerInterface.html#gaf1d7910d2d2c0a5769397a7330c33d5b',1,'NuguClientKit::FocusConfiguration::type()']]]
+  ['tts_5fspeech_5fstop_1071',['TTS_SPEECH_STOP',['../group__TTSInterface.html#gga7d4f4423b5757b9a2b029a5ce5fbcccfa5403a575dd609954035245918942cacb',1,'NuguCapability']]],
+  ['ttsattribute_1072',['TTSAttribute',['../structNuguCapability_1_1TTSAttribute.html',1,'NuguCapability']]],
+  ['ttsinterface_1073',['TTSInterface',['../group__TTSInterface.html',1,'']]],
+  ['ttsstate_1074',['TTSState',['../group__TTSInterface.html#ga7d4f4423b5757b9a2b029a5ce5fbcccf',1,'NuguCapability']]],
+  ['type_1075',['type',['../structnugu__prof__data.html#a062ca9707171a1f9ffce1efc0682e06f',1,'nugu_prof_data::type()'],['../structNuguCapability_1_1ChipsInfo_1_1Content.html#a7bc1fd4285e9dcd63cdba9c0e4d014e6',1,'NuguCapability::ChipsInfo::Content::type()'],['../classNuguCapability_1_1SpeakerInfo.html#ae8a602ed2f1acabfe439030ac269061c',1,'NuguCapability::SpeakerInfo::type()'],['../group__FocusManagerInterface.html#gaf1d7910d2d2c0a5769397a7330c33d5b',1,'NuguClientKit::FocusConfiguration::type()']]]
 ];
