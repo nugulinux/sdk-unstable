@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"speech__recognizer__interface_8hh_source.html":[3,0,43],
+"structNuguCapability_1_1ASRAttribute.html":[1,1,0,0],
+"structNuguCapability_1_1ASRAttribute.html#a81d5159679ea5a8a88b2e99d6464f86f":[1,1,0,0,0],
+"structNuguCapability_1_1ASRAttribute.html#aca284c4ed6aeb87e035dfe40c5ca4a14":[1,1,0,0,2],
 "structNuguCapability_1_1ASRAttribute.html#ae504d2e2415d00bafb6e45cdbe0800db":[1,1,0,0,1],
 "structNuguCapability_1_1ASRAttribute.html#af9c89e2373e575694f5a756677ca782f":[1,1,0,0,3],
 "structNuguCapability_1_1ChipsInfo.html":[1,1,3,0],

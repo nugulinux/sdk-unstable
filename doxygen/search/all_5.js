@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['failed_125',['FAILED',['../group__SpeechRecognizerInterface.html#ggaae383c251ee0fa6e96e4c53b9f5d9a3aab9e14d9b2886bcff408b85aefa780419',1,'NuguClientKit']]],
+  ['failed_125',['FAILED',['../group__NetworkManagerInterface.html#gga6aff79e2435c590ea44de8c43754e015ab9e14d9b2886bcff408b85aefa780419',1,'NuguClientKit::FAILED()'],['../group__SpeechRecognizerInterface.html#ggaae383c251ee0fa6e96e4c53b9f5d9a3aab9e14d9b2886bcff408b85aefa780419',1,'NuguClientKit::FAILED()']]],
   ['favoritechanged_126',['favoriteChanged',['../classNuguCapability_1_1IAudioPlayerListener.html#a3b15b549b31d904f7f1da52302f2e1b6',1,'NuguCapability::IAudioPlayerListener']]],
   ['finish_127',['finish',['../classNuguClientKit_1_1IInteractionControlManager.html#a4d1f1cc1d21e6301121235c11ec1ffc2',1,'NuguClientKit::IInteractionControlManager::finish()'],['../classNuguClientKit_1_1IRoutineManager.html#ac6b7f5ef7913297b8a7111afca29cb20',1,'NuguClientKit::IRoutineManager::finish()']]],
   ['finished_128',['FINISHED',['../group__AudioPlayerInterface.html#ggadb28ffbfa534751260baf341f9819f94a2c616b2713e2e0aed04b4c4752c88133',1,'NuguCapability::FINISHED()'],['../group__RoutineManagerInterface.html#gga85ba501685094b1c1d34f42229ed227ba2c616b2713e2e0aed04b4c4752c88133',1,'NuguClientKit::FINISHED()']]],
