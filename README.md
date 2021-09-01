@@ -1,4 +1,4 @@
-[![Build Ubuntu](https://github.com/nugulinux/sdk-unstable/workflows/Build%20Ubuntu/badge.svg)]((https://github.com/nugulinux/sdk-unstable/actions?query=workflow%3A%22Build+Ubuntu%22)) [![Build Allwinner](https://github.com/nugulinux/sdk-unstable/workflows/Build%20Allwinner/badge.svg)]((https://github.com/nugulinux/sdk-unstable/actions?query=workflow%3A%22Build+Allwinner%22)) [![Build Tizen](https://github.com/nugulinux/sdk-unstable/workflows/Build%20Tizen/badge.svg)](https://github.com/nugulinux/sdk-unstable/actions?query=workflow%3A%22Build+Tizen%22)
+[![Build Ubuntu](https://github.com/nugulinux/sdk-unstable/workflows/Build%20Ubuntu/badge.svg)]((https://github.com/nugulinux/sdk-unstable/actions?query=workflow%3A%22Build+Ubuntu%22)) [![Build Allwinner](https://github.com/nugulinux/sdk-unstable/workflows/Build%20Allwinner/badge.svg)]((https://github.com/nugulinux/sdk-unstable/actions?query=workflow%3A%22Build+Allwinner%22))
 
 # NUGU SDK for Linux unstable repository
 

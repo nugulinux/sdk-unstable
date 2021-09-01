@@ -1,8 +1,14 @@
 name: Build Tizen
 on:
-  release:
-    types:
-      - created
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: 'Comment'
+        required: false
+        default: ''
+#  release:
+#    types:
+#      - created
 
 env:
   REPO: nugu-linux
