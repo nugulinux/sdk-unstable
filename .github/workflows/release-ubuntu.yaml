@@ -203,6 +203,8 @@ jobs:
     env:
       BASEROOT: /tmp/www
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
       - name: Setup
         id: setup
         run: |
@@ -349,12 +351,13 @@ jobs:
           done
 
       - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: /tmp/www
-          CLEAN: true
+          token: ${{ secrets.GH_TOKEN }}
+          branch: gh-pages
+          folder: /tmp/www
+          clean: true
+          single-commit: true
 
   docker:
     runs-on: ubuntu-latest
@@ -363,31 +366,63 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Generate docker image
+        id: check
         run: |
           echo "OS=$OSTYPE"
+
+          function docker_check() {
+            docker pull nugulinux/sdk:unstable
+          }
+
+          if docker_check; then
+            echo "Download success"
+          else
+            echo "Image not exist"
+            echo "::set-output name=commit::x"
+            exit
+          fi
 
           LAST_COMMIT=`docker run -t --rm nugulinux/sdk:unstable printenv | grep LAST_COMMIT`
           echo $LAST_COMMIT
 
+          COMMIT=
           if [[ "$OSTYPE" == "linux-gnu"* ]]; then
               COMMIT=$(echo $LAST_COMMIT | sed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
           elif [[ "$OSTYPE" == "darwin"* ]]; then
               COMMIT=$(echo $LAST_COMMIT | gsed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
           fi
 
-          echo "SHORTSHA='${{ needs.check.outputs.sha }}'"
           echo "nugulinux/sdk:unstable commit='${COMMIT}'"
+          echo "::set-output name=commit::${COMMIT}"
 
           if [[ "${COMMIT}" == "${{ needs.check.outputs.sha }}" ]]; then
             echo "Same version"
-            exit 0
           else
             echo "not match"
-            cd docker
-            docker build --build-arg LAST_COMMIT=${{ needs.check.outputs.sha }} . -t nugulinux/sdk:unstable
-            cd -
           fi
-      - name: Docker login
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - name: Publish
-        run: docker push nugulinux/sdk:unstable
+      - name: Information
+        run: |
+          echo "${{ needs.check.outputs.sha }}"
+          echo "${{ steps.check.outputs.commit }}"
+      - name: Set up QEMU
+        if: ${{ steps.check.outputs.commit != needs.check.outputs.sha }}
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        if: ${{ steps.check.outputs.commit != needs.check.outputs.sha }}
+        uses: docker/setup-buildx-action@v1
+      - name: Login to GitHub Container Registry
+        if: ${{ steps.check.outputs.commit != needs.check.outputs.sha }}
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push
+        if: ${{ steps.check.outputs.commit != needs.check.outputs.sha }}
+        uses: docker/build-push-action@v2
+        with:
+          context: docker/.
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: nugulinux/sdk:unstable
+          build-args: |
+            LAST_COMMIT=${{ needs.check.outputs.sha }}

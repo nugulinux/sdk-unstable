@@ -18,6 +18,7 @@ jobs:
           SHORTSHA=$(echo ${GITHUB_REF} | cut -c11-)
 
           git clone https://github.com/${REPOSLUG}
+          touch CHANGES.txt
           cd ${REPO}
           git checkout ${SHORTSHA}
           git reset --hard
