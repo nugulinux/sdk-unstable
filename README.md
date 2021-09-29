@@ -22,6 +22,10 @@ Ubuntu 18.04:
 
     deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main
 
+Ubuntu 20.04:
+
+    deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ focal main
+
 Update the package information
 
     sudo apt-get update

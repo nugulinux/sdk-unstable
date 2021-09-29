@@ -54,7 +54,18 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        target: [xenial_x64, xenial_arm64, xenial_armhf, bionic_x64, bionic_arm64, bionic_armhf]
+        target:
+          [
+            xenial_x64,
+            xenial_arm64,
+            xenial_armhf,
+            bionic_x64,
+            bionic_arm64,
+            bionic_armhf,
+            focal_x64,
+            focal_arm64,
+            focal_armhf,
+          ]
     steps:
       - name: Setup
         id: setup
@@ -94,7 +105,7 @@ jobs:
               continue;
             fi
 
-            # Check Ubuntu version (bionic / xenial)
+            # Check Ubuntu version (focal / bionic / xenial)
             if [[ $item == *"${{ steps.setup.outputs.ubuntuver }}"* ]]; then
               :
             else
@@ -140,8 +151,10 @@ jobs:
           echo "Add commit-id(${{ steps.setup.outputs.sha }}) to package version"
           sed -i "1 s/ubuntu[0-9]*~xenial/ubuntu${VERSION}~xenial/" packaging/xenial/changelog
           sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${VERSION}~bionic/" packaging/bionic/changelog
+          sed -i "1 s/ubuntu[0-9]*~focal/ubuntu${VERSION}~focal/" packaging/focal/changelog
           head -1 packaging/xenial/changelog
           head -1 packaging/bionic/changelog
+          head -1 packaging/focal/changelog
           cd -
 
           # Fix permissions for docker
@@ -212,16 +225,21 @@ jobs:
 
           POOL_XENIAL=${BASEROOT}/ubuntu/dists/xenial/pool
           POOL_BIONIC=${BASEROOT}/ubuntu/dists/bionic/pool
+          POOL_FOCAL=${BASEROOT}/ubuntu/dists/focal/pool
 
           DIRS=(
               ${POOL_XENIAL}
               ${POOL_BIONIC}
+              ${POOL_FOCAL}
               ${BASEROOT}/ubuntu/dists/xenial/main/binary-amd64
               ${BASEROOT}/ubuntu/dists/xenial/main/binary-arm64
               ${BASEROOT}/ubuntu/dists/xenial/main/binary-armhf
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-amd64
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-arm64
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-armhf
+              ${BASEROOT}/ubuntu/dists/focal/main/binary-amd64
+              ${BASEROOT}/ubuntu/dists/focal/main/binary-arm64
+              ${BASEROOT}/ubuntu/dists/focal/main/binary-armhf
           )
 
           for item in "${DIRS[@]}"
@@ -259,6 +277,12 @@ jobs:
 
           <h2>Unstable package repository setup</h2>
 
+          <h3>Focal (20.04)</h3>
+          <pre>
+              echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ focal main" > /etc/apt/sources.list.d/nugudev.list
+              apt-get update
+          </pre>
+
           <h3>Bionic (18.04)</h3>
           <pre>
               echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main" > /etc/apt/sources.list.d/nugudev.list
@@ -283,6 +307,7 @@ jobs:
           echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
           echo "::set-output name=pool_xenial::${POOL_XENIAL}"
           echo "::set-output name=pool_bionic::${POOL_BIONIC}"
+          echo "::set-output name=pool_focal::${POOL_FOCAL}"
 
       - name: Generate doxygen
         run: |
@@ -344,6 +369,16 @@ jobs:
                 generate "bionic" "armhf"
               elif [[ $item == *"arm64"* ]]; then
                 generate "bionic" "arm64"
+              fi
+            elif [[ $item == *"focal"* ]]; then
+              echo "- 20.04: ${item}"
+              wget -nv ${item} -P ${{ steps.setup.outputs.pool_focal }}
+              if [[ $item == *"amd64"* ]]; then
+                generate "focal" "amd64"
+              elif [[ $item == *"armhf"* ]]; then
+                generate "focal" "armhf"
+              elif [[ $item == *"arm64"* ]]; then
+                generate "focal" "arm64"
               fi
             else
               echo "- unknown version: ${item}"
