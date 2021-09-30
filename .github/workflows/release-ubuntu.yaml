@@ -89,7 +89,7 @@ jobs:
         run: |
           COUNT=0
           MATCH_COUNT=6
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=50)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].name' -r)
 
           for item in $FILES
@@ -339,7 +339,7 @@ jobs:
           }
 
           echo "> Get file list"
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=50)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].browser_download_url' -r)
           for item in $FILES
           do

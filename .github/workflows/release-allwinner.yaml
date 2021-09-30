@@ -43,7 +43,7 @@ jobs:
         run: |
           COUNT=0
           MATCH_COUNT=1
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.check.outputs.id }}/assets?per_page=50)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.check.outputs.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].name' -r)
 
           for item in $FILES
