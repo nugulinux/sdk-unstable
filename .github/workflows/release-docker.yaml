@@ -1,0 +1,98 @@
+name: Build Docker
+on:
+  page_build:
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: 'Comment'
+        required: false
+        default: ''
+
+env:
+  REPO: nugu-linux
+  REPOSLUG: nugu-developers/nugu-linux
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Generate docker image
+        id: check
+        run: |
+          echo "OS=$OSTYPE"
+
+          function docker_check() {
+            docker pull nugulinux/sdk:unstable
+          }
+
+          if docker_check; then
+            echo "Download success"
+          else
+            echo "Image not exist"
+            echo "::set-output name=commit::x"
+            exit
+          fi
+
+          URL_PACKAGES=https://raw.githubusercontent.com/nugulinux/sdk-unstable/gh-pages/ubuntu/dists/bionic/main/binary-amd64/Packages
+          PKG_VERSION=$(curl -s -X GET $URL_PACKAGES | grep Version | head -1)
+          PKG_SHA=$(echo $PKG_VERSION | sed 's/.*\(.......\)~.*/\1/')
+          echo "Commit from Github pages: $PKG_SHA"
+
+          LAST_COMMIT=`docker run -t --rm nugulinux/sdk:unstable printenv | grep LAST_COMMIT`
+          echo $LAST_COMMIT
+
+          COMMIT=
+          if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+              COMMIT=$(echo $LAST_COMMIT | sed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
+          elif [[ "$OSTYPE" == "darwin"* ]]; then
+              COMMIT=$(echo $LAST_COMMIT | gsed -r 's/LAST_COMMIT=(.*)/\1/' | tr -d '\r')
+          fi
+
+          echo "nugulinux/sdk:unstable docker commit='${COMMIT}'"
+
+          if [[ "${COMMIT}" == "${PKG_SHA}" ]]; then
+            echo "Same version"
+            NEED_BUILD=0
+          else
+            echo "not match"
+            NEED_BUILD=1
+          fi
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "force build"
+            NEED_BUILD=1
+          fi
+
+          echo "::set-output name=commit::${COMMIT}"
+          echo "::set-output name=sha::${PKG_SHA}"
+          echo "::set-output name=build::${NEED_BUILD}"
+
+      - name: Information
+        run: |
+          echo "${{ steps.check.outputs.sha }}"
+          echo "${{ steps.check.outputs.commit }}"
+          echo "${{ steps.check.outputs.build }}"
+      - name: Set up QEMU
+        if: ${{ steps.check.outputs.build == 1}}
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        if: ${{ steps.check.outputs.build == 1}}
+        uses: docker/setup-buildx-action@v1
+      - name: Login to GitHub Container Registry
+        if: ${{ steps.check.outputs.build == 1}}
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push
+        if: ${{ steps.check.outputs.build == 1}}
+        uses: docker/build-push-action@v2
+        with:
+          context: docker/.
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: nugulinux/sdk:unstable
+          build-args: |
+            LAST_COMMIT=${{ steps.check.outputs.sha }}
