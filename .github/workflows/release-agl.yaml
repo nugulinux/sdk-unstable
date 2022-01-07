@@ -125,6 +125,7 @@ jobs:
           cd build
           cmake .. -DENABLE_OPUS_LIBRARY=ON \
             -DENABLE_PORTAUDIO_PLUGIN=OFF \
+            -DENABLE_ASAN=OFF \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/Toolchain.cmake
           make -j6
