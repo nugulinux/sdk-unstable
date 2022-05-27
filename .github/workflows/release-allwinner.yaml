@@ -96,6 +96,7 @@ jobs:
           cd build
 
           cmake .. \
+              -DENABLE_ASAN=OFF \
               -DCMAKE_INSTALL_PREFIX=/mnt/UDISK \
               -DCMAKE_INSTALL_LIBDIR=/mnt/UDISK/lib \
               -DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/Toolchain.cmake
