@@ -26,6 +26,10 @@ Ubuntu 20.04:
 
     deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ focal main
 
+Ubuntu 22.04:
+
+    deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ jammy main
+
 Update the package information
 
     sudo apt-get update
