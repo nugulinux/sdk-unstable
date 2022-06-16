@@ -14,10 +14,6 @@ Add NUGU SDK for Linux PPA:
 
 Create a `/etc/apt/sources.list.d/nugu-unstable.list` file with following content.
 
-Ubuntu 16.04:
-
-    deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ xenial main
-
 Ubuntu 18.04:
 
     deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main

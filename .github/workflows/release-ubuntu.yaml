@@ -56,9 +56,6 @@ jobs:
       matrix:
         target:
           [
-            xenial_x64,
-            xenial_arm64,
-            xenial_armhf,
             bionic_x64,
             bionic_arm64,
             bionic_armhf,
@@ -108,7 +105,7 @@ jobs:
               continue;
             fi
 
-            # Check Ubuntu version (jammy / focal / bionic / xenial)
+            # Check Ubuntu version (jammy / focal / bionic)
             if [[ $item == *"${{ steps.setup.outputs.ubuntuver }}"* ]]; then
               :
             else
@@ -152,11 +149,9 @@ jobs:
           rm -rf .git
 
           echo "Add commit-id(${{ steps.setup.outputs.sha }}) to package version"
-          sed -i "1 s/ubuntu[0-9]*~xenial/ubuntu${VERSION}~xenial/" packaging/xenial/changelog
           sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${VERSION}~bionic/" packaging/bionic/changelog
           sed -i "1 s/ubuntu[0-9]*~focal/ubuntu${VERSION}~focal/" packaging/focal/changelog
           sed -i "1 s/ubuntu[0-9]*~jammy/ubuntu${VERSION}~jammy/" packaging/jammy/changelog
-          head -1 packaging/xenial/changelog
           head -1 packaging/bionic/changelog
           head -1 packaging/focal/changelog
           head -1 packaging/jammy/changelog
@@ -234,18 +229,13 @@ jobs:
         run: |
           sudo apt-get install doxygen graphviz
 
-          POOL_XENIAL=${BASEROOT}/ubuntu/dists/xenial/pool
           POOL_BIONIC=${BASEROOT}/ubuntu/dists/bionic/pool
           POOL_FOCAL=${BASEROOT}/ubuntu/dists/focal/pool
           POOL_JAMMY=${BASEROOT}/ubuntu/dists/jammy/pool
 
           DIRS=(
-              ${POOL_XENIAL}
               ${POOL_BIONIC}
               ${POOL_JAMMY}
-              ${BASEROOT}/ubuntu/dists/xenial/main/binary-amd64
-              ${BASEROOT}/ubuntu/dists/xenial/main/binary-arm64
-              ${BASEROOT}/ubuntu/dists/xenial/main/binary-armhf
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-amd64
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-arm64
               ${BASEROOT}/ubuntu/dists/bionic/main/binary-armhf
@@ -310,12 +300,6 @@ jobs:
               apt-get update
           </pre>
 
-          <h3>Xenial (16.04)</h3>
-          <pre>
-              echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ xenial main" > /etc/apt/sources.list.d/nugudev.list
-              apt-get update
-          </pre>
-
           <hr/>
 
           <p>Generated at ${DATE}</p>
@@ -326,7 +310,6 @@ jobs:
 
           echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
           echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
-          echo "::set-output name=pool_xenial::${POOL_XENIAL}"
           echo "::set-output name=pool_bionic::${POOL_BIONIC}"
           echo "::set-output name=pool_focal::${POOL_FOCAL}"
           echo "::set-output name=pool_jammy::${POOL_JAMMY}"
@@ -372,17 +355,7 @@ jobs:
 
             echo "Download ${item}"
 
-            if [[ $item == *"xenial"* ]]; then
-              echo "- 16.04: ${item}"
-              wget -nv ${item} -P ${{ steps.setup.outputs.pool_xenial }}
-              if [[ $item == *"amd64"* ]]; then
-                generate "xenial" "amd64"
-              elif [[ $item == *"armhf"* ]]; then
-                generate "xenial" "armhf"
-              elif [[ $item == *"arm64"* ]]; then
-                generate "xenial" "arm64"
-              fi
-            elif [[ $item == *"bionic"* ]]; then
+            if [[ $item == *"bionic"* ]]; then
               echo "- 18.04: ${item}"
               wget -nv ${item} -P ${{ steps.setup.outputs.pool_bionic }}
               if [[ $item == *"amd64"* ]]; then
