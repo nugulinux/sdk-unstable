@@ -35,7 +35,7 @@ jobs:
             exit
           fi
 
-          URL_PACKAGES=https://raw.githubusercontent.com/nugulinux/sdk-unstable/gh-pages/ubuntu/dists/bionic/main/binary-amd64/Packages
+          URL_PACKAGES=https://raw.githubusercontent.com/nugulinux/sdk-unstable/gh-pages/ubuntu/dists/focal/main/binary-amd64/Packages
           PKG_VERSION=$(curl -s -X GET $URL_PACKAGES | grep Version | head -1)
           PKG_SHA=$(echo $PKG_VERSION | sed 's/.*\(.......\)~.*/\1/')
           echo "Commit from Github pages: $PKG_SHA"

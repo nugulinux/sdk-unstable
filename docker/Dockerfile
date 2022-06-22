@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 LABEL maintainer="nugulinux@gmail.com" \
       version="0.1" \
       description="nugulinux unstable sdk"
@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y software-properties-common ca-certificates --no-install-recommends \
     && add-apt-repository -y ppa:nugulinux/sdk \
-    && echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main" > /etc/apt/sources.list.d/nugu-unstable.list \
+    && echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ focal main" > /etc/apt/sources.list.d/nugu-unstable.list \
     && apt-get update && apt-get install -y --no-install-recommends \
 	gstreamer1.0-pulseaudio \
 	libnugu \
