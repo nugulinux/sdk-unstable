@@ -123,7 +123,7 @@ jobs:
           rm -rf build
           mkdir build
           cd build
-          cmake .. -DENABLE_OPUS_LIBRARY=ON \
+          cmake .. -DENABLE_BUILTIN_OPUS=ON \
             -DENABLE_PORTAUDIO_PLUGIN=OFF \
             -DENABLE_ASAN=OFF \
             -DCMAKE_INSTALL_PREFIX=/usr \

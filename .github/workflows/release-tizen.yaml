@@ -141,7 +141,7 @@ jobs:
               -DENABLE_GSTREAMER_PLUGIN=OFF \
               -DENABLE_PORTAUDIO_PLUGIN=OFF \
               -DENABLE_VENDOR_LIBRARY=ON \
-              -DENABLE_OPUS_LIBRARY=ON
+              -DENABLE_BUILTIN_OPUS=ON
 
           make -j6
 
