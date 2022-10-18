@@ -27,7 +27,7 @@ jobs:
           cat CHANGES.txt
 
       - name: Upload
-        uses: svenstaro/upload-release-action@2.2.0
+        uses: svenstaro/upload-release-action@v2
         with:
           file: CHANGES.txt
           repo_token: ${{ secrets.GH_TOKEN }}

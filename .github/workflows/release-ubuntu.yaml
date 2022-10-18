@@ -208,7 +208,7 @@ jobs:
 
       - name: Upload artifact to release
         if: ${{ steps.build.outputs.files == '1'}}
-        uses: svenstaro/upload-release-action@2.2.0
+        uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/result/*
           file_glob: true
@@ -223,7 +223,7 @@ jobs:
       BASEROOT: /tmp/www
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup
         id: setup
         run: |
@@ -391,7 +391,7 @@ jobs:
           done
 
       - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: gh-pages

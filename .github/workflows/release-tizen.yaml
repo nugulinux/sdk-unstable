@@ -166,7 +166,7 @@ jobs:
 
       - name: Upload
         if: ${{ steps.check.outputs.exist == '0'}}
-        uses: svenstaro/upload-release-action@2.2.0
+        uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/result/*
           file_glob: true

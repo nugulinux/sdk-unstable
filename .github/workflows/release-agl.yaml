@@ -145,7 +145,7 @@ jobs:
 
       - name: Upload
         if: ${{ steps.dupcheck.outputs.exist == '0'}}
-        uses: svenstaro/upload-release-action@2.2.0
+        uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/*.tgz
           file_glob: true
