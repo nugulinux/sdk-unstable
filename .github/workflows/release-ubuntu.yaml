@@ -45,8 +45,8 @@ jobs:
           fi
           echo "Release-ID: $ID"
 
-          echo "::set-output name=id::$ID"
-          echo "::set-output name=sha::$SHORTSHA"
+          echo "id=$ID" >> $GITHUB_OUTPUT
+          echo "sha=$SHORTSHA" >> $GITHUB_OUTPUT
 
   build:
     runs-on: ubuntu-latest
@@ -68,7 +68,6 @@ jobs:
           ]
     steps:
       - name: Setup
-        id: setup
         run: |
           UBUNTU_VER=$(echo ${{ matrix.target }} | cut -d "_" -f 1)
           ARCH=$(echo ${{ matrix.target }} | cut -d "_" -f 2)
@@ -78,18 +77,17 @@ jobs:
             ARCH2="${ARCH}"
           fi
 
-          echo "::set-output name=ubuntuver::$UBUNTU_VER"
-          echo "::set-output name=arch::$ARCH"
-          echo "::set-output name=arch2::$ARCH2"
-          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
-          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
+          echo "ubuntuver=$UBUNTU_VER" >> $GITHUB_ENV
+          echo "arch=$ARCH" >> $GITHUB_ENV
+          echo "arch2=$ARCH2" >> $GITHUB_ENV
+          echo "id=${{ needs.check.outputs.release_id }}" >> $GITHUB_ENV
+          echo "sha=${{ needs.check.outputs.sha }}" >> $GITHUB_ENV
 
       - name: Check for duplicated files
-        id: check
         run: |
           COUNT=0
           MATCH_COUNT=6
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=80)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ env.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].name' -r)
 
           for item in $FILES
@@ -97,16 +95,16 @@ jobs:
             echo "Check artifacts - $item"
 
             # Check ARCH or ARCH2
-            if [[ $item == *"${{ steps.setup.outputs.arch }}"* ]]; then
+            if [[ $item == *"${{ env.arch }}"* ]]; then
               :
-            elif [[ $item == *"${{ steps.setup.outputs.arch2 }}"* ]]; then
+            elif [[ $item == *"${{ env.arch2 }}"* ]]; then
               :
             else
               continue;
             fi
 
             # Check Ubuntu version (jammy / focal / bionic)
-            if [[ $item == *"${{ steps.setup.outputs.ubuntuver }}"* ]]; then
+            if [[ $item == *"${{ env.ubuntuver }}"* ]]; then
               :
             else
               continue;
@@ -119,36 +117,35 @@ jobs:
           # Mark to flag file to trigger the build
           if [[ $COUNT == $MATCH_COUNT ]]; then
             echo "> There is no need to rebuild."
-            echo "::set-output name=exist::1"
+            echo "exist=1" >> $GITHUB_ENV
           else
             echo "> Rebuild required"
-            echo "::set-output name=exist::0"
+            echo "exist=0" >> $GITHUB_ENV
           fi
 
       - name: The build artifact already exists, so the build is skipped.
-        if: ${{ steps.check.outputs.exist == '1'}}
+        if: ${{ env.exist == '1'}}
         run: echo "Done"
 
       - name: Start Ubuntu build
-        id: build
-        if: ${{ steps.check.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: |
           # Get date for commit to generate version
-          DATETIME=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/${{ steps.setup.outputs.sha }} | jq '.commit.committer.date' -r)
+          DATETIME=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${REPOSLUG}/commits/${{ env.sha }} | jq '.commit.committer.date' -r)
           echo "commit.committer.date = ${DATETIME}"
 
           STAMP=$(date -d ${DATETIME} +%Y%m%d)
-          VERSION="${STAMP}${{ steps.setup.outputs.sha }}"
+          VERSION="${STAMP}${{ env.sha }}"
           echo "package version = ${VERSION}"
 
           echo "Clone the sdk repository"
           git clone https://github.com/${REPOSLUG} --recursive
           cd ${REPO}
-          git checkout ${{ steps.setup.outputs.sha }}
+          git checkout ${{ env.sha }}
           git reset --hard
           rm -rf .git
 
-          echo "Add commit-id(${{ steps.setup.outputs.sha }}) to package version"
+          echo "Add commit-id(${{ env.sha }}) to package version"
           sed -i "1 s/ubuntu[0-9]*~bionic/ubuntu${VERSION}~bionic/" packaging/bionic/changelog
           sed -i "1 s/ubuntu[0-9]*~focal/ubuntu${VERSION}~focal/" packaging/focal/changelog
           sed -i "1 s/ubuntu[0-9]*~jammy/ubuntu${VERSION}~jammy/" packaging/jammy/changelog
@@ -174,12 +171,12 @@ jobs:
           cp *.deb /tmp/result/
 
           echo "Completed"
-          echo "::set-output name=files::1"
+          echo "files=1" >> $GITHUB_ENV
 
       - name: Generate tgz
-        if: ${{ steps.build.outputs.files == '1'}}
+        if: ${{ env.files == '1'}}
         run: |
-          FILENAME=files_${{ matrix.target }}_${{ steps.setup.outputs.sha }}
+          FILENAME=files_${{ matrix.target }}_${{ env.sha }}
 
           # Create temporary directory
           mkdir dest
@@ -207,7 +204,7 @@ jobs:
           cp ${FILENAME}.tgz /tmp/result/
 
       - name: Upload artifact to release
-        if: ${{ steps.build.outputs.files == '1'}}
+        if: ${{ env.files == '1'}}
         uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/result/*
@@ -263,7 +260,7 @@ jobs:
           <h1>DEB Package repository for unstable release</h1>
 
           <p>
-          last unstable commit: <a href="https://github.com/nugu-developers/nugu-linux/commit/${{ steps.setup.outputs.sha }}">${{ steps.setup.outputs.sha }}</a>
+          last unstable commit: <a href="https://github.com/nugu-developers/nugu-linux/commit/${{ env.sha }}">${{ env.sha }}</a>
           </p>
 
           <p>
@@ -308,17 +305,17 @@ jobs:
           </html>
           EOF
 
-          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
-          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
-          echo "::set-output name=pool_bionic::${POOL_BIONIC}"
-          echo "::set-output name=pool_focal::${POOL_FOCAL}"
-          echo "::set-output name=pool_jammy::${POOL_JAMMY}"
+          echo "id=${{ needs.check.outputs.release_id }}" >> $GITHUB_ENV
+          echo "sha=${{ needs.check.outputs.sha }}" >> $GITHUB_ENV
+          echo "pool_bionic=${POOL_BIONIC}" >> $GITHUB_ENV
+          echo "pool_focal=${POOL_FOCAL}" >> $GITHUB_ENV
+          echo "pool_jammy=${POOL_JAMMY}" >> $GITHUB_ENV
 
       - name: Generate doxygen
         run: |
           git clone https://github.com/${REPOSLUG}
           cd ${REPO}
-          git checkout ${{ steps.setup.outputs.sha }}
+          git checkout ${{ env.sha }}
           git reset --hard
           rm -rf .git
 
@@ -344,7 +341,7 @@ jobs:
           }
 
           echo "> Get file list"
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=80)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ env.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].browser_download_url' -r)
           for item in $FILES
           do
@@ -357,7 +354,7 @@ jobs:
 
             if [[ $item == *"bionic"* ]]; then
               echo "- 18.04: ${item}"
-              wget -nv ${item} -P ${{ steps.setup.outputs.pool_bionic }}
+              wget -nv ${item} -P ${{ env.pool_bionic }}
               if [[ $item == *"amd64"* ]]; then
                 generate "bionic" "amd64"
               elif [[ $item == *"armhf"* ]]; then
@@ -367,7 +364,7 @@ jobs:
               fi
             elif [[ $item == *"focal"* ]]; then
               echo "- 20.04: ${item}"
-              wget -nv ${item} -P ${{ steps.setup.outputs.pool_focal }}
+              wget -nv ${item} -P ${{ env.pool_focal }}
               if [[ $item == *"amd64"* ]]; then
                 generate "focal" "amd64"
               elif [[ $item == *"armhf"* ]]; then
@@ -377,7 +374,7 @@ jobs:
               fi
             elif [[ $item == *"jammy"* ]]; then
               echo "- 20.04: ${item}"
-              wget -nv ${item} -P ${{ steps.setup.outputs.pool_jammy }}
+              wget -nv ${item} -P ${{ env.pool_jammy }}
               if [[ $item == *"amd64"* ]]; then
                 generate "jammy" "amd64"
               elif [[ $item == *"armhf"* ]]; then

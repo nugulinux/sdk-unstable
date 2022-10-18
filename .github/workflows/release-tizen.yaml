@@ -45,8 +45,8 @@ jobs:
           fi
           echo "Release-ID: $ID"
 
-          echo "::set-output name=id::$ID"
-          echo "::set-output name=sha::$SHORTSHA"
+          echo "id=$ID" >> $GITHUB_OUTPUT
+          echo "sha=$SHORTSHA" >> $GITHUB_OUTPUT
 
   build:
     runs-on: ubuntu-latest
@@ -57,17 +57,15 @@ jobs:
         target: [emulator, device]
     steps:
       - name: Setup
-        id: setup
         run: |
-          echo "::set-output name=id::${{ needs.check.outputs.release_id }}"
-          echo "::set-output name=sha::${{ needs.check.outputs.sha }}"
+          echo "id=${{ needs.check.outputs.release_id }}" >> $GITHUB_ENV
+          echo "sha=${{ needs.check.outputs.sha }}" >> $GITHUB_ENV
 
       - name: Check for duplicated files
-        id: check
         run: |
           COUNT=0
           MATCH_COUNT=1
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.setup.outputs.id }}/assets?per_page=80)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ env.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].name' -r)
 
           for item in $FILES
@@ -93,22 +91,22 @@ jobs:
           # Mark to flag file to trigger the build
           if [[ $COUNT == $MATCH_COUNT ]]; then
             echo "> There is no need to rebuild."
-            echo "::set-output name=exist::1"
+            echo "exist=1" >> $GITHUB_ENV
           else
             echo "> Rebuild required"
-            echo "::set-output name=exist::0"
+            echo "exist=0" >> $GITHUB_ENV
           fi
 
       - name: The build artifact already exists, so the build is skipped.
-        if: ${{ steps.check.outputs.exist == '1'}}
+        if: ${{ env.exist == '1'}}
         run: echo "Done"
 
       - name: Build
-        if: ${{ steps.check.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: |
           git clone https://github.com/${REPOSLUG} --recursive
           cd ${REPO}
-          git checkout ${{ steps.setup.outputs.sha }}
+          git checkout ${{ env.sha }}
           git reset --hard
           rm -rf .git
 
@@ -148,7 +146,7 @@ jobs:
           DESTDIR=$SDKPATH make install
 
           cd ..
-          tar cvfz files_tizen_${{ matrix.target }}_${{ steps.setup.outputs.sha }}.tgz SDK
+          tar cvfz files_tizen_${{ matrix.target }}_${{ env.sha }}.tgz SDK
           EOF
 
           chmod 755 sdkbuild.sh
@@ -165,7 +163,7 @@ jobs:
           ls -l
 
       - name: Upload
-        if: ${{ steps.check.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/result/*

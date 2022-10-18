@@ -34,7 +34,6 @@ jobs:
         target: [ koi_rpi4, koi_x64 ]
     steps:
       - name: Get SHA and ID from Release ${{ github.ref }}
-        id: check
         run: |
           if [ -z "${{ github.event.inputs.hash }}" ]; then
             # Remove "refs/tags/" from "refs/tags/xxxxxxx"
@@ -53,15 +52,14 @@ jobs:
           fi
           echo "Release-ID: $ID"
 
-          echo "::set-output name=id::$ID"
-          echo "::set-output name=sha::$SHORTSHA"
+          echo "id=$ID" >> $GITHUB_ENV
+          echo "sha=$SHORTSHA" >> $GITHUB_ENV
 
       - name: Check for duplicated files
-        id: dupcheck
         run: |
           COUNT=0
           MATCH_COUNT=1
-          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ steps.check.outputs.id }}/assets?per_page=80)
+          RESULT=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${{ env.id }}/assets?per_page=80)
           FILES=$(echo $RESULT  | jq '.[].name' -r)
 
           for item in $FILES
@@ -81,22 +79,22 @@ jobs:
           # Mark to flag file to trigger the build
           if [[ $COUNT == $MATCH_COUNT ]]; then
             echo "> There is no need to rebuild."
-            echo "::set-output name=exist::1"
+            echo "exist=1" >> $GITHUB_ENV
           else
             echo "> Rebuild required"
-            echo "::set-output name=exist::0"
+            echo "exist=0" >> $GITHUB_ENV
           fi
 
       - name: The build artifact already exists, so the build is skipped.
-        if: ${{ steps.dupcheck.outputs.exist == '1'}}
+        if: ${{ env.exist == '1'}}
         run: echo "Done"
 
       - name: Prepare SDK source
-        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: |
           git clone https://github.com/${REPOSLUG} --recursive
           cd ${REPO}
-          git checkout ${{ steps.check.outputs.sha }}
+          git checkout ${{ env.sha }}
           git reset --hard
           rm -rf .git
 
@@ -106,11 +104,11 @@ jobs:
           ls -l
 
       - name: Prepare AGL Docker image
-        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: docker pull ghcr.io/webispy/agl:${{ matrix.target }}
 
       - name: Build
-        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: |
           cd ${REPO}
 
@@ -132,7 +130,7 @@ jobs:
 
           mkdir SDK
           DESTDIR=SDK make install
-          tar cvfz files_agl_${{ matrix.target }}_${{ steps.check.outputs.sha }}.tgz SDK
+          tar cvfz files_agl_${{ matrix.target }}_${{ env.sha }}.tgz SDK
           EOF
 
           chmod 755 sdkbuild.sh
@@ -144,7 +142,7 @@ jobs:
           cp build/files_*.tgz /tmp/
 
       - name: Upload
-        if: ${{ steps.dupcheck.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         uses: svenstaro/upload-release-action@v2
         with:
           file: /tmp/*.tgz

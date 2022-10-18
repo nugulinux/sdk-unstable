@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get last commit from nugu-developers/nugu-linux
-        id: get-commit
         env:
           GITHUB_EVENT: ${{ toJson(github.event) }}
         run: |
@@ -32,34 +31,35 @@ jobs:
           echo "SHA=$SHA"
           echo "SHORTSHA=$SHORTSHA"
           echo "MSG=$MSG"
-          echo "::set-output name=sha::$SHA"
-          echo "::set-output name=shortsha::$SHORTSHA"
-          echo "::set-output name=body::$MSG"
+          echo "sha=$SHA" >> $GITHUB_ENV
+          echo "shortsha=$SHORTSHA" >> $GITHUB_ENV
+          echo "body<<EOF" >> $GITHUB_ENV
+          echo "$MSG" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
-      - name: Check existing release for ${{ steps.get-commit.outputs.shortsha }}
-        id: last-release
+      - name: Check existing release for ${{ env.shortsha }}
         run: |
-          echo "SHA=${{ steps.get-commit.outputs.sha }}"
-          ID=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${{ steps.get-commit.outputs.shortsha }} | jq '.id' -r)
+          echo "SHA=${{ env.sha }}"
+          ID=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" -X GET https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${{ env.shortsha }} | jq '.id' -r)
           echo "> Release ID = ${ID}"
           if [[ ${ID} != "null" ]]; then
             echo "Release ${ID} is already exist"
-            echo "::set-output name=exist::1"
+            echo "exist=1" >> $GITHUB_ENV
           else
             echo "Release ${ID} is not exist."
-            echo "::set-output name=exist::0"
+            echo "exist=0" >> $GITHUB_ENV
           fi
 
       - name: Done
-        if: ${{ steps.last-release.outputs.exist == '1'}}
+        if: ${{ env.exist == '1'}}
         run: echo "Done"
 
       - name: Generate new release
-        if: ${{ steps.last-release.outputs.exist == '0'}}
+        if: ${{ env.exist == '0'}}
         run: |
-          jq -n --arg body "${{ steps.get-commit.outputs.body }}" \
-            --arg tag_name "${{ steps.get-commit.outputs.shortsha }}" \
-            --arg name "${{ steps.get-commit.outputs.shortsha }}" \
+          jq -n --arg body "${{ env.body }}" \
+            --arg tag_name "${{ env.shortsha }}" \
+            --arg name "${{ env.shortsha }}" \
             '{ "tag_name": $tag_name, "name": $name, "body": $body }' | curl -D - \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             -X POST https://api.github.com/repos/${GITHUB_REPOSITORY}/releases -d@-

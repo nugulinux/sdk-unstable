@@ -19,7 +19,6 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
       - name: Generate docker image
-        id: check
         run: |
           echo "OS=$OSTYPE"
 
@@ -31,7 +30,7 @@ jobs:
             echo "Download success"
           else
             echo "Image not exist"
-            echo "::set-output name=commit::x"
+            echo "commit=x" >> $GITHUB_ENV
             exit
           fi
 
@@ -65,29 +64,29 @@ jobs:
             NEED_BUILD=1
           fi
 
-          echo "::set-output name=commit::${COMMIT}"
-          echo "::set-output name=sha::${PKG_SHA}"
-          echo "::set-output name=build::${NEED_BUILD}"
+          echo "commit=${COMMIT}" >> $GITHUB_ENV
+          echo "sha=${PKG_SHA}" >> $GITHUB_ENV
+          echo "build=${NEED_BUILD}" >> $GITHUB_ENV
 
       - name: Information
         run: |
-          echo "${{ steps.check.outputs.sha }}"
-          echo "${{ steps.check.outputs.commit }}"
-          echo "${{ steps.check.outputs.build }}"
+          echo "${{ env.sha }}"
+          echo "${{ env.commit }}"
+          echo "${{ env.build }}"
       - name: Set up QEMU
-        if: ${{ steps.check.outputs.build == 1}}
+        if: ${{ env.build == 1}}
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
-        if: ${{ steps.check.outputs.build == 1}}
+        if: ${{ env.build == 1}}
         uses: docker/setup-buildx-action@v2
       - name: Login to GitHub Container Registry
-        if: ${{ steps.check.outputs.build == 1}}
+        if: ${{ env.build == 1}}
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
-        if: ${{ steps.check.outputs.build == 1}}
+        if: ${{ env.build == 1}}
         uses: docker/build-push-action@v3
         with:
           context: docker/.
@@ -95,4 +94,4 @@ jobs:
           push: true
           tags: nugulinux/sdk:unstable
           build-args: |
-            LAST_COMMIT=${{ steps.check.outputs.sha }}
+            LAST_COMMIT=${{ env.sha }}
