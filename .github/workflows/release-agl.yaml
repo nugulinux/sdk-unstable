@@ -116,7 +116,7 @@ jobs:
           #!/bin/bash
           set -e
 
-          source /opt/agl-sdk/11.0.4-*/environment-setup-*
+          source /opt/agl-sdk/11.0.*/environment-setup-*
 
           rm -rf build
           mkdir build
