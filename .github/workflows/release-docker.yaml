@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Generate docker image
         run: |
           echo "OS=$OSTYPE"
@@ -75,19 +75,19 @@ jobs:
           echo "${{ env.build }}"
       - name: Set up QEMU
         if: ${{ env.build == 1}}
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         if: ${{ env.build == 1}}
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
       - name: Login to GitHub Container Registry
         if: ${{ env.build == 1}}
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
         if: ${{ env.build == 1}}
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v5
         with:
           context: docker/.
           platforms: linux/amd64,linux/arm64
