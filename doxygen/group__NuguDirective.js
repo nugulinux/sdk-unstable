@@ -1,0 +1,38 @@
+var group__NuguDirective =
+[
+    [ "NuguDirective", "group__NuguDirective.html#ga0e689d212db128a33b2869181169e216", null ],
+    [ "NuguDirectiveDataCallback", "group__NuguDirective.html#gad7b2a8a9e6127f5240532e38d55813ee", null ],
+    [ "nugu_directive_medium", "group__NuguDirective.html#gae3bc153e4b821722bfcc20aee94727fd", [
+      [ "NUGU_DIRECTIVE_MEDIUM_AUDIO", "group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdaef9d453b9bf85d3e2ecba7cf468409c7", null ],
+      [ "NUGU_DIRECTIVE_MEDIUM_VISUAL", "group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdaa275cd912e1e2a2b98c02dd9adb59806", null ],
+      [ "NUGU_DIRECTIVE_MEDIUM_NONE", "group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fda2eaf7c456a90163040568638bb6b39a8", null ],
+      [ "NUGU_DIRECTIVE_MEDIUM_ANY", "group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fda28ebbe65bc0951506ac046dc3359f995", null ],
+      [ "NUGU_DIRECTIVE_MEDIUM_MAX", "group__NuguDirective.html#ggae3bc153e4b821722bfcc20aee94727fdab74f2629ca667bbee05214a1864e5ded", null ]
+    ] ],
+    [ "nugu_directive_new", "group__NuguDirective.html#gab87fd19b47ca52db5db2e73232c8ec7a", null ],
+    [ "nugu_directive_ref", "group__NuguDirective.html#ga502912ff0b9e914c2d5c3fe8f114fdaf", null ],
+    [ "nugu_directive_unref", "group__NuguDirective.html#ga7aff4a16e9087dc7911dedb5be6c9ca5", null ],
+    [ "nugu_directive_peek_namespace", "group__NuguDirective.html#ga426c8418ed48b038643b07be7ba84c4e", null ],
+    [ "nugu_directive_peek_name", "group__NuguDirective.html#ga4c7d221c005a19e4f78eef4a3d798537", null ],
+    [ "nugu_directive_peek_groups", "group__NuguDirective.html#gae5c86c9ea454fd4d5035dc9959efeaca", null ],
+    [ "nugu_directive_peek_version", "group__NuguDirective.html#gadab703d327c1c3c4a2ca1f949efcf9ba", null ],
+    [ "nugu_directive_peek_msg_id", "group__NuguDirective.html#ga53ed3093c684c42a4e56efb6c14c9c92", null ],
+    [ "nugu_directive_peek_dialog_id", "group__NuguDirective.html#ga4cc917f295480ca628b59278c0caa5a9", null ],
+    [ "nugu_directive_peek_referrer_id", "group__NuguDirective.html#gadc2161d8aa02d2ad943cef5ea7df9133", null ],
+    [ "nugu_directive_peek_json", "group__NuguDirective.html#gad783e670c395955c792300d0bf0d57cc", null ],
+    [ "nugu_directive_is_active", "group__NuguDirective.html#ga1e79f0287f061edca6c95379b961d384", null ],
+    [ "nugu_directive_set_active", "group__NuguDirective.html#ga702da3c3ced0c3877befccd329664c00", null ],
+    [ "nugu_directive_add_data", "group__NuguDirective.html#ga7e418328bf1e91d48fcb5e5a06933da9", null ],
+    [ "nugu_directive_close_data", "group__NuguDirective.html#ga2b8ea1315f4e3ec572a8876c4ebf06ab", null ],
+    [ "nugu_directive_is_data_end", "group__NuguDirective.html#gab2670bcf069c891e11d3bb7fb8cb45ed", null ],
+    [ "nugu_directive_set_media_type", "group__NuguDirective.html#gad021258775a6b0215783c285fe187e39", null ],
+    [ "nugu_directive_peek_media_type", "group__NuguDirective.html#ga8a86ecd351a5ffe05c5ebfc99e787f6b", null ],
+    [ "nugu_directive_get_data", "group__NuguDirective.html#gafc8529bf95587a8cf019bf072c6462fe", null ],
+    [ "nugu_directive_get_data_size", "group__NuguDirective.html#ga9ec746d819ee46cfb71e5659edcdd5ba", null ],
+    [ "nugu_directive_set_blocking_policy", "group__NuguDirective.html#gad30fdaa34dcc565330f2b27984371db1", null ],
+    [ "nugu_directive_get_blocking_medium", "group__NuguDirective.html#ga45e4b5b340fda1a9b51c3a2ac67f3e92", null ],
+    [ "nugu_directive_get_blocking_medium_string", "group__NuguDirective.html#ga487dc686691260f57277c4984ed5bb03", null ],
+    [ "nugu_directive_is_blocking", "group__NuguDirective.html#gabb16f3f980013ddf1ac8059e17befdca", null ],
+    [ "nugu_directive_set_data_callback", "group__NuguDirective.html#gabd2cba337252d647492bdb3b7e758ed5", null ],
+    [ "nugu_directive_remove_data_callback", "group__NuguDirective.html#gac5b00af73cdedd9525f999bd78abd36e", null ]
+];

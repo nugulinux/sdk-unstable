@@ -1,0 +1,107 @@
+Package: libnugu
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~focal
+Architecture: amd64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 4904
+Depends: libc6 (>= 2.28), libgcc-s1 (>= 3.3.1), libglib2.0-0 (>= 2.31.8), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl1.1 (>= 1.1.1), libstdc++6 (>= 6), zlib1g (>= 1:1.1.4)
+Recommends: libnugu-plugins-default
+Filename: dists/focal/pool/libnugu_1.7.5ubuntu20240220a903cc6.focal_amd64.deb
+Size: 2596476
+MD5sum: 0dda957ff384cf5acfbb53d26bef52a3
+SHA1: db3602d9db7153315dcaa623c0e9cc5df86ddcd5
+SHA256: 379a228bc14226ab71610f0fa8a7afc246da23139fceb9b904ba872055e44649
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu package provide shared libraries.
+
+Package: libnugu-dbg
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~focal
+Architecture: amd64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 8012
+Depends: libnugu (= 1.7.5ubuntu20240220a903cc6~focal)
+Filename: dists/focal/pool/libnugu-dbg_1.7.5ubuntu20240220a903cc6.focal_amd64.deb
+Size: 6928680
+MD5sum: 8b72c2d731aad9f21714042795a07780
+SHA1: 3c0583840dce012b45438c7bc706f2919eba9cc3
+SHA256: e93bd11f9c90b6627cc9b54493fffd8cbd79b2673cb8051511df20674a0f2e3b
+Section: debug
+Priority: optional
+Description: NUGU is an AI service platform (debugging symbols)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dbg package provide debugging symbols.
+Build-Ids: 09a4ac0d98aa483c9ec96c620f3b276a52c9e325 133f47f3499e43db2b75ba5a71b418690dcfe274 2210fec3ca328fed1657385e0028f572926a0caf 22e6a2175cbb3ff58ef46ce9d7fd61d11d3d391e 275aa4a3b1c9337d5fe1da23c65d46f68652dc87 38a3ce7246885e207848a969063a24e7f8c8ffc9 4298749e26e63b2bd918f042781bbd872dada825 4c6cbca69d16921faf24c35bf1d145b5931e965f 56a9efa18a337ad5010c6687e28d8afc13202b51 63133dd8bd7cc699747fd945e4580f793fae4c22 66af7271c6cc934c8b98cab2eb262922b9937935 87a4400c9efd14bd6f413398b04c8f994f558d65 8b609a07e78cabbcc9c88934f5155b9d76c034a4 95529e4bb00906d6151af2b77892bf22382d8bdd ab0378b2628cc24791604d9fb9505882b97d7dff b74071bcc41abb9ac29b9f909008a7e347b159cd c48e5e0495a964f8d88f2f89171ce2fdbd35f894 e4a7f280feb7d46a81ec92bc9de31af308078e96 ea6f1c2560746a4ab7d30da69b7e75ee0ce1bcb6 f492f7bceaf545baedfd51bc9f682fbdfe470545 f55f20641bf78dbd6c5801173bff492619a5363c
+
+Package: libnugu-dev
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~focal
+Architecture: amd64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 380
+Depends: libnugu, libnugu-kwd-dev, libnugu-epd-dev, libglib2.0-dev
+Filename: dists/focal/pool/libnugu-dev_1.7.5ubuntu20240220a903cc6.focal_amd64.deb
+Size: 47656
+MD5sum: 1d1b924e219f19e4733b8b4cc288cdf5
+SHA1: 102e2b996a0e1858559f8d36ae4b2a2545601180
+SHA256: b3b19cc41635356a9dee1f89a0d6e9e3d4c061f5d2b6412e8815f8ea041cec90
+Section: libdevel
+Priority: optional
+Description: NUGU is an AI service platform (development files)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dev package provide development files.
+
+Package: libnugu-examples
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~focal
+Architecture: amd64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 633
+Depends: libnugu, libc6 (>= 2.4), libgcc-s1 (>= 3.3.1), libglib2.0-0 (>= 2.16.0), libstdc++6 (>= 9), python3, python3-flask-restful, python3-requests-oauthlib, curl, jq
+Filename: dists/focal/pool/libnugu-examples_1.7.5ubuntu20240220a903cc6.focal_amd64.deb
+Size: 205528
+MD5sum: 73a20e42410c9a22d39f45379f9f5809
+SHA1: 0273f2b7b8503c3be466807d01ce4ee8d33a5efc
+SHA256: e51054b3af1f35df07b2fb46ea47c72c0f8fdc9e96b89d47481003e7c723b76b
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (examples)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-examples package provide examples.
+
+Package: libnugu-plugins-default
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~focal
+Architecture: amd64
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 255
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libglib2.0-0 (>= 2.12.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu, libnugu-epd, libopus0 (>= 1.1), libportaudio2 (>= 19+svn20101113), gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
+Filename: dists/focal/pool/libnugu-plugins-default_1.7.5ubuntu20240220a903cc6.focal_amd64.deb
+Size: 36772
+MD5sum: d737fbdf1d33f8aa759baf5aabf67e1b
+SHA1: f2a9223811f91ef6c407951c8d5ebcb0ca67d369
+SHA256: 3f37ca7cc05d6437bc070f50f86a9aabf12df1c2f39c4346668d0753fba4663e
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (plugins)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-plugins-default package provide default plugins.
+

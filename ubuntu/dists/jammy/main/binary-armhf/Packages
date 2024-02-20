@@ -1,0 +1,107 @@
+Package: libnugu
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~jammy
+Architecture: armhf
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 4258
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.5), libglib2.0-0 (>= 2.31.8), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu-epd, libnugu-kwd, libssl3 (>= 3.0.0~~alpha1), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4)
+Recommends: libnugu-plugins-default
+Filename: dists/jammy/pool/libnugu_1.7.5ubuntu20240220a903cc6.jammy_armhf.deb
+Size: 2825048
+MD5sum: 6a5f13534c2a24789d66a96697e5f6e9
+SHA1: 1395cb29180abba85877bbd27c3b095618736964
+SHA256: a52f6de610654dc7fe1f2f9ed7a75f75adc2f4849b8d055d41d9d5d42978aa4d
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu package provide shared libraries.
+
+Package: libnugu-dbg
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~jammy
+Architecture: armhf
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 7364
+Depends: libnugu (= 1.7.5ubuntu20240220a903cc6~jammy)
+Filename: dists/jammy/pool/libnugu-dbg_1.7.5ubuntu20240220a903cc6.jammy_armhf.deb
+Size: 6490632
+MD5sum: 16f76c7281449be7006dfb825d28c722
+SHA1: fdf14c34749b98bdda5e6df81e49df71b45a792b
+SHA256: c3d91408574ccd2b7d6d12469a26f833503ac98593eafb5e2ba1e4ce3eeb007e
+Section: debug
+Priority: optional
+Description: NUGU is an AI service platform (debugging symbols)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dbg package provide debugging symbols.
+Build-Ids: 0521283838b7369a9b27d7c8ce01526bc0c662cb 126ac63ccbf39257ba063871811acd9100dad02a 133f814de9165dde1d6d9a3bcfc1fd18b7efe3a5 238ef387f8410ccf406aa860d770753710516322 2479236cdd17baa8b3ea679b213f0478673b5bfa 3aa75c7aaa52f41fb617d27498463e98f5df3bb6 3b756e5aabcc0b12d06c1b951ac403d88bdc7003 3dd14c5ff61841af31cbc328f24d39735fa7ec8e 5086b7369fd025de855e2c32aaab5e8e1c9ca8f5 5ba135c7b9c0f5b94d923616bb77a75720fe0265 5d9c65b1810d03e0d989b097ce33005c780c3655 5e5795aa12e54870a27801ee06d8c4d078655136 7e6701edcdefe25f08dc89c05c34d7998b45e551 9b7001250b37c7b9468bad57ea323fbe22197fd6 9ce2efd77d8d5fb778da905f80dfd4e21c391cc2 aa428742b410eedb3794777bae768f1808fe62c8 bcb25a64600bccc9b0c4fefad9328bac2001f8ec d751ab45e8134546f86c1a94760ce566cd9b3d06 ea96e64686bf434c8a7467d7f7e5e6e902a5a78a edafef1ab56936dc3c1114ad8fc5c56b1a645517 f20ef73ae4b20d4d0ea78cc6a868d32e335c8da8
+
+Package: libnugu-dev
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~jammy
+Architecture: armhf
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 380
+Depends: libnugu, libnugu-kwd-dev, libnugu-epd-dev, libglib2.0-dev
+Filename: dists/jammy/pool/libnugu-dev_1.7.5ubuntu20240220a903cc6.jammy_armhf.deb
+Size: 48088
+MD5sum: cfc8de2ef74e31a081810304a6396fd5
+SHA1: b0e7dbe2f74d048dbb0a0aba7fa53827fa6cb540
+SHA256: b6dd183ebfa186da781d8a03ae83c32c3b4069999f73a39012da205bb47f6ed1
+Section: libdevel
+Priority: optional
+Description: NUGU is an AI service platform (development files)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-dev package provide development files.
+
+Package: libnugu-examples
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~jammy
+Architecture: armhf
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 489
+Depends: libnugu, libc6 (>= 2.34), libgcc-s1 (>= 3.5), libglib2.0-0 (>= 2.16.0), libstdc++6 (>= 11), python3, python3-flask-restful, python3-requests-oauthlib, curl, jq
+Filename: dists/jammy/pool/libnugu-examples_1.7.5ubuntu20240220a903cc6.jammy_armhf.deb
+Size: 216354
+MD5sum: b5e94775b8bd8bc0a6121076a7419792
+SHA1: 4f9469fea53417e7f411276a2ee5290d5b15fe1a
+SHA256: 90d080894ce1c6385ad460392f295b4507a65bc560366352a40ce765d7560b1b
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (examples)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-examples package provide examples.
+
+Package: libnugu-plugins-default
+Source: nugu
+Version: 1.7.5ubuntu20240220a903cc6~jammy
+Architecture: armhf
+Maintainer: Inho Oh <inho.oh@sk.com>
+Installed-Size: 167
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.34), libgcc-s1 (>= 3.5), libglib2.0-0 (>= 2.12.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libnugu, libnugu-epd, libopus0 (>= 1.1), libportaudio2 (>= 19+svn20101113), gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
+Filename: dists/jammy/pool/libnugu-plugins-default_1.7.5ubuntu20240220a903cc6.jammy_armhf.deb
+Size: 39492
+MD5sum: f4b93151e7a4d25541ced9bb8e9cfb50
+SHA1: 32a47059b62a281e4d4b12352b3cf38cfeda6f4a
+SHA256: f94c4b8fa131e22108b6d729758b2eeeb9c3ba3ea790b9f2d61afab7d0eec18e
+Section: libs
+Priority: optional
+Description: NUGU is an AI service platform (plugins)
+ NUGU OpenSDK
+ .
+ NUGU is an AI platform that supports ASR and TTS.
+ .
+ The libnugu-plugins-default package provide default plugins.
+

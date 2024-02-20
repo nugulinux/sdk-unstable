@@ -1,0 +1,36 @@
+var focus__manager__interface_8hh =
+[
+    [ "CALL_FOCUS_TYPE", "group__FocusManagerInterface.html#gad6d7320d2e8ae3522086770cda2e555a", null ],
+    [ "CALL_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga75aa24467b127e0c8a2a305332e317c2", null ],
+    [ "CALL_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gac94ffce249d51ed868a55deae96843e3", null ],
+    [ "ASR_USER_FOCUS_TYPE", "group__FocusManagerInterface.html#ga18fef042001fd0e0ba90262c47d4a3ec", null ],
+    [ "ASR_USER_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga72bd41914850aa1dc8179ce527705fc9", null ],
+    [ "ASR_USER_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gaa036b27fb566ef0c3e3818d768b8c0ed", null ],
+    [ "ASR_DM_FOCUS_TYPE", "group__FocusManagerInterface.html#ga8933b1cf841c43789cc29166d679ccce", null ],
+    [ "ASR_DM_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#gad636688450184b7739b8044b40029208", null ],
+    [ "ASR_DM_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gaf3e15f1e69a3f93b9835d95fabbaa6a0", null ],
+    [ "INFO_FOCUS_TYPE", "group__FocusManagerInterface.html#gafabe7b6d55edd5b409b34eccb1d11e58", null ],
+    [ "INFO_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga48c34bb22bfd01a2cda99d90d55f32b9", null ],
+    [ "INFO_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#ga3eefebe1798bcbfcc6f63bf78cff0f74", null ],
+    [ "ALERTS_FOCUS_TYPE", "group__FocusManagerInterface.html#gab5d8c9646f38dad68125432a513f152e", null ],
+    [ "ALERTS_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#gaed031740e706367b465ba5286fa4cb1c", null ],
+    [ "ALERTS_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gad5e0529542e672dc0a3b9c7d81867b1b", null ],
+    [ "ASR_BEEP_FOCUS_TYPE", "group__FocusManagerInterface.html#ga2995d9767fe175e6a84e68923d5e33ce", null ],
+    [ "ASR_BEEP_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga74134fe1ccea3dbd8755d14dc184b7e5", null ],
+    [ "ASR_BEEP_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gab63de5e86dfb2f2790f80ecdcddcf9e9", null ],
+    [ "MEDIA_FOCUS_TYPE", "group__FocusManagerInterface.html#gac367876b6adf5b6cac25850d3d3269b1", null ],
+    [ "MEDIA_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga131e696ddae8de7171f6b4f0139ca6d1", null ],
+    [ "MEDIA_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#ga662a8a3e73e86d5b51f64fb7b09292fe", null ],
+    [ "SOUND_FOCUS_TYPE", "group__FocusManagerInterface.html#ga9715ca6a77ca93ba9c76a5569cecabbc", null ],
+    [ "SOUND_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga15ceaaf04c8ccd82f6c51f28fa8e9809", null ],
+    [ "SOUND_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#ga42611c05ef19e07a6ee8b1a8405c822d", null ],
+    [ "DUMMY_FOCUS_TYPE", "group__FocusManagerInterface.html#ga5e1f4eb42bf182f1eb4398577ea6a361", null ],
+    [ "DUMMY_FOCUS_REQUEST_PRIORITY", "group__FocusManagerInterface.html#ga31718616fa92071495bd39f0a606652f", null ],
+    [ "DUMMY_FOCUS_RELEASE_PRIORITY", "group__FocusManagerInterface.html#gabfe12ba56256c161a90cfafdb3d11d60", null ],
+    [ "FocusConfiguration", "focus__manager__interface_8hh.html#ga44cbe212eaf2747447bb75337df8a8df", null ],
+    [ "FocusState", "focus__manager__interface_8hh.html#ga0a43ecaeb330bca6b94215d69e54bfe6", [
+      [ "FOREGROUND", "focus__manager__interface_8hh.html#gga0a43ecaeb330bca6b94215d69e54bfe6ae41f4c3e11dd067fd5691da0124b8fd2", null ],
+      [ "BACKGROUND", "focus__manager__interface_8hh.html#gga0a43ecaeb330bca6b94215d69e54bfe6a87ed58ce5596142e11cb65deb049bb4b", null ],
+      [ "NONE", "focus__manager__interface_8hh.html#gga0a43ecaeb330bca6b94215d69e54bfe6ab50339a10e1de285ac99d4c3990b8693", null ]
+    ] ]
+];

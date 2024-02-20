@@ -1,0 +1,48 @@
+<html>
+<body>
+<h1>DEB Package repository for unstable release</h1>
+
+<p>
+last unstable commit: <a href="https://github.com/nugu-developers/nugu-linux/commit/"></a>
+</p>
+
+<p>
+API Document(doxygen): <a href="https://nugulinux.github.io/sdk-unstable/doxygen/">https://nugulinux.github.io/sdk-unstable/doxygen/</a>
+</p>
+
+<hr/>
+
+<h2>NUGU SDK for Linux PPA Setup (stable release)</h2>
+<pre>
+    add-apt-repository ppa:nugulinux/sdk
+    apt-get update
+</pre>
+
+<hr/>
+
+<h2>Unstable package repository setup</h2>
+
+<h3>Jammy (22.04)</h3>
+<pre>
+    echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ jammy main" > /etc/apt/sources.list.d/nugudev.list
+    apt-get update
+</pre>
+
+<h3>Focal (20.04)</h3>
+<pre>
+    echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ focal main" > /etc/apt/sources.list.d/nugudev.list
+    apt-get update
+</pre>
+
+<h3>Bionic (18.04)</h3>
+<pre>
+    echo "deb [trusted=yes] https://nugulinux.github.io/sdk-unstable/ubuntu/ bionic main" > /etc/apt/sources.list.d/nugudev.list
+    apt-get update
+</pre>
+
+<hr/>
+
+<p>Generated at Tue Feb 20 02:47:19 UTC 2024</p>
+
+</body>
+</html>

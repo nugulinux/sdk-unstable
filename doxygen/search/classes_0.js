@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['_5fasrattribute_1424',['_ASRAttribute',['../structNuguCapability_1_1__ASRAttribute.html',1,'NuguCapability']]],
+  ['_5fbatteryinfo_1425',['_BatteryInfo',['../structNuguCapability_1_1__BatteryInfo.html',1,'NuguCapability']]],
+  ['_5fblockingpolicy_1426',['_BlockingPolicy',['../structNuguClientKit_1_1__BlockingPolicy.html',1,'NuguClientKit']]],
+  ['_5fbtdeviceinfo_1427',['_BTDeviceInfo',['../structNuguCapability_1_1__BTDeviceInfo.html',1,'NuguCapability']]],
+  ['_5fbtprofile_1428',['_BTProfile',['../structNuguCapability_1_1__BTProfile.html',1,'NuguCapability']]],
+  ['_5fchipsinfo_1429',['_ChipsInfo',['../structNuguCapability_1_1__ChipsInfo.html',1,'NuguCapability']]],
+  ['_5fdirectivecancelpolicy_1430',['_DirectiveCancelPolicy',['../structNuguClientKit_1_1__DirectiveCancelPolicy.html',1,'NuguClientKit']]],
+  ['_5fdisplaycontextinfo_1431',['_DisplayContextInfo',['../structNuguCapability_1_1__DisplayContextInfo.html',1,'NuguCapability']]],
+  ['_5fepdattribute_1432',['_EpdAttribute',['../structNuguClientKit_1_1__EpdAttribute.html',1,'NuguClientKit']]],
+  ['_5ffocusconfiguration_1433',['_FocusConfiguration',['../structNuguClientKit_1_1__FocusConfiguration.html',1,'NuguClientKit']]],
+  ['_5flocationinfo_1434',['_LocationInfo',['../structNuguCapability_1_1__LocationInfo.html',1,'NuguCapability']]],
+  ['_5fnugu_5fhttp_5fresponse_1435',['_nugu_http_response',['../struct__nugu__http__response.html',1,'']]],
+  ['_5frecognitionresult_1436',['_RecognitionResult',['../structNuguClientKit_1_1__RecognitionResult.html',1,'NuguClientKit']]],
+  ['_5fsession_1437',['_Session',['../structNuguClientKit_1_1__Session.html',1,'NuguClientKit']]],
+  ['_5ftextattribute_1438',['_TextAttribute',['../structNuguCapability_1_1__TextAttribute.html',1,'NuguCapability']]],
+  ['_5fttsattribute_1439',['_TTSAttribute',['../structNuguCapability_1_1__TTSAttribute.html',1,'NuguCapability']]],
+  ['_5fwakeupmodelfile_1440',['_WakeupModelFile',['../structNuguClientKit_1_1__WakeupModelFile.html',1,'NuguClientKit']]]
+];
